@@ -11,339 +11,271 @@
 </body>
 </html>
 
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 02 — Guia para as Bússolas</title>
+    <title>Aula 02: Ondas na Prática — Tipos e Características</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #f0f4f8;
+            background: #f0f4f8;
             color: #222;
             line-height: 1.6;
-            padding: 2rem;
-            max-width: 1000px;
+            padding: 20px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         header {
-            text-align: center;
-            padding: 2rem;
-            background: linear-gradient(135deg, #2c5aa0, #4a80d6);
+            background: linear-gradient(135deg, #2c5282, #2b6cb0);
             color: white;
+            padding: 30px;
             border-radius: 12px;
-            margin-bottom: 2.5rem;
+            margin-bottom: 30px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
-        h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-        h2 {
-            color: #2c5aa0;
-            margin: 2rem 0 1rem;
-            padding-bottom: 0.4rem;
-            border-bottom: 2px solid #4a80d6;
-        }
-        h3 {
-            color: #333;
-            margin: 1.5rem 0 0.8rem;
-        }
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-        ul {
-            margin-left: 1.8rem;
-            margin-bottom: 1.2rem;
-        }
-        li {
-            margin-bottom: 0.6rem;
-        }
-        .ilustracao {
-            background: white;
-            border: 1px solid #cce0f5;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(44,90,160,0.08);
-        }
-        .ilustracao svg {
-            max-width: 100%;
-            height: auto;
-        }
-        .destaque {
-            background-color: #e8f0fc;
-            border-left: 4px solid #2c5aa0;
-            padding: 1.2rem;
-            border-radius: 6px;
-            margin: 1.5rem 0;
-        }
-        .link-simulador {
-            display: inline-block;
-            background-color: #2c5aa0;
-            color: white;
-            padding: 0.7rem 1.2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 0.5rem;
-            transition: background 0.3s;
-        }
-        .link-simulador:hover {
-            background-color: #1f427a;
-        }
-        .nota {
-            font-size: 0.95rem;
-            color: #444;
-            font-style: italic;
-        }
+        h1 { font-size: 1.8rem; margin-bottom: 8px; }
+        h2 { color: #2b6cb0; margin: 30px 0 15px; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; }
+        h3 { color: #2c5282; margin: 20px 0 10px; }
+        section { background: white; padding: 25px; border-radius: 10px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .illustration { text-align: center; margin: 20px 0; }
+        svg { max-width: 100%; height: auto; }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .comparison-table th, .comparison-table td { border: 1px solid #cbd5e0; padding: 12px; text-align: left; }
+        .comparison-table th { background: #edf2f7; }
+        .highlight { background: #fef5e7; padding: 15px; border-radius: 8px; border-left: 4px solid #ed8936; margin: 15px 0; }
+        .wave-spectrum { display: flex; flex-wrap: wrap; text-align: center; font-size: 0.85rem; margin-top: 10px; }
+        .wave-band { padding: 8px 4px; color: #222; font-weight: 500; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Aula 02 — Guia para as Bússolas</h1>
-    <p style="margin:0; opacity:0.9;">Entenda o campo magnético, as linhas de força e como a bússola funciona</p>
+    <h1>📚 Aula 02 — Ondas na Prática</h1>
+    <p>Reconhecendo tipos e características das ondas</p>
 </header>
 
-<h2>Campo Magnético</h2>
+<section>
+    <h2>🌊 Natureza das Ondas</h2>
 
-<p>O campo magnético é a região ao redor de um ímã ou de um corpo magnetizado onde atuam forças magnéticas. No caso da Terra, existe um campo magnético terrestre que se estende do interior do planeta para o espaço. É esse campo que orienta a agulha da bússola.</p>
+    <h3>Ondas Mecânicas</h3>
+    <p>Elas surgem da vibração de partículas de um meio material — como ar, água ou corda. Para se moverem, precisam que essas partículas passem a vibração para as vizinhas. <strong>Por isso, não existem e não se propagam no vácuo!</strong></p>
+    <p><strong>Exemplos:</strong> som, ondas na água, vibrações em uma corda.</p>
+    <div class="highlight">
+        <strong>Analogia:</strong> imagine uma fila de pessoas passando uma bola — a bola é a energia da onda, as pessoas são as partículas do meio. Se não houver pessoas, a bola não passa.
+    </div>
 
-<div class="ilustracao">
-    <svg width="400" height="220" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-        <!-- Ímã de barra -->
-        <rect x="80" y="90" width="240" height="40" rx="6" fill="url(#gradImã)" stroke="#333" stroke-width="2"/>
-        <text x="120" y="117" fill="white" font-size="20" font-weight="bold">N</text>
-        <text x="270" y="117" fill="white" font-size="20" font-weight="bold">S</text>
+    <div class="illustration">
+        <svg width="520" height="180" viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ebf8ff"/>
+                    <stop offset="100%" stop-color="#bee3f8"/>
+                </linearGradient>
+            </defs>
+            <rect width="520" height="180" rx="10" fill="url(#bg1)"/>
+            <text x="260" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c5282">Onda Mecânica — precisa de meio material</text>
+            <g transform="translate(40,50)">
+                <circle cx="30" cy="40" r="12" fill="#3182ce" stroke="#2b6cb0" stroke-width="2"/>
+                <text x="30" y="45" text-anchor="middle" font-size="10" fill="white">P1</text>
+                <circle cx="80" cy="40" r="12" fill="#63b3ed" stroke="#3182ce" stroke-width="2"/>
+                <text x="80" y="45" text-anchor="middle" font-size="10" fill="white">P2</text>
+                <circle cx="130" cy="40" r="12" fill="#90cdf4" stroke="#63b3ed" stroke-width="2"/>
+                <text x="130" y="45" text-anchor="middle" font-size="10" fill="#2c5282">P3</text>
+                <circle cx="180" cy="40" r="12" fill="#bfeaee" stroke="#90cdf4" stroke-width="2"/>
+                <text x="180" y="45" text-anchor="middle" font-size="10" fill="#2c5282">P4</text>
+                <path d="M42,32 L68,32 L68,48 L42,48 Z" fill="#f6ad55" stroke="#ed8936" stroke-width="1.5"/>
+                <path d="M92,32 L118,32 L118,48 L92,48 Z" fill="#f6ad55" stroke="#ed8936" stroke-width="1.5" opacity="0.6"/>
+                <path d="M142,32 L168,32 L168,48 L142,48 Z" fill="#f6ad55" stroke="#ed8936" stroke-width="1.5" opacity="0.3"/>
+                <path d="M45,60 L75,75 L105,60 L135,75 L165,60 L195,75" stroke="#2b6cb0" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <text x="110" y="105" text-anchor="middle" font-size="13" fill="#2c5282">Vibração passa de partícula em partícula</text>
+                <path d="M220,40 L260,40" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+                <text x="290" y="45" font-size="12" fill="#333">→ Propagação</text>
+            </g>
+            <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+                </marker>
+            </defs>
+        </svg>
+    </div>
 
-        <!-- Linhas de campo -->
-        <path d="M80,110 A120,80 0 0,1 200,30 A120,80 0 0,1 320,110" fill="none" stroke="#2c5aa0" stroke-width="2" marker-end="url(#seta)"/>
-        <path d="M80,110 A100,60 0 0,1 200,50 A100,60 0 0,1 320,110" fill="none" stroke="#4a80d6" stroke-width="2" marker-end="url(#seta)"/>
-        <path d="M80,110 A80,40 0 0,1 200,70 A80,40 0 0,1 320,110" fill="none" stroke="#6a98e8" stroke-width="2" marker-end="url(#seta)"/>
-        <path d="M80,110 A80,40 0 0,0 200,150 A80,40 0 0,0 320,110" fill="none" stroke="#6a98e8" stroke-width="2" marker-end="url(#seta)"/>
-        <path d="M80,110 A100,60 0 0,0 200,170 A100,60 0 0,0 320,110" fill="none" stroke="#4a80d6" stroke-width="2" marker-end="url(#seta)"/>
-        <path d="M80,110 A120,80 0 0,0 200,190 A120,80 0 0,0 320,110" fill="none" stroke="#2c5aa0" stroke-width="2" marker-end="url(#seta)"/>
+    <h3>Ondas Eletromagnéticas</h3>
+    <p>Elas se formam pela variação conjunta de um campo elétrico e um campo magnético, que se geram mutuamente. <strong>Não precisam de meio material</strong> — se propagam perfeitamente no vácuo, e também atravessam alguns materiais.</p>
+    <p><strong>Exemplos:</strong> luz visível, raios X, ondas de rádio, micro-ondas.</p>
+    <div class="highlight">
+        <strong>Analogia:</strong> é como uma onda que se move sozinha pelo espaço, sem precisar de "alguém" para passar a energia adiante.
+    </div>
 
-        <!-- Bússola -->
-        <circle cx="350" cy="50" r="28" fill="white" stroke="#333" stroke-width="2"/>
-        <polygon points="350,26 356,44 344,44" fill="red"/>
-        <polygon points="350,74 356,56 344,56" fill="#333"/>
-        <text x="344" y="22" font-size="11" fill="red">N</text>
+    <div class="illustration">
+        <svg width="520" height="220" viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#faf5ff"/>
+                    <stop offset="100%" stop-color="#e9d8fd"/>
+                </linearGradient>
+            </defs>
+            <rect width="520" height="220" rx="10" fill="url(#bg2)"/>
+            <text x="260" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#553c9a">Onda Eletromagnética — campos se propagam no vácuo</text>
+            <g transform="translate(60,60)">
+                <path d="M0,40 Q20,0 40,40 Q60,80 80,40 Q100,0 120,40 Q140,80 160,40 Q180,0 200,40 Q220,80 240,40 Q260,0 280,40" 
+                      stroke="#e53e3e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <path d="M0,40 Q20,80 40,40 Q60,0 80,40 Q100,80 120,40 Q140,0 160,40 Q180,80 200,40 Q220,0 240,40 Q260,80 280,40" 
+                      stroke="#3182ce" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <text x="290" y="45" font-size="12" fill="#333">→ Propagação</text>
+                <text x="140" y="95" text-anchor="middle" font-size="13" fill="#c53030">Campo Elétrico ↔</text>
+                <text x="140" y="115" text-anchor="middle" font-size="13" fill="#2b6cb0">Campo Magnético ↕</text>
+                <text x="140" y="145" text-anchor="middle" font-size="13" fill="#553c9a">Geram-se mutuamente, sem necessidade de meio</text>
+            </g>
+        </svg>
+    </div>
+</section>
 
-        <!-- Definições -->
-        <defs>
-            <linearGradient id="gradImã" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="50%" stop-color="#d32f2f"/>
-                <stop offset="50%" stop-color="#1976d2"/>
-            </linearGradient>
-            <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                <polygon points="0,0 10,5 0,10" fill="#2c5aa0"/>
-            </marker>
-        </defs>
-    </svg>
-    <p style="font-size:0.9rem; color:#444; margin-top:0.5rem;">Linhas de campo magnético saindo do polo Norte e entrando no polo Sul</p>
-</div>
+<section>
+    <h2>📡 Espectro Eletromagnético</h2>
+    <p>As ondas eletromagnéticas formam uma escala chamada <strong>espectro</strong>: vão das ondas de rádio (baixa frequência, comprimento longo) até raios gama (alta frequência, comprimento curto). No meio está a luz visível, o único tipo que nossos olhos conseguem detectar.</p>
+    <p>O espectro é o conjunto de todas as ondas eletromagnéticas, organizadas de acordo com seu <strong>comprimento de onda</strong>, <strong>frequência</strong> e <strong>energia</strong>.</p>
 
-<p><strong>Algumas características importantes:</strong></p>
-<ul>
-    <li>As linhas do campo magnético saem do polo norte de um ímã e entram no polo sul (fora do ímã).</li>
-    <li>A Terra se comporta como um grande ímã devido ao movimento do ferro líquido em seu núcleo.</li>
-    <li>A agulha da bússola se alinha com esse campo, indicando a direção do norte magnético.</li>
-    <li>O campo magnético é mais intenso próximo aos polos magnéticos e mais fraco em regiões mais distantes.</li>
-</ul>
+    <div class="illustration">
+        <svg width="900" height="260" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="specBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f7fafc"/>
+                    <stop offset="100%" stop-color="#edf2f7"/>
+                </linearGradient>
+            </defs>
+            <rect width="900" height="260" rx="10" fill="url(#specBg)"/>
+            <text x="450" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2d3748">Espectro Eletromagnético</text>
 
-<p>Além de orientar bússolas, o campo magnético da Terra tem uma função essencial: protege o planeta contra parte das partículas carregadas emitidas pelo Sol, ajudando a preservar a atmosfera e a vida na Terra.</p>
+            <!-- Barra do espectro -->
+            <rect x="50" y="60" width="800" height="45" rx="6" fill="url(#rainbow)" stroke="#cbd5e0" stroke-width="1"/>
+            <defs>
+                <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#805ad5"/>
+                    <stop offset="12%" stop-color="#9c27b0"/>
+                    <stop offset="20%" stop-color="#e53e3e"/>
+                    <stop offset="28%" stop-color="#ed8936"/>
+                    <stop offset="36%" stop-color="#ecc94b"/>
+                    <stop offset="44%" stop-color="#48bb78"/>
+                    <stop offset="52%" stop-color="#38b2ac"/>
+                    <stop offset="60%" stop-color="#3182ce"/>
+                    <stop offset="75%" stop-color="#2b6cb0"/>
+                    <stop offset="100%" stop-color="#2c5282"/>
+                </linearGradient>
+            </defs>
 
-<h2>Linhas de Campo Magnético</h2>
+            <!-- Marcadores -->
+            <line x1="50" y1="55" x2="50" y2="112" stroke="#333" stroke-width="1.5"/>
+            <line x1="130" y1="55" x2="130" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="210" y1="55" x2="210" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="290" y1="55" x2="290" y2="112" stroke="#333" stroke-width="1.5"/>
+            <line x1="370" y1="55" x2="370" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="450" y1="55" x2="450" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="530" y1="55" x2="530" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="650" y1="55" x2="650" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="770" y1="55" x2="770" y2="112" stroke="#333" stroke-width="1.5"/>
+            <line x1="850" y1="55" x2="850" y2="112" stroke="#333" stroke-width="1.5"/>
 
-<p>As linhas de campo magnético são linhas imaginárias usadas para representar a direção e a intensidade do campo magnético ao redor de um ímã ou da Terra.</p>
+            <!-- Rótulos -->
+            <text x="40" y="130" text-anchor="middle" font-size="11" font-weight="bold">Raios Gama</text>
+            <text x="90" y="145" text-anchor="middle" font-size="10">Raios X</text>
+            <text x="170" y="130" text-anchor="middle" font-size="11" font-weight="bold">Ultravioleta</text>
+            <text x="330" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="#d69e2e">LUZ VISÍVEL</text>
+            <text x="410" y="145" text-anchor="middle" font-size="10">Infravermelho</text>
+            <text x="490" y="130" text-anchor="middle" font-size="11" font-weight="bold">Micro-ondas</text>
+            <text x="710" y="130" text-anchor="middle" font-size="11" font-weight="bold">Ondas de Rádio</text>
 
-<p><strong>Suas principais características são:</strong></p>
-<ul>
-    <li>Indicam a direção do campo magnético. A agulha de uma bússola fica tangente a essas linhas.</li>
-    <li>Fora de um ímã, as linhas saem do polo norte e entram no polo sul.</li>
-    <li>Dentro do ímã, elas retornam do polo sul para o polo norte, formando circuitos fechados.</li>
-    <li>Quanto mais próximas umas das outras, mais intenso é o campo magnético naquela região. Por isso, o campo é mais forte perto dos polos do ímã.</li>
-    <li>As linhas de campo nunca se cruzam, pois em cada ponto existe apenas uma direção para o campo magnético.</li>
-</ul>
+            <!-- Eixos -->
+            <text x="50" y="175" text-anchor="middle" font-size="12">↑ Maior Energia<br/>Maior Frequência</text>
+            <text x="850" y="175" text-anchor="middle" font-size="12">↓ Menor Energia<br/>Menor Frequência</text>
+            <text x="450" y="200" text-anchor="middle" font-size="13" font-weight="bold">← Comprimento de Onda Menor &nbsp;&nbsp;|&nbsp;&nbsp; Comprimento de Onda Maior →</text>
+            <text x="450" y="230" text-anchor="middle" font-size="12" fill="#2b6cb0">Todas viajam no vácuo a ≈ 300.000 km/s (velocidade da luz)</text>
+        </svg>
+    </div>
 
-<div class="destaque">
-    <p><strong>💡 Experimento simples:</strong> Coloque um ímã sob uma folha de papel e espalhe limalha de ferro sobre ela. A limalha se organiza sozinha, desenhando as linhas do campo magnético!</p>
-</div>
+    <h3>Ordem e aplicações (do menor para o maior comprimento de onda):</h3>
+    <ul style="margin-left:20px; margin-top:10px;">
+        <li><strong>Raios Gama:</strong> Maior energia e frequência. Usados em radioterapia e estudos nucleares.</li>
+        <li><strong>Raios X:</strong> Usados em exames de imagem (radiografias).</li>
+        <li><strong>Ultravioleta (UV):</strong> Radiação solar; pode causar efeitos na pele.</li>
+        <li><strong>Luz Visível:</strong> Única faixa percebida pelo olho humano — vermelho, laranja, amarelo, verde, azul, anil e violeta.</li>
+        <li><strong>Infravermelho (IV):</strong> Associado ao calor; usado em controles remotos e sensores térmicos.</li>
+        <li><strong>Micro-ondas:</strong> Comunicação e fornos de micro-ondas.</li>
+        <li><strong>Ondas de Rádio:</strong> Menor energia; rádio, TV, celulares e comunicação via satélite.</li>
+    </ul>
 
-<h2>Vetor Campo Magnético</h2>
+    <div class="highlight">
+        <strong>Relações importantes:</strong><br>
+        ✅ Quanto <strong>maior a frequência</strong>, <strong>maior</strong> a energia da onda.<br>
+        ✅ Quanto <strong>maior o comprimento de onda</strong>, <strong>menores</strong> são a frequência e a energia.<br>
+        ✅ Todas viajam no vácuo com a mesma velocidade: ≈ 300 mil km/s.
+    </div>
+</section>
 
-<p>O vetor campo magnético, representado por <strong>⃗B</strong>, é uma grandeza vetorial que indica a direção, o sentido e a intensidade do campo magnético em cada ponto do espaço.</p>
+<section>
+    <h2>📐 Classificação das Ondas</h2>
+    <p>As ondas podem ser classificadas de diferentes formas, de acordo com sua natureza, direção de vibração e dimensão de propagação.</p>
 
-<div class="ilustracao">
-    <svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
-        <!-- Linha curva de campo -->
-        <path d="M40,90 Q160,30 280,90" fill="none" stroke="#666" stroke-width="2" stroke-dasharray="6,4"/>
-        <!-- Vetor tangente -->
-        <line x1="150" y1="60" x2="190" y2="80" stroke="#d32f2f" stroke-width="3"/>
-        <polygon points="190,80 182,72 184,84" fill="#d32f2f"/>
-        <circle cx="170" cy="70" r="4" fill="#222"/>
-        <text x="200" y="75" font-size="16" fill="#d32f2f" font-weight="bold">⃗B</text>
-        <text x="145" y="50" font-size="11" fill="#444">Linha de campo</text>
-        <text x="155" y="105" font-size="11" fill="#444">Vetor tangente à linha</text>
-    </svg>
-    <p style="font-size:0.9rem; color:#444; margin-top:0.5rem;">O vetor campo magnético é sempre tangente à linha de campo em cada ponto</p>
-</div>
+    <h3>1. Quanto à natureza</h3>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Meio material</th>
+                <th>Propagação no vácuo</th>
+                <th>Exemplos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Mecânicas</strong></td>
+                <td>✅ Precisam</td>
+                <td>❌ Não se propagam</td>
+                <td>Som, ondas em uma corda, ondas na água</td>
+            </tr>
+            <tr>
+                <td><strong>Eletromagnéticas</strong></td>
+                <td>❌ Não precisam</td>
+                <td>✅ Se propagam</td>
+                <td>Luz, ondas de rádio, raios X, micro-ondas</td>
+            </tr>
+        </tbody>
+    </table>
 
-<p><strong>As características do vetor campo magnético são:</strong></p>
-<ul>
-    <li><strong>Direção:</strong> é tangente à linha de campo magnético no ponto considerado.</li>
-    <li><strong>Sentido:</strong> fora de um ímã, vai do polo norte para o polo sul.</li>
-    <li><strong>Intensidade (módulo):</strong> é maior onde as linhas de campo estão mais próximas e menor onde elas estão mais afastadas.</li>
-    <li>A unidade do campo magnético no Sistema Internacional (SI) é o <strong>tesla (T)</strong>.</li>
-</ul>
+    <h3>2. Quanto à direção de vibração</h3>
+    <div class="illustration">
+        <svg width="720" height="260" viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg">
+            <rect width="720" height="260" rx="10" fill="#f7fafc"/>
 
-<p>Exemplo: Se uma bússola é colocada em determinado ponto, a agulha se orienta na mesma direção e sentido do vetor campo magnético (⃗B) naquele local. Assim, a agulha indica a direção das linhas do campo magnético.</p>
+    </div>
 
-<div class="destaque">
-    <p><strong>🧪 Teste na prática!</strong> Vocês podem observar isso no simulador gratuito:</p>
-    <a href="https://phet.colorado.edu/pt_BR/simulations/magnet-and-compass" target="_blank" class="link-simulador">Simulador "Ímã e Bússola" — PhET/USP</a>
-</div>
-
-<h2>Ação do Campo Magnético sobre uma Bússola</h2>
-
-<p>A ação do campo magnético sobre uma bússola ocorre porque a agulha da bússola é, na verdade, um pequeno ímã.</p>
-
-<div class="ilustracao">
-    <svg width="360" height="200" viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg">
-        <!-- Campo de fundo -->
-        <defs>
-            <marker id="setaCampo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                <polygon points="0,0 10,5 0,10" fill="#4a80d6"/>
-            </marker>
-        </defs>
-        <line x1="40" y1="60" x2="320" y2="60" stroke="#4a80d6" stroke-width="2" marker-end="url(#setaCampo)"/>
-        <line x1="40" y1="100" x2="320" y2="100" stroke="#4a80d6" stroke-width="2" marker-end="url(#setaCampo)"/>
-        <line x1="40" y1="140" x2="320" y2="140" stroke="#4a80d6" stroke-width="2" marker-end="url(#setaCampo)"/>
-        <text x="300" y="48" font-size="11" fill="#2c5aa0">sentido do campo</text>
-
-        <!-- Bússola desalinhada -->
-        <circle cx="100" cy="100" r="35" fill="white" stroke="#333" stroke-width="2"/>
-        <polygon points="100,70 108,92 92,92" fill="red" transform="rotate(-30,100,100)"/>
-        <polygon points="100,130 108,108 92,108" fill="#333" transform="rotate(-30,100,100)"/>
-        <text x="88" y="155" font-size="11" fill="#555">Desalinhada</text>
-
-        <!-- Seta de transição -->
-        <path d="M150,100 L180,100 M172,92 L180,100 L172,108" stroke="#333" stroke-width="2" fill="none"/>
-
-        <!-- Bússola alinhada -->
-        <circle cx="260" cy="100" r="35" fill="white" stroke="#333" stroke-width="2"/>
-        <polygon points="260,70 268,92 252,92" fill="red"/>
-        <polygon points="260,130 268,108 252,108" fill="#333"/>
-        <text x="248" y="155" font-size="11" fill="#555">Alinhada com o campo</text>
-    </svg>
-    <p style="font-size:0.9rem; color:#444; margin-top:0.5rem;">O torque faz a agulha girar até se alinhar com o campo magnético</p>
-</div>
-
-<p>Quando a bússola é colocada em um campo magnético:</p>
-<ul>
-    <li>O campo magnético exerce um <strong>torque</strong> (momento de força) sobre a agulha.</li>
-    <li>Esse torque faz a agulha girar até que ela fique alinhada com as linhas do campo magnético.</li>
-    <li>A extremidade norte da agulha passa a indicar o sentido do vetor campo magnético naquele ponto.</li>
-</ul>
-
-<p>Por isso, quando você gira a caixa da bússola, a agulha continua se movendo até voltar a apontar na direção do campo magnético da Terra. Em resumo: o campo magnético não empurra a bússola para um lado; ele faz a agulha girar até que ela fique alinhada com o campo magnético. Essa propriedade permite que a bússola indique a direção do norte magnético.</p>
-
-<h2>Ímã e Bússola</h2>
-
-<p>Um ímã e uma bússola estão profundamente relacionados, porque ambos envolvem campos magnéticos.</p>
-
-<div class="ilustracao">
-    <svg width="400" height="220" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-        <!-- Ímã à esquerda -->
-        <rect x="30" y="90" width="140" height="45" rx="6" fill="url(#gradImã2)" stroke="#333" stroke-width="2"/>
-        <text x="55" y="118" fill="white" font-size="22" font-weight="bold">N</text>
-        <text x="135" y="118" fill="white" font-size="22" font-weight="bold">S</text>
-
-        <!-- Linha de força -->
-        <path d="M170,110 Q230,50 290,110" fill="none" stroke="#2c5aa0" stroke-width="2" marker-end="url(#seta)"/>
-
-        <!-- Bússola à direita -->
-        <circle cx="310" cy="110" r="40" fill="white" stroke="#333" stroke-width="2"/>
-        <polygon points="310,75 319,102 301,102" fill="red"/>
-        <polygon points="310,145 319,118 301,118" fill="#333"/>
-        <text x="302" y="68" font-size="12" fill="red">N</text>
-        <text x="302" y="162" font-size="11" fill="#555">agulha alinhada</text>
-
-        <defs>
-            <linearGradient id="gradImã2" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="50%" stop-color="#d32f2f"/>
-                <stop offset="50%" stop-color="#1976d2"/>
-            </linearGradient>
-            <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                <polygon points="0,0 10,5 0,10" fill="#2c5aa0"/>
-            </marker>
-        </defs>
-    </svg>
-    <p style="font-size:0.9rem; color:#444; margin-top:0.5rem;">A agulha da bússola se alinha ao campo produzido pelo ímã</p>
-</div>
-
-<ul>
-    <li>Um ímã produz um campo magnético ao seu redor, com um polo Norte (N) e um polo Sul (S).</li>
-    <li>A bússola possui uma pequena agulha imantada que funciona como um pequeno ímã.</li>
-    <li>Quando a bússola é colocada perto de um ímã, o campo magnético do ímã exerce uma força sobre a agulha, fazendo-a girar e se alinhar com o campo.</li>
-    <li><strong>Polos opostos se atraem (N–S) e polos iguais se repelem (N–N ou S–S).</strong></li>
-</ul>
-
-<p>A bússola funciona porque a própria Terra age como um grande ímã: o campo magnético terrestre orienta a agulha para o norte magnético. Assim, tanto um ímã comum quanto a Terra conseguem influenciar a direção da agulha da bússola.</p>
-
-<h2>Campo Magnético Terrestre</h2>
-
-<p>O campo magnético terrestre é o campo magnético produzido pela Terra, que se comporta como um grande ímã.</p>
-
-<div class="ilustracao">
-    <svg width="380" height="300" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
-        <!-- Terra -->
-        <circle cx="190" cy="160" r="90" fill="#b3d9ff" stroke="#2c5aa0" stroke-width="3"/>
-        <ellipse cx="190" cy="160" rx="120" ry="140" fill="none" stroke="#4a80d6" stroke-width="2" stroke-dasharray="8,4" opacity="0.6"/>
-        <ellipse cx="190" cy="160" rx="150" ry="170" fill="none" stroke="#4a80d6" stroke-width="2" stroke-dasharray="8,4" opacity="0.4"/>
-
-        <!-- Polos -->
-        <text x="175" y="80" font-size="14" font-weight="bold" fill="#d32f2f">Norte Magnético</text>
-        <text x="175" y="260" font-size="14" font-weight="bold" fill="#1976d2">Sul Magnético</text>
-
-        <!-- Linhas de campo -->
-        <path d="M190,70 A120,140 0 0,1 190,250" fill="none" stroke="#d32f2f" stroke-width="3" marker-end="url(#setaTerra)"/>
-        <path d="M190,70 A150,170 0 0,1 190,250" fill="none" stroke="#d32f2f" stroke-width="2" marker-end="url(#setaTerra)"/>
-
-        <!-- Bússola na superfície -->
-        <circle cx="280" cy="130" r="30" fill="white" stroke="#333" stroke-width="2"/>
-        <polygon points="280,105 287,125 273,125" fill="red"/>
-        <polygon points="280,155 287,135 273,135" fill="#333"/>
-        <text x="272" y="100" font-size="10" fill="red">N</text>
-
-        <defs>
-            <marker id="setaTerra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-                <polygon points="0,0 10,5 0,10" fill="#d32f2f"/>
-            </marker>
-        </defs>
-    </svg>
-    <p style="font-size:0.9rem; color:#444; margin-top:0.5rem;">A Terra como um grande ímã — a agulha da bússola aponta para o Norte Magnético</p>
-</div>
-
-<p><strong>Principais características:</strong></p>
-<ul>
-    <li><strong>Origem:</strong> é gerado principalmente pelo movimento do ferro e do níquel líquidos no núcleo externo da Terra, criando correntes elétricas que produzem o campo magnético.</li>
-    <li><strong>Ação sobre bússolas:</strong> o campo terrestre orienta a agulha da bússola, fazendo-a apontar aproximadamente para o norte magnético.</li>
-    <li><strong>Polos magnéticos:</strong> a Terra possui polos magnéticos que <em>não coincidem exatamente</em> com os polos geográficos.</li>
-    <li><strong>Proteção:</strong> o campo magnético terrestre forma a <strong>magnetosfera</strong>, que ajuda a proteger o planeta contra partículas carregadas vindas do Sol.</li>
-</ul>
-
-<p class="nota">Em resumo, o campo magnético terrestre funciona como um enorme campo de força invisível ao redor da Terra, responsável pelo funcionamento das bússolas e pela proteção do planeta.</p>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Critério</th>
+                <th>Classificação</th>
+                <th>Exemplos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Natureza</strong></td>
+                <td>Mecânica / Eletromagnética</td>
+                <td>Som / Luz</td>
+            </tr>
+            <tr>
+                <td><strong>Direção de vibração</strong></td>
+                <td>Transversal / Longitudinal</td>
+                <td>Onda em corda / Som</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
 </body>
 </html>
@@ -352,410 +284,390 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 01: Marcos Históricos e Propriedades dos Materiais Magnéticos Naturais</title>
+    <title>Aula 01: Som e Luz — Exemplos para Entender Ondas</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        :root {
+            --cor-primaria: #2563eb;
+            --cor-secundaria: #1e40af;
+            --cor-destaque: #f97316;
+            --cor-fundo: #f0f7ff;
+            --cor-texto: #1f2937;
+            --cor-caixa: #ffffff;
+            --cor-borda: #bfdbfe;
+            --sombra: 0 4px 12px rgba(0,0,0,0.08);
         }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background-color: #f0f4f8;
-            color: #2d3748;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
             line-height: 1.7;
             padding: 20px;
             max-width: 1000px;
             margin: 0 auto;
         }
-
         header {
-            background: linear-gradient(135deg, #2b6cb0, #2c5282);
+            background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
             color: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 32px;
+            box-shadow: var(--sombra);
         }
-
-        h1 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
+        h1 { font-size: 1.8rem; margin-bottom: 8px; }
         h2 {
-            color: #2b6cb0;
-            margin: 30px 0 15px;
-            padding-bottom: 8px;
-            border-bottom: 3px solid #ed8936;
-            font-size: 1.4rem;
+            color: var(--cor-secundaria);
+            border-left: 5px solid var(--cor-destaque);
+            padding-left: 12px;
+            margin: 32px 0 16px;
+            font-size: 1.3rem;
         }
-
-        h3 {
-            color: #2d3748;
-            margin: 20px 0 10px;
-            font-size: 1.15rem;
+        h3 { color: var(--cor-primaria); margin: 20px 0 10px; font-size: 1.1rem; }
+        .caixa-conteudo {
+            background: var(--cor-caixa);
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: var(--sombra);
+            border: 1px solid var(--cor-borda);
         }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
         .ilustracao {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            margin: 16px 0;
         }
-
-        .ilustracao p {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #4a5568;
-            margin-top: 10px;
-            font-style: italic;
-        }
-
+        svg { max-width: 100%; height: auto; }
+        ul { margin: 12px 0 12px 28px; }
+        li { margin-bottom: 8px; }
         .destaque {
-            background-color: #fef5e7;
-            border-left: 5px solid #ed8936;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 18px 0;
+            background-color: #fff7ed;
+            border-left: 4px solid var(--cor-destaque);
+            padding: 14px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
         }
-
-        .curiosidade {
-            background-color: #ebf8ff;
-            border-left: 5px solid #3182ce;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 18px 0;
+        .comparar {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
         }
-
-        .regra {
-            background-color: #f7fafc;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 12px 0;
+        .coluna {
+            background: #eff6ff;
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid #bfdbfe;
         }
-
-        .regra p {
-            margin: 5px 0;
-            font-weight: 500;
+        .espectro {
+            margin: 20px 0;
+            padding: 16px;
+            background: #f8fafc;
+            border-radius: 10px;
         }
-
-        svg {
-            max-width: 100%;
-            height: auto;
-        }
-
-        hr {
-            border: none;
-            border-top: 2px dashed #cbd5e0;
-            margin: 35px 0;
+        @media (max-width: 700px) {
+            .comparar { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Aula 01: Marcos Históricos e Propriedades dos Materiais Magnéticos Naturais</h1>
-    <p>Introdução ao magnetismo, história, propriedades e comportamentos dos materiais magnéticos</p>
+    <h1>Aula 01: Som e Luz</h1>
+    <p>Exemplos para entender ondas — pulsos, ondas, tipos e espectro eletromagnético</p>
 </header>
 
-
-<h2>O que é magnetismo e onde surgiu o nome?</h2>
-
-<p>O termo <strong>"magnetismo"</strong> vem da Grécia Antiga. Na região de Magnésia, os gregos encontraram uma pedra escura, de brilho metálico, capaz de atrair objetos de ferro. Essa pedra é a <strong>magnetita</strong>, de fórmula química Fe₃O₄ — um óxido de ferro que possui propriedades magnéticas naturais.</p>
-
-</div>
-
-<p>O magnetismo é um fenômeno físico causado pelo movimento de cargas elétricas (como os elétrons) e pelas propriedades magnéticas dessas partículas. Ele faz com que certos materiais exerçam forças de atração ou repulsão uns sobre os outros.</p>
-
-
-<h2>Como funciona um ímã?</h2>
-
-<p>Todo ímã possui um <strong>campo magnético</strong>: uma região ao seu redor onde atua a força magnética. As linhas do campo saem do polo norte e entram pelo polo sul do ímã.</p>
-
-<div class="ilustracao">
-    <svg width="380" height="220" viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <linearGradient id="imaN" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#e53e3e"/>
-                <stop offset="100%" stop-color="#c53030"/>
-            </linearGradient>
-            <linearGradient id="imaS" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#3182ce"/>
-                <stop offset="100%" stop-color="#2b6cb0"/>
-            </linearGradient>
-            <marker id="pontaSeta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a5568"/>
-            </marker>
-        </defs>
-
-        <path d="M 90 70 C 140 30, 240 30, 290 70" stroke="#4a5568" stroke-width="2" fill="none" marker-end="url(#pontaSeta)"/>
-        <path d="M 80 90 C 150 50, 230 50, 300 90" stroke="#4a5568" stroke-width="2" fill="none" marker-end="url(#pontaSeta)"/>
-        <path d="M 75 130 C 150 170, 230 170, 305 130" stroke="#4a5568" stroke-width="2" fill="none" marker-end="url(#pontaSeta)"/>
-        <path d="M 90 150 C 140 190, 240 190, 290 150" stroke="#4a5568" stroke-width="2" fill="none" marker-end="url(#pontaSeta)"/>
-
-        <rect x="80" y="100" width="100" height="50" rx="6" fill="url(#imaN)"/>
-        <text x="130" y="132" text-anchor="middle" fill="white" font-size="22" font-weight="bold">N</text>
-
-        <rect x="200" y="100" width="100" height="50" rx="6" fill="url(#imaS)"/>
-        <text x="250" y="132" text-anchor="middle" fill="white" font-size="22" font-weight="bold">S</text>
-
-        <text x="190" y="205" text-anchor="middle" fill="#2d3748" font-size="13">Linhas do campo magnético: saem do Norte e entram pelo Sul</text>
-    </svg>
-    <p>Esquema: Linhas do campo magnético ao redor de um ímã em forma de barra.</p>
-</div>
-
-<div class="regra">
-    <p>✅ Polos iguais (N–N ou S–S) se <strong>repelem</strong>.</p>
-    <p>✅ Polos diferentes (N–S) se <strong>atraem</strong>.</p>
-</div>
-
-
-<h2>De onde vem o magnetismo?</h2>
-
-<p>Nos átomos, os elétrons giram em torno do núcleo e também possuem uma propriedade chamada <strong>spin</strong>. Esses movimentos geram pequenos campos magnéticos.</p>
-
-
-<p>Na maioria dos materiais, esses campos estão orientados em direções aleatórias e se cancelam. Já em materiais como <strong>ferro, níquel e cobalto</strong>, muitos desses pequenos campos podem se alinhar, formando um ímã.</p>
-
-<div class="curiosidade">
-    <strong>Curiosidade:</strong> A própria Terra funciona como um grande ímã! O movimento do ferro líquido no núcleo terrestre gera um campo magnético que protege o planeta de partículas vindas do Sol e permite o funcionamento das bússolas.
-</div>
-
-<p>Em resumo, o magnetismo é a interação entre campos magnéticos produzidos por cargas elétricas em movimento e pelos momentos magnéticos dos elétrons. É uma das manifestações da <strong>força eletromagnética</strong>, uma das quatro forças fundamentais da natureza.</p>
-
-
-<hr>
-
-<h2>Magnetismo na China Antiga</h2>
-
-<p>Os chineses conheciam o magnetismo antes mesmo dos gregos! Entre 300 a.C. e 220 a.C., usavam um instrumento chamado <strong>Si Nan</strong>: uma colher de magnetita sobre uma base lisa. Quando em equilíbrio, o cabo da colher sempre apontava para o sul — esse é o antecessor da bússola.</p>
-
-
-</div>
-
-<p>No século VI, já fabricavam ímãs artificiais e agulhas imantadas. Entre os séculos X e XI, passaram a usar bússolas na navegação marítima — muito antes dos europeus, que só começaram a usar no século XIII.</p>
-
-
-<hr>
-
-<h2>Polos magnéticos</h2>
-
-<p>São as duas extremidades de um ímã: <strong>polo norte (N)</strong> e <strong>polo sul (S)</strong>. É nelas que a força magnética é mais intensa.</p>
-
-<div class="ilustracao">
-    <svg width="340" height="160" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <linearGradient id="gradN" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#fc8181"/>
-                <stop offset="100%" stop-color="#e53e3e"/>
-            </linearGradient>
-            <linearGradient id="gradS" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#63b3ed"/>
-                <stop offset="100%" stop-color="#3182ce"/>
-            </linearGradient>
-        </defs>
-
-        <rect x="30" y="55" width="100" height="50" rx="6" fill="url(#gradN)" stroke="#c53030" stroke-width="2"/>
-        <text x="80" y="87" text-anchor="middle" fill="white" font-size="22" font-weight="bold">N</text>
-
-        <rect x="210" y="55" width="100" height="50" rx="6" fill="url(#gradN)" stroke="#c53030" stroke-width="2"/>
-        <text x="260" y="87" text-anchor="middle" fill="white" font-size="22" font-weight="bold">N</text>
-
-        <path d="M 145 40 L 175 60 L 145 80" stroke="#e53e3e" stroke-width="4" fill="none"/>
-        <path d="M 175 40 L 145 60 L 175 80" stroke="#e53e3e" stroke-width="4" fill="none"/>
-        <text x="160" y="115" text-anchor="middle" fill="#c53030" font-weight="bold">REPELEM</text>
-
-        <text x="170" y="155" text-anchor="middle" fill="#2d3748" font-size="13">Polos iguais se repelem</text>
-    </svg>
-    <p>Esquema: Força de repulsão entre polos norte.</p>
-</div>
-
-<div class="ilustracao">
-    <svg width="340" height="160" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
-        <rect x="30" y="55" width="100" height="50" rx="6" fill="url(#gradN)" stroke="#c53030" stroke-width="2"/>
-        <text x="80" y="87" text-anchor="middle" fill="white" font-size="22" font-weight="bold">N</text>
-
-        <rect x="210" y="55" width="100" height="50" rx="6" fill="url(#gradS)" stroke="#2b6cb0" stroke-width="2"/>
-        <text x="260" y="87" text-anchor="middle" fill="white" font-size="22" font-weight="bold">S</text>
-
-        <path d="M 145 65 L 190 65 L 190 50 L 210 70 L 190 90 L 190 75 L 145 75 Z" fill="#48bb78"/>
-        <text x="170" y="115" text-anchor="middle" fill="#2f855a" font-weight="bold">ATRAEM</text>
-
-        <text x="170" y="155" text-anchor="middle" fill="#2d3748" font-size="13">Polos diferentes se atraem</text>
-    </svg>
-    <p>Esquema: Força de atração entre polos opostos.</p>
-</div>
-
-<p>Quando um ímã é suspenso livremente, seu polo norte aponta aproximadamente para o norte geográfico da Terra.</p>
-
-<div class="destaque">
-    <strong>Regra importante:</strong> Não é possível isolar um único polo magnético! Se um ímã for quebrado ao meio, cada pedaço forma um novo ímã, com seu próprio N e S.
-</div>
-
-<p>Os polos magnéticos são essenciais para bússolas, motores elétricos, geradores, alto-falantes e aparelhos de ressonância magnética.</p>
-
-
-<hr>
-
-<h2>Estudos científicos na Europa</h2>
-
-<ul style="margin-left:25px; margin-bottom:18px;">
-    <li><strong>1269 — Pierre Pèlerin de Maricourt:</strong> descobriu que todo ímã tem dois polos (N e S) e descreveu as regras de atração e repulsão.</li>
-    <li><strong>1600 — William Gilbert:</strong> publicou <em>De Magnete</em>. Explicou a imantação por indução e afirmou que a Terra se comporta como um grande ímã. É chamado de "pai do magnetismo experimental".</li>
-    <li><strong>1820 — Hans Christian Ørsted:</strong> mostrou que corrente elétrica gera magnetismo.</li>
-    <li><strong>1831 — Michael Faraday:</strong> descobriu que variações no campo magnético geram corrente elétrica.</li>
-    <li><strong>1865 — James Clerk Maxwell:</strong> uniu eletricidade e magnetismo em uma única teoria: o <strong>eletromagnetismo</strong>.</li>
-</ul>
-
-
-<hr>
-
-<h2>Diferenças entre eletricidade e magnetismo</h2>
-
-<div class="ilustracao">
-    <svg width="380" height="200" viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <linearGradient id="pos" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#fc8181"/>
-                <stop offset="100%" stop-color="#e53e3e"/>
-            </linearGradient>
-            <linearGradient id="neg" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#63b3ed"/>
-                <stop offset="100%" stop-color="#3182ce"/>
-            </linearGradient>
-        </defs>
-
-        <rect x="20" y="20" width="150" height="160" rx="8" fill="#fef5e7" stroke="#ecc94b" stroke-width="2"/>
-        <text x="95" y="45" text-anchor="middle" fill="#b7791f" font-weight="bold">Eletricidade</text>
-        <circle cx="60" cy="90" r="28" fill="url(#pos)"/>
-        <text x="60" y="98" text-anchor="middle" fill="white" font-size="24" font-weight="bold">+</text>
-        <circle cx="130" cy="90" r="28" fill="url(#neg)"/>
-        <text x="130" y="98" text-anchor="middle" fill="white" font-size="24" font-weight="bold">−</text>
-        <text x="95" y="155" text-anchor="middle" font-size="12">Cargas podem existir sozinhas</text>
-
-        <rect x="210" y="20" width="150" height="160" rx="8" fill="#ebf8ff" stroke="#4299e1" stroke-width="2"/>
-        <text x="285" y="45" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Magnetismo</text>
-        <rect x="235" y="70" width="100" height="45" rx="5" fill="url(#gradN)"/>
-        <text x="265" y="98" text-anchor="middle" fill="white" font-weight="bold">N</text>
-        <rect x="285" y="70" width="60" height="45" rx="5" fill="url(#gradS)"/>
-        <text x="315" y="98" text-anchor="middle" fill="white" font-weight="bold">S</text>
-        <text x="285" y="155" text-anchor="middle" font-size="12">Polos N e S SEMPRE juntos</text>
-    </svg>
-    <p>Esquema comparativo: Cargas elétricas podem estar separadas; polos magnéticos nunca existem separados.</p>
-</div>
-
-<p><strong>Eletricidade:</strong> existem cargas positivas e negativas que podem existir sozinhas — podemos ter apenas um próton (+) ou apenas um elétron (−).</p>
-<p><strong>Magnetismo:</strong> não existem polos isolados! Não existe "apenas polo norte" ou "apenas polo sul" na natureza. Todo ímã é um <strong>dipolo magnético</strong>: tem sempre os dois polos juntos.</p>
-
-<div class="destaque">
-    <strong>Pergunta:</strong> Se eu cortar um ímã ao meio, o que acontece?<br>
-    ✅ Não separo o norte do sul — cada pedacinho vira um <strong>novo ímã completo</strong>, com seu próprio N e S! Mesmo se cortar em pedaços muito pequenos.
-</div>
-
-
-<hr>
-
-<h2>Domínios magnéticos</h2>
-
-<p>São pequenas regiões dentro de materiais ferromagnéticos (ferro, níquel, cobalto) nas quais os pequenos ímãs atômicos estão todos alinhados na mesma direção.</p>
-
-<div class="ilustracao">
-    <svg width="360" height="220" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <marker id="setaDir" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
-                <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
-            </marker>
-        </defs>
-
-        <text x="90" y="30" text-anchor="middle" font-weight="bold">Sem campo magnético</text>
-        <text x="90" y="48" text-anchor="middle" font-size="12"></text>
-        <rect x="30" y="55" width="120" height="120" fill="#f7fafc" stroke="#cbd5e0" stroke-width="2" rx="4"/>
-        <g stroke="#2b6cb0" stroke-width="2" marker-end="url(#setaDir)">
-            <line x1="45" y1="75" x2="65" y2="75"/>
-            <line x1="80" y1="75" x2="60" y2="95"/>
-            <line x1="95" y1="75" x2="95" y2="95"/>
-            <line x1="130" y1="75" x2="110" y2="95"/>
-            <line x1="45" y1="105" x2="75" y2="105"/>
-            <line x1="85" y1="105" x2="65" y2="125"/>
-            <line x1="100" y1="105" x2="130" y2="105"/>
-            <line x1="45" y1="135" x2="65" y2="135"/>
-            <line x1="80" y1="135" x2="60" y2="155"/>
-            <line x1="95" y1="135" x2="125" y2="135"/>
-            <line x1="130" y1="135" x2="110" y2="155"/>
-        </g>
-
-        <text x="270" y="30" text-anchor="middle" font-weight="bold">Com campo magnético</text>
-        <text x="270" y="48" text-anchor="middle" font-size="12"></text>
-        <rect x="210" y="55" width="120" height="120" fill="#ebf8ff" stroke="#4299e1" stroke-width="2" rx="4"/>
-        <g stroke="#e53e3e" stroke-width="3" marker-end="url(#setaDir)">
-            <line x1="225" y1="75" x2="315" y2="75"/>
-            <line x1="225" y1="95" x2="315" y2="95"/>
-            <line x1="225" y1="115" x2="315" y2="115"/>
-            <line x1="225" y1="135" x2="315" y2="135"/>
-            <line x1="225" y1="155" x2="315" y2="155"/>
-        </g>
-
-        <text x="180" y="205" text-anchor="middle" fill="#2d3748" font-size="13">Alinhamento dos domínios cria o ímã</text>
-    </svg>
-    <p>Esquema: Como os domínios se alinham quando submetidos a um campo magnético.</p>
-</div>
-
-<p>Em um material não magnetizado, os domínios apontam em direções aleatórias e se cancelam. Sob a ação de um campo magnético externo, os domínios se alinham e o material se torna magnético.</p>
-<p>Alguns materiais perdem o alinhamento rapidamente; outros o mantêm, tornando-se ímãs permanentes.</p>
-
-
-<hr>
-
-<h2>Dipolos magnéticos</h2>
-
-<p>Todo sistema que possui um polo norte e um polo sul é um <strong>dipolo magnético</strong>. Em nível atômico, cada átomo funciona como um pequeno dipolo, criado pelo spin e pelo movimento dos elétrons.</p>
-<p>Como não existem monopolos isolados, ao quebrar qualquer ímã surgem sempre novos dipolos menores, cada um com os dois polos.</p>
-
-
-<hr>
-
-<h2>Por que o ímã atrai o ferro?</h2>
-
-<div class="ilustracao">
-    <svg width="340" height="180" viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
-        <rect x="30" y="65" width="100" height="50" rx="6" fill="url(#gradN)" stroke="#c53030" stroke-width="2"/>
-        <text x="80" y="97" text-anchor="middle" fill="white" font-size="22" font-weight="bold">N</text>
-
-        <rect x="210" y="65" width="90" height="50" rx="6" fill="#e2e8f0" stroke="#a0aec0" stroke-width="2"/>
-        <path d="M 225 75 L 270 75 M 235 85 L 280 85 M 225 95 L 270 95 M 235 105 L 280 105" stroke="#4a5568" stroke-width="2" marker-end="url(#setaDir)"/>
-
-        <path d="M 145 80 L 190 80 L 190 65 L 210 85 L 190 105 L 190 90 L 145 90 Z" fill="#48bb78"/>
-
-        <rect x="210" y="65" width="45" height="50" rx="6" fill="url(#gradS)" stroke="#2b6cb0" stroke-width="2" opacity="0.9"/>
-        <text x="232" y="97" text-anchor="middle" fill="white" font-size="16" font-weight="bold">S</text>
-
-        <text x="170" y="165" text-anchor="middle" fill="#2d3748" font-size="13"></text>
-    </svg>
-    <p>Esquema: O ímã reorienta os domínios do ferro, criando um polo oposto na face mais próxima — e por isso se atraem.</p>
-</div>
-
-<p>Quando aproximamos um ímã de um pedaço de ferro, os dipolos do ferro se reorganizam: o lado mais próximo ganha um polo <strong>oposto</strong> ao do ímã. Como polos opostos se atraem, o ferro é puxado em direção ao ímã — e isso acontece tanto com polo norte quanto com polo sul!</p>
+<section class="caixa-conteudo">
+    <h2>Formação de um Pulso</h2>
+    <p>Um <strong>pulso</strong> é uma perturbação única que se propaga em um meio material, transportando energia, mas <em>não transporta matéria</em>.</p>
+    <p>Um pulso surge quando uma fonte provoca um deslocamento rápido em um ponto do meio (como uma corda ou mola), e essa perturbação se desloca ao longo dele.</p>
+
+    <div class="ilustracao">
+        <svg width="480" height="140" viewBox="0 0 480 140" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="setaPulso" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <polygon points="0,0 10,5 0,10" fill="#2563eb"/>
+                </marker>
+            </defs>
+            <path d="M 30,70 L 80,70 L 100,30 L 120,70 L 450,70" stroke="#2563eb" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <circle cx="50" cy="70" r="6" fill="#f97316"/>
+            <text x="35" y="100" font-size="13" fill="#374151">Fonte</text>
+            <path d="M130 55 L170 55" stroke="#2563eb" stroke-width="2" marker-end="url(#setaPulso)"/>
+            <text x="180" y="60" font-size="12" fill="#4b5563">Propagação</text>
+            <text x="90" y="20" font-size="14" font-weight="bold" fill="#1e40af">Pulso único em uma corda</text>
+        </svg>
+    </div>
+
+    <h3>Exemplo</h3>
+    <p>Ao dar um único "tranco" na extremidade de uma corda esticada, forma-se um pulso que percorre toda a corda.</p>
+
+    <h3>Características</h3>
+    <ul>
+        <li>É uma perturbação única — <strong>não contínua</strong>.</li>
+        <li>Transporta energia, mas não transporta matéria.</li>
+        <li>Pode ser <strong>transversal</strong> (vibração perpendicular à propagação) ou <strong>longitudinal</strong> (vibração paralela à propagação).</li>
+    </ul>
+</section>
+
+<section class="caixa-conteudo">
+    <h2>Formação de uma Onda</h2>
+    <p>Uma <strong>onda</strong> é formada quando uma fonte produz vibrações contínuas ou repetidas, gerando uma sequência de pulsos que se propagam pelo meio.</p>
+
+    <div class="ilustracao">
+        <svg width="480" height="160" viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="setaOnda" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <polygon points="0,0 10,5 0,10" fill="#16a34a"/>
+                </marker>
+            </defs>
+            <path d="M30,80 C50,40 70,120 90,80 C110,40 130,120 150,80 C170,40 190,120 210,80 C230,40 250,120 270,80 C290,40 310,120 330,80 C350,40 370,120 390,80 C410,40 430,120 450,80" 
+                  stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <circle cx="50" cy="80" r="6" fill="#f97316"/>
+            <text x="35" y="120" font-size="13" fill="#374151">Fonte vibrando</text>
+            <path d="M130 45 L170 45" stroke="#16a34a" stroke-width="2" marker-end="url(#setaOnda)"/>
+            <text x="180" y="50" font-size="12" fill="#4b5563">Propagação</text>
+            <text x="150" y="25" font-size="14" font-weight="bold" fill="#15803d">Sequência contínua de pulsos = onda</text>
+        </svg>
+    </div>
+
+    <h3>Características</h3>
+    <ul>
+        <li>Transporta energia, mas não transporta matéria.</li>
+        <li>Pode se propagar em meios materiais (<strong>ondas mecânicas</strong>) ou no vácuo (<strong>ondas eletromagnéticas</strong>).</li>
+        <li>Formada por sucessivos pulsos produzidos pela vibração da fonte.</li>
+    </ul>
+
+    <h3>Exemplo</h3>
+    <p>Agitar repetidamente uma corda esticada faz surgir uma onda que percorre toda a corda.</p>
+
+    <div class="destaque">
+        <strong>📌 Diferença principal:</strong><br>
+        <strong>Pulso:</strong> uma única perturbação.<br>
+        <strong>Onda:</strong> uma sequência contínua de perturbações causada pela vibração da fonte.
+    </div>
+</section>
+
+<section class="caixa-conteudo">
+    <h2>Natureza das Ondas</h2>
+    <p>As ondas são classificadas em dois tipos principais, conforme o meio necessário para se propagarem:</p>
+
+    <div class="comparar">
+        <div class="coluna">
+            <h3 style="color:#2563eb">🔊 Ondas Mecânicas</h3>
+            <ul>
+                <li>Precisam de um <strong>meio material</strong> (sólido, líquido ou gasoso).</li>
+                <li>Não se propagam no vácuo.</li>
+                <li><strong>Exemplos:</strong> som, ondas na água, ondas sísmicas.</li>
+            </ul>
+        </div>
+        <div class="coluna">
+            <h3 style="color:#7c3aed">💡 Ondas Eletromagnéticas</h3>
+            <ul>
+                <li><strong>Não precisam</strong> de meio material.</li>
+                <li>Podem se propagar no <strong>vácuo</strong>.</li>
+                <li><strong>Exemplos:</strong> luz, rádio, micro-ondas, raios X.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="destaque">
+        <strong>Resumo:</strong> Em ambos os casos, as ondas transportam <strong>energia</strong>, mas não transportam <strong>matéria</strong>.
+    </div>
+</section>
+
+<section class="caixa-conteudo">
+    <h2>O Espectro Eletromagnético</h2>
+    <p>É o conjunto de todas as ondas eletromagnéticas, organizadas conforme o comprimento de onda ou a frequência.</p>
+
+    <div class="espectro">
+        <svg width="100%" height="180" viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="gradEspectro" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#2c3e50"/>
+                    <stop offset="15%" stop-color="#3b5bdb"/>
+                    <stop offset="30%" stop-color="#22c55e"/>
+                    <stop offset="45%" stop-color="#facc15"/>
+                    <stop offset="55%" stop-color="#f97316"/>
+                    <stop offset="70%" stop-color="#ef4444"/>
+                    <stop offset="85%" stop-color="#a855f7"/>
+                    <stop offset="100%" stop-color="#e11d48"/>
+                </linearGradient>
+            </defs>
+            <rect x="30" y="40" width="740" height="36" rx="6" fill="url(#gradEspectro)" stroke="#333" stroke-width="1"/>
+            <text x="30" y="100" font-size="12" fill="#374151">Ondas de rádio</text>
+            <text x="130" y="100" font-size="12" fill="#374151">Micro-ondas</text>
+            <text x="240" y="100" font-size="12" fill="#374151">Infravermelho</text>
+            <text x="360" y="100" font-size="12" font-weight="bold" fill="#1f2937">Luz visível</text>
+            <text x="490" y="100" font-size="12" fill="#374151">Ultravioleta</text>
+            <text x="600" y="100" font-size="12" fill="#374151">Raios X</text>
+            <text x="710" y="100" font-size="12" fill="#374151">Raios gama</text>
+            <text x="30" y="155" font-size="13" fill="#4b5563">⬅ Menor frequência | Maior frequência ➡</text>
+            <text x="30" y="170" font-size="12" fill="#6b7280">Maior comprimento de onda ➡ ⬅ Menor comprimento de onda</text>
+        </svg>
+    </div>
+
+    <h3>Características</h3>
+    <ul>
+        <li>Todas são ondas eletromagnéticas; propagam-se no vácuo.</li>
+        <li>Quanto <strong>maior a frequência</strong>, <strong>menor o comprimento de onda</strong> e <strong>maior a energia</strong>.</li>
+    </ul>
+
+    <h3>Aplicações por faixa</h3>
+    <ul>
+        <li><strong>📡 Ondas de rádio:</strong> comunicação (rádio, TV, celular).</li>
+        <li><strong>🍳 Micro-ondas:</strong> forno micro-ondas e radares.</li>
+        <li><strong>📲 Infravermelho:</strong> controle remoto e câmeras térmicas.</li>
+        <li><strong>👁️ Luz visível:</strong> única faixa percebida pelo olho humano.</li>
+        <li><strong>☀️ Ultravioleta:</strong> bronzeamento e esterilização.</li>
+        <li><strong>🩻 Raios X:</strong> exames médicos.</li>
+        <li><strong>⚛️ Raios gama:</strong> radioterapia e fenômenos nucleares.</li>
+    </ul>
+</section>
+
+<section class="caixa-conteudo">
+    <h2>Ondas Longitudinais</h2>
+    <p>Nessas ondas, a vibração das partículas ocorre <strong>na mesma direção</strong> em que a onda se propaga.</p>
+
+    <div class="ilustracao">
+        <svg width="480" height="180" viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="setaLong" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <polygon points="0,0 10,5 0,10" fill="#2563eb"/>
+                </marker>
+            </defs>
+            <!-- Compressão -->
+            <g fill="#2563eb">
+                <circle cx="60" cy="70" r="7"/><circle cx="75" cy="70" r="7"/><circle cx="90" cy="70" r="7"/>
+                <circle cx="60" cy="95" r="7"/><circle cx="75" cy="95" r="7"/><circle cx="90" cy="95" r="7"/>
+            </g>
+            <text x="65" y="120" font-size="12" fill="#1e40af">Compressão</text>
+            <!-- Rarefação -->
+            <g fill="#60a5fa">
+                <circle cx="140" cy="82" r="7"/>
+                <circle cx="180" cy="82" r="7"/>
+                <circle cx="220" cy="82" r="7"/>
+            </g>
+            <text x="155" y="120" font-size="12" fill="#3b82f6">Rarefação</text>
+            <!-- Compressão -->
+            <g fill="#2563eb">
+                <circle cx="270" cy="70" r="7"/><circle cx="285" cy="70" r="7"/><circle cx="300" cy="70" r="7"/>
+                <circle cx="270" cy="95" r="7"/><circle cx="285" cy="95" r="7"/><circle cx="300" cy="95" r="7"/>
+            </g>
+            <text x="275" y="120" font-size="12" fill="#1e40af">Compressão</text>
+            <!-- Rarefação -->
+            <g fill="#60a5fa">
+                <circle cx="350" cy="82" r="7"/>
+                <circle cx="390" cy="82" r="7"/>
+            </g>
+            <text x="355" y="120" font-size="12" fill="#3b82f6">Rarefação</text>
+            <!-- Seta direção -->
+            <path d="M60 150 L420 150" stroke="#374151" stroke-width="2" marker-end="url(#setaLong)"/>
+            <text x="180" y="170" font-size="13" fill="#374151">Vibração e propagação na mesma direção</text>
+        </svg>
+    </div>
+
+    <h3>Características</h3>
+    <ul>
+        <li>Formam regiões de <strong>compressão</strong> (partículas próximas) e <strong>rarefação</strong> (partículas afastadas).</li>
+        <li>Precisam de meio material quando são ondas mecânicas.</li>
+        <li>Transportam energia sem transportar matéria.</li>
+    </ul>
+
+    <h3>Exemplos</h3>
+    <p>O som no ar; ondas em uma mola comprimida e solta.</p>
+
+    <div class="destaque">
+        <strong>Resumo:</strong> Vibração das partículas → <strong>paralela</strong> à propagação.<br>
+        <strong>Principal exemplo:</strong> ondas sonoras.
+    </div>
+</section>
+
+<section class="caixa-conteudo">
+    <h2>Ondas Transversais</h2>
+    <p>Nessas ondas, a vibração das partículas ocorre <strong>perpendicularmente</strong> à direção de propagação.</p>
+
+    <div class="ilustracao">
+        <svg width="480" height="200" viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="setaTransV" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="6" markerHeight="6" orient="auto">
+                    <polygon points="5,0 10,10 0,10" fill="#16a34a"/>
+                </marker>
+                <marker id="setaTransH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <polygon points="0,0 10,5 0,10" fill="#eab308"/>
+                </marker>
+            </defs>
+            <path d="M30,100 C60,50 90,150 120,100 C150,50 180,150 210,100 C240,50 270,150 300,100 C330,50 360,150 390,100 C420,50 450,150 450,100" 
+                  stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <text x="70" y="35" font-size="13" fill="#15803d">Crista (ponto alto)</text>
+            <text x="70" y="165" font-size="13" fill="#15803d">Vale (ponto baixo)</text>
+            <path d="M20 40 L20 160" stroke="#16a34a" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#setaTransV)"/>
+            <text x="5" y="30" font-size="11" fill="#16a34a">Vibração</text>
+            <path d="M30 180 L450 180" stroke="#eab308" stroke-width="2" marker-end="url(#setaTransH)"/>
+            <text x="180" y="195" font-size="11" fill="#ca8a04">Propagação</text>
+        </svg>
+    </div>
+
+    <h3>Características</h3>
+    <ul>
+        <li>Partículas se movem para cima/baixo (ou lado a lado), enquanto a onda avança em outra direção.</li>
+        <li>Apresentam <strong>cristas</strong> (pontos altos) e <strong>vales</strong> (pontos baixos).</li>
+        <li>Transportam energia sem transportar matéria.</li>
+    </ul>
+
+    <h3>Exemplos</h3>
+    <p>Ondas em corda movimentada para cima e para baixo; ondas na superfície da água; ondas eletromagnéticas como a luz.</p>
+
+    <div class="destaque">
+        <strong>Resumo:</strong> Vibração das partículas → <strong>perpendicular</strong> à propagação.<br>
+        <strong>Principal exemplo:</strong> onda em uma corda.
+    </div>
+</section>
+
+<section class="caixa-conteudo">
+    <h2>Ondas Mistas</h2>
+    <p>São ondas que combinam características <strong>longitudinais e transversais</strong>. As partículas vibram tanto na direção da propagação quanto perpendicularmente a ela.</p>
+
+    <div class="ilustracao">
+        <svg width="480" height="220" viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="setaMista" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <polygon points="0,0 10,5 0,10" fill="#f97316"/>
+                </marker>
+            </defs>
+            <!-- Onda na superfície -->
+            <path d="M30,80 C70,50 110,110 150,80 C190,50 230,110 270,80 C310,50 350,110 390,80 C430,50 460,80 460,80" 
+                  stroke="#0ea5e9" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <!-- Trajetória elíptica de uma partícula -->
+            <ellipse cx="150" cy="80" rx="18" ry="35" stroke="#f97316" stroke-width="2" stroke-dasharray="5,4" fill="none"/>
+            <text x="175" y="85" font-size="12" fill="#f97316">Movimento da partícula</text>
+            <path d="M30 160 L450 160" stroke="#374151" stroke-width="2" marker-end="url(#setaMista)"/>
+            <text x="180" y="185" font-size="13" fill="#374151">Direção de propagação da onda</text>
+            <text x="140" y="210" font-size="13" font-weight="bold" fill="#0369a1">Ondas na superfície da água</text>
+        </svg>
+    </div>
+
+    <h3>Características</h3>
+    <ul>
+        <li>Possuem movimentos de compressão e rarefação (como ondas longitudinais).</li>
+        <li>Também apresentam movimentos de subida e descida (como ondas transversais).</li>
+        <li>Transportam energia sem transportar matéria.</li>
+    </ul>
+
+    <h3>Exemplo</h3>
+    <p>As ondas na superfície da água são o exemplo mais comum: as partículas descrevem movimentos combinados enquanto a onda se propaga.</p>
+
+    <div class="destaque">
+        <strong>Resumo:</strong> Vibração das partículas → <strong>combinação de paralela e perpendicular</strong> à propagação.<br>
+        <strong>Principal exemplo:</strong> ondas na superfície da água.
+    </div>
+</section>
 
 </body>
 </html>
-
 
 
 
