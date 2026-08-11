@@ -17,268 +17,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 02: Ondas na Prática — Tipos e Características</title>
+    <title>Seções de Aulas</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f0f4f8;
-            color: #222;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1100px;
-            margin: 0 auto;
+        section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
         }
-        header {
-            background: linear-gradient(135deg, #2c5282, #2b6cb0);
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        h1 { font-size: 1.8rem; margin-bottom: 8px; }
-        h2 { color: #2b6cb0; margin: 30px 0 15px; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; }
-        h3 { color: #2c5282; margin: 20px 0 10px; }
-        section { background: white; padding: 25px; border-radius: 10px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-        .illustration { text-align: center; margin: 20px 0; }
-        svg { max-width: 100%; height: auto; }
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        .comparison-table th, .comparison-table td { border: 1px solid #cbd5e0; padding: 12px; text-align: left; }
-        .comparison-table th { background: #edf2f7; }
-        .highlight { background: #fef5e7; padding: 15px; border-radius: 8px; border-left: 4px solid #ed8936; margin: 15px 0; }
-        .wave-spectrum { display: flex; flex-wrap: wrap; text-align: center; font-size: 0.85rem; margin-top: 10px; }
-        .wave-band { padding: 8px 4px; color: #222; font-weight: 500; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>📚 Aula 02 — Ondas na Prática</h1>
-    <p>Reconhecendo tipos e características das ondas</p>
-</header>
+    <h1>Material de Estudo</h1>
 
-<section>
-    <h2>🌊 Natureza das Ondas</h2>
-
-    <h3>Ondas Mecânicas</h3>
-    <p>Elas surgem da vibração de partículas de um meio material — como ar, água ou corda. Para se moverem, precisam que essas partículas passem a vibração para as vizinhas. <strong>Por isso, não existem e não se propagam no vácuo!</strong></p>
-    <p><strong>Exemplos:</strong> som, ondas na água, vibrações em uma corda.</p>
-    <div class="highlight">
-        <strong>Analogia:</strong> imagine uma fila de pessoas passando uma bola — a bola é a energia da onda, as pessoas são as partículas do meio. Se não houver pessoas, a bola não passa.
-    </div>
-
-    <div class="illustration">
-        <svg width="520" height="180" viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#ebf8ff"/>
-                    <stop offset="100%" stop-color="#bee3f8"/>
-                </linearGradient>
-            </defs>
-            <rect width="520" height="180" rx="10" fill="url(#bg1)"/>
-            <text x="260" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c5282">Onda Mecânica — precisa de meio material</text>
-            <g transform="translate(40,50)">
-                <circle cx="30" cy="40" r="12" fill="#3182ce" stroke="#2b6cb0" stroke-width="2"/>
-                <text x="30" y="45" text-anchor="middle" font-size="10" fill="white">P1</text>
-                <circle cx="80" cy="40" r="12" fill="#63b3ed" stroke="#3182ce" stroke-width="2"/>
-                <text x="80" y="45" text-anchor="middle" font-size="10" fill="white">P2</text>
-                <circle cx="130" cy="40" r="12" fill="#90cdf4" stroke="#63b3ed" stroke-width="2"/>
-                <text x="130" y="45" text-anchor="middle" font-size="10" fill="#2c5282">P3</text>
-                <circle cx="180" cy="40" r="12" fill="#bfeaee" stroke="#90cdf4" stroke-width="2"/>
-                <text x="180" y="45" text-anchor="middle" font-size="10" fill="#2c5282">P4</text>
-                <path d="M42,32 L68,32 L68,48 L42,48 Z" fill="#f6ad55" stroke="#ed8936" stroke-width="1.5"/>
-                <path d="M92,32 L118,32 L118,48 L92,48 Z" fill="#f6ad55" stroke="#ed8936" stroke-width="1.5" opacity="0.6"/>
-                <path d="M142,32 L168,32 L168,48 L142,48 Z" fill="#f6ad55" stroke="#ed8936" stroke-width="1.5" opacity="0.3"/>
-                <path d="M45,60 L75,75 L105,60 L135,75 L165,60 L195,75" stroke="#2b6cb0" stroke-width="3" fill="none" stroke-linecap="round"/>
-                <text x="110" y="105" text-anchor="middle" font-size="13" fill="#2c5282">Vibração passa de partícula em partícula</text>
-                <path d="M220,40 L260,40" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-                <text x="290" y="45" font-size="12" fill="#333">→ Propagação</text>
-            </g>
-            <defs>
-                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
-                </marker>
-            </defs>
-        </svg>
-    </div>
-
-    <h3>Ondas Eletromagnéticas</h3>
-    <p>Elas se formam pela variação conjunta de um campo elétrico e um campo magnético, que se geram mutuamente. <strong>Não precisam de meio material</strong> — se propagam perfeitamente no vácuo, e também atravessam alguns materiais.</p>
-    <p><strong>Exemplos:</strong> luz visível, raios X, ondas de rádio, micro-ondas.</p>
-    <div class="highlight">
-        <strong>Analogia:</strong> é como uma onda que se move sozinha pelo espaço, sem precisar de "alguém" para passar a energia adiante.
-    </div>
-
-    <div class="illustration">
-        <svg width="520" height="220" viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#faf5ff"/>
-                    <stop offset="100%" stop-color="#e9d8fd"/>
-                </linearGradient>
-            </defs>
-            <rect width="520" height="220" rx="10" fill="url(#bg2)"/>
-            <text x="260" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#553c9a">Onda Eletromagnética — campos se propagam no vácuo</text>
-            <g transform="translate(60,60)">
-                <path d="M0,40 Q20,0 40,40 Q60,80 80,40 Q100,0 120,40 Q140,80 160,40 Q180,0 200,40 Q220,80 240,40 Q260,0 280,40" 
-                      stroke="#e53e3e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-                <path d="M0,40 Q20,80 40,40 Q60,0 80,40 Q100,80 120,40 Q140,0 160,40 Q180,80 200,40 Q220,0 240,40 Q260,80 280,40" 
-                      stroke="#3182ce" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-                <text x="290" y="45" font-size="12" fill="#333">→ Propagação</text>
-                <text x="140" y="95" text-anchor="middle" font-size="13" fill="#c53030">Campo Elétrico ↔</text>
-                <text x="140" y="115" text-anchor="middle" font-size="13" fill="#2b6cb0">Campo Magnético ↕</text>
-                <text x="140" y="145" text-anchor="middle" font-size="13" fill="#553c9a">Geram-se mutuamente, sem necessidade de meio</text>
-            </g>
-        </svg>
-    </div>
-</section>
-
-<section>
-    <h2>📡 Espectro Eletromagnético</h2>
-    <p>As ondas eletromagnéticas formam uma escala chamada <strong>espectro</strong>: vão das ondas de rádio (baixa frequência, comprimento longo) até raios gama (alta frequência, comprimento curto). No meio está a luz visível, o único tipo que nossos olhos conseguem detectar.</p>
-    <p>O espectro é o conjunto de todas as ondas eletromagnéticas, organizadas de acordo com seu <strong>comprimento de onda</strong>, <strong>frequência</strong> e <strong>energia</strong>.</p>
-
-    <div class="illustration">
-        <svg width="900" height="260" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="specBg" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#f7fafc"/>
-                    <stop offset="100%" stop-color="#edf2f7"/>
-                </linearGradient>
-            </defs>
-            <rect width="900" height="260" rx="10" fill="url(#specBg)"/>
-            <text x="450" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2d3748">Espectro Eletromagnético</text>
-
-            <!-- Barra do espectro -->
-            <rect x="50" y="60" width="800" height="45" rx="6" fill="url(#rainbow)" stroke="#cbd5e0" stroke-width="1"/>
-            <defs>
-                <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#805ad5"/>
-                    <stop offset="12%" stop-color="#9c27b0"/>
-                    <stop offset="20%" stop-color="#e53e3e"/>
-                    <stop offset="28%" stop-color="#ed8936"/>
-                    <stop offset="36%" stop-color="#ecc94b"/>
-                    <stop offset="44%" stop-color="#48bb78"/>
-                    <stop offset="52%" stop-color="#38b2ac"/>
-                    <stop offset="60%" stop-color="#3182ce"/>
-                    <stop offset="75%" stop-color="#2b6cb0"/>
-                    <stop offset="100%" stop-color="#2c5282"/>
-                </linearGradient>
-            </defs>
-
-            <!-- Marcadores -->
-            <line x1="50" y1="55" x2="50" y2="112" stroke="#333" stroke-width="1.5"/>
-            <line x1="130" y1="55" x2="130" y2="112" stroke="#333" stroke-width="1"/>
-            <line x1="210" y1="55" x2="210" y2="112" stroke="#333" stroke-width="1"/>
-            <line x1="290" y1="55" x2="290" y2="112" stroke="#333" stroke-width="1.5"/>
-            <line x1="370" y1="55" x2="370" y2="112" stroke="#333" stroke-width="1"/>
-            <line x1="450" y1="55" x2="450" y2="112" stroke="#333" stroke-width="1"/>
-            <line x1="530" y1="55" x2="530" y2="112" stroke="#333" stroke-width="1"/>
-            <line x1="650" y1="55" x2="650" y2="112" stroke="#333" stroke-width="1"/>
-            <line x1="770" y1="55" x2="770" y2="112" stroke="#333" stroke-width="1.5"/>
-            <line x1="850" y1="55" x2="850" y2="112" stroke="#333" stroke-width="1.5"/>
-
-            <!-- Rótulos -->
-            <text x="40" y="130" text-anchor="middle" font-size="11" font-weight="bold">Raios Gama</text>
-            <text x="90" y="145" text-anchor="middle" font-size="10">Raios X</text>
-            <text x="170" y="130" text-anchor="middle" font-size="11" font-weight="bold">Ultravioleta</text>
-            <text x="330" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="#d69e2e">LUZ VISÍVEL</text>
-            <text x="410" y="145" text-anchor="middle" font-size="10">Infravermelho</text>
-            <text x="490" y="130" text-anchor="middle" font-size="11" font-weight="bold">Micro-ondas</text>
-            <text x="710" y="130" text-anchor="middle" font-size="11" font-weight="bold">Ondas de Rádio</text>
-
-            <!-- Eixos -->
-            <text x="50" y="175" text-anchor="middle" font-size="12">↑ Maior Energia<br/>Maior Frequência</text>
-            <text x="850" y="175" text-anchor="middle" font-size="12">↓ Menor Energia<br/>Menor Frequência</text>
-            <text x="450" y="200" text-anchor="middle" font-size="13" font-weight="bold">← Comprimento de Onda Menor &nbsp;&nbsp;|&nbsp;&nbsp; Comprimento de Onda Maior →</text>
-            <text x="450" y="230" text-anchor="middle" font-size="12" fill="#2b6cb0">Todas viajam no vácuo a ≈ 300.000 km/s (velocidade da luz)</text>
-        </svg>
-    </div>
-
-    <h3>Ordem e aplicações (do menor para o maior comprimento de onda):</h3>
-    <ul style="margin-left:20px; margin-top:10px;">
-        <li><strong>Raios Gama:</strong> Maior energia e frequência. Usados em radioterapia e estudos nucleares.</li>
-        <li><strong>Raios X:</strong> Usados em exames de imagem (radiografias).</li>
-        <li><strong>Ultravioleta (UV):</strong> Radiação solar; pode causar efeitos na pele.</li>
-        <li><strong>Luz Visível:</strong> Única faixa percebida pelo olho humano — vermelho, laranja, amarelo, verde, azul, anil e violeta.</li>
-        <li><strong>Infravermelho (IV):</strong> Associado ao calor; usado em controles remotos e sensores térmicos.</li>
-        <li><strong>Micro-ondas:</strong> Comunicação e fornos de micro-ondas.</li>
-        <li><strong>Ondas de Rádio:</strong> Menor energia; rádio, TV, celulares e comunicação via satélite.</li>
-    </ul>
-
-    <div class="highlight">
-        <strong>Relações importantes:</strong><br>
-        ✅ Quanto <strong>maior a frequência</strong>, <strong>maior</strong> a energia da onda.<br>
-        ✅ Quanto <strong>maior o comprimento de onda</strong>, <strong>menores</strong> são a frequência e a energia.<br>
-        ✅ Todas viajam no vácuo com a mesma velocidade: ≈ 300 mil km/s.
-    </div>
-</section>
-
-<section class="card">
-    <h2>📐 Classificação das Ondas</h2>
-    <p>As ondas podem ser classificadas de diferentes formas, de acordo com sua natureza, direção de vibração e dimensão de propagação.</p>
-
-    <h3>1. Quanto à natureza</h3>
-    <ul>
-        <li><strong>Mecânicas:</strong> Precisam de meio material; não se propagam no vácuo. Ex.: som, ondas em corda, ondas na água.</li>
-        <li><strong>Eletromagnéticas:</strong> Não precisam de meio material; propagam-se no vácuo. Ex.: luz, ondas de rádio, raios X, micro-ondas.</li>
-    </ul>
-
-    <h3>2. Quanto à direção de vibração</h3>
-    <div class="comparacao">
-        <div class="card" style="border-top: 4px solid #e53e3e;">
-            <h4 style="text-align:center; color:#e53e3e; margin-bottom:10px;">Ondas Transversais</h4>
-            <p>A vibração ocorre <strong>perpendicularmente</strong> à direção de propagação.</p>
-            <p><em>Ex.: ondas em uma corda, ondas eletromagnéticas.</em></p>
-            <svg width="280" height="150" viewBox="0 0 280 150">
-                <text x="140" y="25" text-anchor="middle" font-size="14" font-weight="bold">Transversal</text>
-                <path d="M30,70 Q60,30 90,70 T150,70 T210,70 T250,70" stroke="#e53e3e" stroke-width="4" fill="none" stroke-linecap="round"/>
-                <defs>
-                    <marker id="setaV" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#e53e3e"/>
-                    </marker>
-                    <marker id="setaH" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
-                    </marker>
-                </defs>
-                <line x1="70" y1="70" x2="70" y2="35" stroke="#e53e3e" stroke-width="2" marker-end="url(#setaV)"/>
-                <text x="82" y="55" fill="#e53e3e" font-size="11">vibração</text>
-                <line x1="90" y1="85" x2="240" y2="85" stroke="#2b6cb0" stroke-width="2" marker-end="url(#setaH)"/>
-                <text x="160" y="105" fill="#2b6cb0" font-size="11">propagação</text>
-            </svg>
-        </div>
-
-        <div class="card" style="border-top: 4px solid #3182ce;">
-            <h4 style="text-align:center; color:#3182ce; margin-bottom:10px;">Ondas Longitudinais</h4>
-            <p>A vibração ocorre na <strong>mesma direção</strong> da propagação.</p>
-            <p><em>Ex.: ondas sonoras no ar.</em></p>
-            <svg width="280" height="150" viewBox="0 0 280 150">
-                <text x="140" y="25" text-anchor="middle" font-size="14" font-weight="bold">Longitudinal</text>
-                <g fill="#3182ce" stroke="#2b6cb0" stroke-width="1">
-                    <ellipse cx="45" cy="75" rx="12" ry="8"/><ellipse cx="65" cy="75" rx="12" ry="8"/><ellipse cx="85" cy="75" rx="12" ry="8"/>
-                    <ellipse cx="125" cy="75" rx="7" ry="8"/><ellipse cx="145" cy="75" rx="7" ry="8"/>
-                    <ellipse cx="185" cy="75" rx="12" ry="8"/><ellipse cx="205" cy="75" rx="12" ry="8"/><ellipse cx="225" cy="75" rx="12" ry="8"/>
-                    <ellipse cx="255" cy="75" rx="7" ry="8"/>
-                </g>
-                <line x1="30" y1="105" x2="250" y2="105" stroke="#2b6cb0" stroke-width="2" marker-end="url(#setaH)"/>
-                <text x="140" y="128" fill="#2b6cb0" font-size="11" text-anchor="middle">vibração = propagação</text>
-                <text x="65" y="55" font-size="10" fill="#333">comprensão</text>
-                <text x="205" y="55" font-size="10" fill="#333">comprensão</text>
-            </svg>
-        </div>
-    </div>
-
-  
-
-</body>
-</html>
-
-
-
-
-
-<!DOCTYPE html>
+    <!-- Aula 01 -->
+    <section id="aula-01">
+        <h2>Aula 01: Som e luz: exemplos para entender ondas</h2>
+        <p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -662,6 +418,363 @@
 
 </body>
 </html>
+</p>
+    </section>
+
+    <!-- Aula 02 -->
+    <section id="aula-02">
+        <h2>Aula 02: Ondas na prática: reconhecendo tipos e características 
+</h2>
+        <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02: Ondas na Prática — Tipos e Características</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f4f8;
+            color: #222;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        header {
+            background: linear-gradient(135deg, #2c5282, #2b6cb0);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        h1 { font-size: 1.8rem; margin-bottom: 8px; }
+        h2 { color: #2b6cb0; margin: 30px 0 15px; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; }
+        h3 { color: #2c5282; margin: 20px 0 10px; }
+        section { background: white; padding: 25px; border-radius: 10px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .illustration { text-align: center; margin: 20px 0; }
+        svg { max-width: 100%; height: auto; }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .comparison-table th, .comparison-table td { border: 1px solid #cbd5e0; padding: 12px; text-align: left; }
+        .comparison-table th { background: #edf2f7; }
+        .highlight { background: #fef5e7; padding: 15px; border-radius: 8px; border-left: 4px solid #ed8936; margin: 15px 0; }
+        .wave-spectrum { display: flex; flex-wrap: wrap; text-align: center; font-size: 0.85rem; margin-top: 10px; }
+        .wave-band { padding: 8px 4px; color: #222; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📚 Aula 02 — Ondas na Prática</h1>
+    <p>Reconhecendo tipos e características das ondas</p>
+</header>
+
+<section>
+    <h2>🌊 Natureza das Ondas</h2>
+
+    <h3>Ondas Mecânicas</h3>
+    <p>Elas surgem da vibração de partículas de um meio material — como ar, água ou corda. Para se moverem, precisam que essas partículas passem a vibração para as vizinhas. <strong>Por isso, não existem e não se propagam no vácuo!</strong></p>
+    <p><strong>Exemplos:</strong> som, ondas na água, vibrações em uma corda.</p>
+    <div class="highlight">
+        <strong>Analogia:</strong> imagine uma fila de pessoas passando uma bola — a bola é a energia da onda, as pessoas são as partículas do meio. Se não houver pessoas, a bola não passa.
+    </div>
+
+    <div class="illustration">
+        <svg width="520" height="180" viewBox="0 0 520 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ebf8ff"/>
+                    <stop offset="100%" stop-color="#bee3f8"/>
+                </linearGradient>
+            </defs>
+            <rect width="520" height="180" rx="10" fill="url(#bg1)"/>
+            <text x="260" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c5282">Onda Mecânica — precisa de meio material</text>
+            <g transform="translate(40,50)">
+                <circle cx="30" cy="40" r="12" fill="#3182ce" stroke="#2b6cb0" stroke-width="2"/>
+                <text x="30" y="45" text-anchor="middle" font-size="10" fill="white">P1</text>
+                <circle cx="80" cy="40" r="12" fill="#63b3ed" stroke="#3182ce" stroke-width="2"/>
+                <text x="80" y="45" text-anchor="middle" font-size="10" fill="white">P2</text>
+                <circle cx="130" cy="40" r="12" fill="#90cdf4" stroke="#63b3ed" stroke-width="2"/>
+                <text x="130" y="45" text-anchor="middle" font-size="10" fill="#2c5282">P3</text>
+                <circle cx="180" cy="40" r="12" fill="#bfeaee" stroke="#90cdf4" stroke-width="2"/>
+                <text x="180" y="45" text-anchor="middle" font-size="10" fill="#2c5282">P4</text>
+                <path d="M42,32 L68,32 L68,48 L42,48 Z" fill="#f6ad55" stroke="#ed8936" stroke-width="1.5"/>
+                <path d="M92,32 L118,32 L118,48 L92,48 Z" fill="#f6ad55" stroke="#ed8936" stroke-width="1.5" opacity="0.6"/>
+                <path d="M142,32 L168,32 L168,48 L142,48 Z" fill="#f6ad55" stroke="#ed8936" stroke-width="1.5" opacity="0.3"/>
+                <path d="M45,60 L75,75 L105,60 L135,75 L165,60 L195,75" stroke="#2b6cb0" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <text x="110" y="105" text-anchor="middle" font-size="13" fill="#2c5282">Vibração passa de partícula em partícula</text>
+                <path d="M220,40 L260,40" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+                <text x="290" y="45" font-size="12" fill="#333">→ Propagação</text>
+            </g>
+            <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+                </marker>
+            </defs>
+        </svg>
+    </div>
+
+    <h3>Ondas Eletromagnéticas</h3>
+    <p>Elas se formam pela variação conjunta de um campo elétrico e um campo magnético, que se geram mutuamente. <strong>Não precisam de meio material</strong> — se propagam perfeitamente no vácuo, e também atravessam alguns materiais.</p>
+    <p><strong>Exemplos:</strong> luz visível, raios X, ondas de rádio, micro-ondas.</p>
+    <div class="highlight">
+        <strong>Analogia:</strong> é como uma onda que se move sozinha pelo espaço, sem precisar de "alguém" para passar a energia adiante.
+    </div>
+
+    <div class="illustration">
+        <svg width="520" height="220" viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#faf5ff"/>
+                    <stop offset="100%" stop-color="#e9d8fd"/>
+                </linearGradient>
+            </defs>
+            <rect width="520" height="220" rx="10" fill="url(#bg2)"/>
+            <text x="260" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#553c9a">Onda Eletromagnética — campos se propagam no vácuo</text>
+            <g transform="translate(60,60)">
+                <path d="M0,40 Q20,0 40,40 Q60,80 80,40 Q100,0 120,40 Q140,80 160,40 Q180,0 200,40 Q220,80 240,40 Q260,0 280,40" 
+                      stroke="#e53e3e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <path d="M0,40 Q20,80 40,40 Q60,0 80,40 Q100,80 120,40 Q140,0 160,40 Q180,80 200,40 Q220,0 240,40 Q260,80 280,40" 
+                      stroke="#3182ce" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <text x="290" y="45" font-size="12" fill="#333">→ Propagação</text>
+                <text x="140" y="95" text-anchor="middle" font-size="13" fill="#c53030">Campo Elétrico ↔</text>
+                <text x="140" y="115" text-anchor="middle" font-size="13" fill="#2b6cb0">Campo Magnético ↕</text>
+                <text x="140" y="145" text-anchor="middle" font-size="13" fill="#553c9a">Geram-se mutuamente, sem necessidade de meio</text>
+            </g>
+        </svg>
+    </div>
+</section>
+
+<section>
+    <h2>📡 Espectro Eletromagnético</h2>
+    <p>As ondas eletromagnéticas formam uma escala chamada <strong>espectro</strong>: vão das ondas de rádio (baixa frequência, comprimento longo) até raios gama (alta frequência, comprimento curto). No meio está a luz visível, o único tipo que nossos olhos conseguem detectar.</p>
+    <p>O espectro é o conjunto de todas as ondas eletromagnéticas, organizadas de acordo com seu <strong>comprimento de onda</strong>, <strong>frequência</strong> e <strong>energia</strong>.</p>
+
+    <div class="illustration">
+        <svg width="900" height="260" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="specBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f7fafc"/>
+                    <stop offset="100%" stop-color="#edf2f7"/>
+                </linearGradient>
+            </defs>
+            <rect width="900" height="260" rx="10" fill="url(#specBg)"/>
+            <text x="450" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2d3748">Espectro Eletromagnético</text>
+
+            <!-- Barra do espectro -->
+            <rect x="50" y="60" width="800" height="45" rx="6" fill="url(#rainbow)" stroke="#cbd5e0" stroke-width="1"/>
+            <defs>
+                <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#805ad5"/>
+                    <stop offset="12%" stop-color="#9c27b0"/>
+                    <stop offset="20%" stop-color="#e53e3e"/>
+                    <stop offset="28%" stop-color="#ed8936"/>
+                    <stop offset="36%" stop-color="#ecc94b"/>
+                    <stop offset="44%" stop-color="#48bb78"/>
+                    <stop offset="52%" stop-color="#38b2ac"/>
+                    <stop offset="60%" stop-color="#3182ce"/>
+                    <stop offset="75%" stop-color="#2b6cb0"/>
+                    <stop offset="100%" stop-color="#2c5282"/>
+                </linearGradient>
+            </defs>
+
+            <!-- Marcadores -->
+            <line x1="50" y1="55" x2="50" y2="112" stroke="#333" stroke-width="1.5"/>
+            <line x1="130" y1="55" x2="130" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="210" y1="55" x2="210" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="290" y1="55" x2="290" y2="112" stroke="#333" stroke-width="1.5"/>
+            <line x1="370" y1="55" x2="370" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="450" y1="55" x2="450" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="530" y1="55" x2="530" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="650" y1="55" x2="650" y2="112" stroke="#333" stroke-width="1"/>
+            <line x1="770" y1="55" x2="770" y2="112" stroke="#333" stroke-width="1.5"/>
+            <line x1="850" y1="55" x2="850" y2="112" stroke="#333" stroke-width="1.5"/>
+
+            <!-- Rótulos -->
+            <text x="40" y="130" text-anchor="middle" font-size="11" font-weight="bold">Raios Gama</text>
+            <text x="90" y="145" text-anchor="middle" font-size="10">Raios X</text>
+            <text x="170" y="130" text-anchor="middle" font-size="11" font-weight="bold">Ultravioleta</text>
+            <text x="330" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="#d69e2e">LUZ VISÍVEL</text>
+            <text x="410" y="145" text-anchor="middle" font-size="10">Infravermelho</text>
+            <text x="490" y="130" text-anchor="middle" font-size="11" font-weight="bold">Micro-ondas</text>
+            <text x="710" y="130" text-anchor="middle" font-size="11" font-weight="bold">Ondas de Rádio</text>
+
+            <!-- Eixos -->
+            <text x="50" y="175" text-anchor="middle" font-size="12">↑ Maior Energia<br/>Maior Frequência</text>
+            <text x="850" y="175" text-anchor="middle" font-size="12">↓ Menor Energia<br/>Menor Frequência</text>
+            <text x="450" y="200" text-anchor="middle" font-size="13" font-weight="bold">← Comprimento de Onda Menor &nbsp;&nbsp;|&nbsp;&nbsp; Comprimento de Onda Maior →</text>
+            <text x="450" y="230" text-anchor="middle" font-size="12" fill="#2b6cb0">Todas viajam no vácuo a ≈ 300.000 km/s (velocidade da luz)</text>
+        </svg>
+    </div>
+
+    <h3>Ordem e aplicações (do menor para o maior comprimento de onda):</h3>
+    <ul style="margin-left:20px; margin-top:10px;">
+        <li><strong>Raios Gama:</strong> Maior energia e frequência. Usados em radioterapia e estudos nucleares.</li>
+        <li><strong>Raios X:</strong> Usados em exames de imagem (radiografias).</li>
+        <li><strong>Ultravioleta (UV):</strong> Radiação solar; pode causar efeitos na pele.</li>
+        <li><strong>Luz Visível:</strong> Única faixa percebida pelo olho humano — vermelho, laranja, amarelo, verde, azul, anil e violeta.</li>
+        <li><strong>Infravermelho (IV):</strong> Associado ao calor; usado em controles remotos e sensores térmicos.</li>
+        <li><strong>Micro-ondas:</strong> Comunicação e fornos de micro-ondas.</li>
+        <li><strong>Ondas de Rádio:</strong> Menor energia; rádio, TV, celulares e comunicação via satélite.</li>
+    </ul>
+
+    <div class="highlight">
+        <strong>Relações importantes:</strong><br>
+        ✅ Quanto <strong>maior a frequência</strong>, <strong>maior</strong> a energia da onda.<br>
+        ✅ Quanto <strong>maior o comprimento de onda</strong>, <strong>menores</strong> são a frequência e a energia.<br>
+        ✅ Todas viajam no vácuo com a mesma velocidade: ≈ 300 mil km/s.
+    </div>
+</section>
+
+<section class="card">
+    <h2>📐 Classificação das Ondas</h2>
+    <p>As ondas podem ser classificadas de diferentes formas, de acordo com sua natureza, direção de vibração e dimensão de propagação.</p>
+
+    <h3>1. Quanto à natureza</h3>
+    <ul>
+        <li><strong>Mecânicas:</strong> Precisam de meio material; não se propagam no vácuo. Ex.: som, ondas em corda, ondas na água.</li>
+        <li><strong>Eletromagnéticas:</strong> Não precisam de meio material; propagam-se no vácuo. Ex.: luz, ondas de rádio, raios X, micro-ondas.</li>
+    </ul>
+
+    <h3>2. Quanto à direção de vibração</h3>
+    <div class="comparacao">
+        <div class="card" style="border-top: 4px solid #e53e3e;">
+            <h4 style="text-align:center; color:#e53e3e; margin-bottom:10px;">Ondas Transversais</h4>
+            <p>A vibração ocorre <strong>perpendicularmente</strong> à direção de propagação.</p>
+            <p><em>Ex.: ondas em uma corda, ondas eletromagnéticas.</em></p>
+            <svg width="280" height="150" viewBox="0 0 280 150">
+                <text x="140" y="25" text-anchor="middle" font-size="14" font-weight="bold">Transversal</text>
+                <path d="M30,70 Q60,30 90,70 T150,70 T210,70 T250,70" stroke="#e53e3e" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <defs>
+                    <marker id="setaV" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#e53e3e"/>
+                    </marker>
+                    <marker id="setaH" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
+                    </marker>
+                </defs>
+                <line x1="70" y1="70" x2="70" y2="35" stroke="#e53e3e" stroke-width="2" marker-end="url(#setaV)"/>
+                <text x="82" y="55" fill="#e53e3e" font-size="11">vibração</text>
+                <line x1="90" y1="85" x2="240" y2="85" stroke="#2b6cb0" stroke-width="2" marker-end="url(#setaH)"/>
+                <text x="160" y="105" fill="#2b6cb0" font-size="11">propagação</text>
+            </svg>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #3182ce;">
+            <h4 style="text-align:center; color:#3182ce; margin-bottom:10px;">Ondas Longitudinais</h4>
+            <p>A vibração ocorre na <strong>mesma direção</strong> da propagação.</p>
+            <p><em>Ex.: ondas sonoras no ar.</em></p>
+            <svg width="280" height="150" viewBox="0 0 280 150">
+                <text x="140" y="25" text-anchor="middle" font-size="14" font-weight="bold">Longitudinal</text>
+                <g fill="#3182ce" stroke="#2b6cb0" stroke-width="1">
+                    <ellipse cx="45" cy="75" rx="12" ry="8"/><ellipse cx="65" cy="75" rx="12" ry="8"/><ellipse cx="85" cy="75" rx="12" ry="8"/>
+                    <ellipse cx="125" cy="75" rx="7" ry="8"/><ellipse cx="145" cy="75" rx="7" ry="8"/>
+                    <ellipse cx="185" cy="75" rx="12" ry="8"/><ellipse cx="205" cy="75" rx="12" ry="8"/><ellipse cx="225" cy="75" rx="12" ry="8"/>
+                    <ellipse cx="255" cy="75" rx="7" ry="8"/>
+                </g>
+                <line x1="30" y1="105" x2="250" y2="105" stroke="#2b6cb0" stroke-width="2" marker-end="url(#setaH)"/>
+                <text x="140" y="128" fill="#2b6cb0" font-size="11" text-anchor="middle">vibração = propagação</text>
+                <text x="65" y="55" font-size="10" fill="#333">comprensão</text>
+                <text x="205" y="55" font-size="10" fill="#333">comprensão</text>
+            </svg>
+        </div>
+    </div>
+
+  
+
+</body>
+</html>
+</p>
+    </section>
+
+    <!-- Aula 03 -->
+    <section id="aula-03">
+        <h2>Aula 03</h2>
+        <p>Conteúdo da Aula 03...</p>
+    </section>
+
+    <!-- Aula 04 -->
+    <section id="aula-04">
+        <h2>Aula 04</h2>
+        <p>Conteúdo da Aula 04...</p>
+    </section>
+
+    <!-- Aula 05 -->
+    <section id="aula-05">
+        <h2>Aula 05</h2>
+        <p>Conteúdo da Aula 05...</p>
+    </section>
+
+    <!-- Aula 06 -->
+    <section id="aula-06">
+        <h2>Aula 06</h2>
+        <p>Conteúdo da Aula 06...</p>
+    </section>
+
+    <!-- Aula 07 -->
+    <section id="aula-07">
+        <h2>Aula 07</h2>
+        <p>Conteúdo da Aula 07...</p>
+    </section>
+
+    <!-- Aula 08 -->
+    <section id="aula-08">
+        <h2>Aula 08</h2>
+        <p>Conteúdo da Aula 08...</p>
+    </section>
+
+    <!-- Aula 09 -->
+    <section id="aula-09">
+        <h2>Aula 09</h2>
+        <p>Conteúdo da Aula 09...</p>
+    </section>
+
+    <!-- Aula 10 -->
+    <section id="aula-10">
+        <h2>Aula 10</h2>
+        <p>Conteúdo da Aula 10...</p>
+    </section>
+
+    <!-- Aula 11 -->
+    <section id="aula-11">
+        <h2>Aula 11</h2>
+        <p>Conteúdo da Aula 11...</p>
+    </section>
+
+    <!-- Aula 12 -->
+    <section id="aula-12">
+        <h2>Aula 12</h2>
+        <p>Conteúdo da Aula 12...</p>
+    </section>
+
+    <!-- Aula 13 -->
+    <section id="aula-13">
+        <h2>Aula 13</h2>
+        <p>Conteúdo da Aula 13...</p>
+    </section>
+
+    <!-- Aula 14 -->
+    <section id="aula-14">
+        <h2>Aula 14</h2>
+        <p>Conteúdo da Aula 14...</p>
+    </section>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
