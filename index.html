@@ -1276,8 +1276,270 @@
         
         
         <div class="conteudo-aula" id="aula-4">
-            <h2>Aula 04</h2>
-            <p>Conteúdo da Aula 04...</p>
+            <h2>Aula 04: Resolvendo problemas com a equação fundamental da ondulatória</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 – Resolvendo problemas com a equação fundamental da ondulatória</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Calibri, sans-serif;
+        }
+        body {
+            background-color: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #2b6cb0;
+        }
+        h1 {
+            color: #2c5282;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #2b6cb0;
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+        }
+        .ilustracao {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+        }
+        th, td {
+            padding: 0.9rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #2b6cb0;
+            color: white;
+        }
+        tr:hover {
+            background-color: #ebf4ff;
+        }
+        .formula {
+            background-color: #edf2f7;
+            border-left: 4px solid #2b6cb0;
+            padding: 1.2rem;
+            margin: 1rem 0;
+            font-size: 1.15rem;
+            text-align: center;
+            border-radius: 0 8px 8px 0;
+        }
+        .exemplo, .resumo {
+            background-color: #fef5e7;
+            border-left: 4px solid #ed8936;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .resumo {
+            background-color: #f0fff4;
+            border-left-color: #38a169;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aula 04: Resolvendo problemas com a equação fundamental da ondulatória</h1>
+    <p>Compreendendo e aplicando as grandezas e fórmulas que descrevem as ondas</p>
+</header>
+
+<section>
+    <h2>📐 Grandezas físicas importantes na ondulatória</h2>
+    <p>Na ondulatória, estudamos as ondas e as grandezas que descrevem seu comportamento. As principais são:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Grandeza</th>
+                <th>Símbolo</th>
+                <th>Unidade</th>
+                <th>Significado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Amplitude</td>
+                <td>A</td>
+                <td>metro (m)</td>
+                <td>Máximo afastamento da onda em relação à posição de equilíbrio.</td>
+            </tr>
+            <tr>
+                <td>Comprimento de onda</td>
+                <td>λ (lambda)</td>
+                <td>metro (m)</td>
+                <td>Distância entre dois pontos consecutivos que estão em mesma fase, como duas cristas.</td>
+            </tr>
+            <tr>
+                <td>Frequência</td>
+                <td>f</td>
+                <td>hertz (Hz)</td>
+                <td>Número de oscilações realizadas por segundo.</td>
+            </tr>
+            <tr>
+                <td>Período</td>
+                <td>T</td>
+                <td>segundo (s)</td>
+                <td>Tempo necessário para realizar uma oscilação completa.</td>
+            </tr>
+            <tr>
+                <td>Velocidade de propagação</td>
+                <td>v</td>
+                <td>m/s</td>
+                <td>Velocidade com que a onda se desloca pelo meio.</td>
+            </tr>
+            <tr>
+                <td>Fase</td>
+                <td>φ (phi)</td>
+                <td>radianos (rad)</td>
+                <td>Indica o estado de oscilação de um ponto da onda.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="ilustracao">
+        <h3>Esquema de uma onda e suas grandezas</h3>
+        <svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Eixos -->
+            <line x1="50" y1="150" x2="750" y2="150" stroke="#333" stroke-width="2" />
+            <line x1="50" y1="30" x2="50" y2="270" stroke="#333" stroke-width="2" />
+            <text x="760" y="155" font-size="14" fill="#333">→ Distância (m)</text>
+            <text x="20" y="40" font-size="14" fill="#333">↑ Deslocamento (m)</text>
+            <text x="60" y="170" font-size="13" fill="#555">Posição de equilíbrio</text>
+
+            <!-- Curva da onda -->
+            <path d="M50,150 Q110,50 170,150 T290,150 T410,150 T530,150 T650,150 T770,150"
+                  stroke="#2b6cb0" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+            <!-- Amplitude -->
+            <line x1="110" y1="50" x2="110" y2="150" stroke="#e53e3e" stroke-width="2" stroke-dasharray="6,4"/>
+            <text x="115" y="105" font-size="16" fill="#e53e3e" font-weight="bold">A</text>
+            <text x="70" y="55" font-size="12" fill="#e53e3e">Crista</text>
+
+            <!-- Comprimento de onda λ -->
+            <line x1="170" y1="180" x2="410" y2="180" stroke="#38a169" stroke-width="3"/>
+            <line x1="170" y1="173" x2="170" y2="187" stroke="#38a169" stroke-width="3"/>
+            <line x1="410" y1="173" x2="410" y2="187" stroke="#38a169" stroke-width="3"/>
+            <text x="270" y="205" font-size="18" fill="#38a169" font-weight="bold">λ</text>
+            <text x="175" y="240" font-size="12" fill="#38a169">Dois pontos em mesma fase</text>
+
+            <!-- Vale -->
+            <text x="230" y="250" font-size="12" fill="#744210">Vale</text>
+        </svg>
+    </div>
+</section>
+
+<section>
+    <h2>📝 Fórmulas principais</h2>
+
+    <div class="formula">
+        <strong>Relação entre frequência e período:</strong><br>
+        f = 1/T &nbsp;&nbsp;&nbsp; e &nbsp;&nbsp;&nbsp; T = 1/f
+    </div>
+
+    <div class="formula">
+        <strong>Equação fundamental da ondulatória (velocidade da onda):</strong><br>
+        v = λ · f
+    </div>
+
+    <div class="formula">
+        <strong>Como f = 1/T, também podemos escrever:</strong><br>
+        v = λ / T
+    </div>
+
+    <div class="ilustracao">
+        <h3>Relações entre as grandezas</h3>
+        <svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Caixas -->
+            <rect x="30" y="70" width="100" height="60" rx="10" fill="#ebf4ff" stroke="#2b6cb0" stroke-width="3"/>
+            <text x="60" y="105" font-size="18" fill="#2b6cb0" text-anchor="middle" font-weight="bold">λ</text>
+            <text x="55" y="125" font-size="11" fill="#444">Comprimento</text>
+
+            <text x="145" y="110" font-size="24" fill="#333">×</text>
+
+            <rect x="170" y="70" width="100" height="60" rx="10" fill="#ebf4ff" stroke="#ed8936" stroke-width="3"/>
+            <text x="200" y="105" font-size="18" fill="#ed8936" text-anchor="middle" font-weight="bold">f</text>
+            <text x="195" y="125" font-size="11" fill="#444">Frequência</text>
+
+            <text x="295" y="110" font-size="24" fill="#333">=</text>
+
+            <rect x="320" y="70" width="100" height="60" rx="10" fill="#ebf4ff" stroke="#38a169" stroke-width="3"/>
+            <text x="350" y="105" font-size="18" fill="#38a169" text-anchor="middle" font-weight="bold">v</text>
+            <text x="340" y="125" font-size="11" fill="#444">Velocidade</text>
+
+            <!-- Setas para T -->
+            <path d="M220,135 L220,165 L100,165 L100,135" stroke="#777" stroke-width="2" fill="none" marker-end="url(#seta)"/>
+            <text x="140" y="185" font-size="16" fill="#777">T = 1/f</text>
+
+            <defs>
+                <marker id="seta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#777" />
+                </marker>
+            </defs>
+        </svg>
+    </div>
+</section>
+
+<section>
+    <h2>✅ Exemplo resolvido</h2>
+    <div class="exemplo">
+        <p><strong>Problema:</strong> Se uma onda possui comprimento de onda de 2 m e frequência de 5 Hz, qual é sua velocidade de propagação?</p>
+        <br>
+        <p><strong>Dados:</strong> λ = 2 m &nbsp;&nbsp;|&nbsp;&nbsp; f = 5 Hz</p>
+        <p><strong>Aplicação:</strong> v = λ · f = 2 · 5 = <strong>10 m/s</strong></p>
+        <br>
+        <p>Se quiséssemos o período: T = 1/f = 1/5 = <strong>0,2 s</strong></p>
+    </div>
+</section>
+
+<section>
+    <h2>📌 Resumo rápido</h2>
+    <div class="resumo">
+        <ul style="margin-left: 1.2rem;">
+            <li><strong>Amplitude (A)</strong> → tamanho da oscilação</li>
+            <li><strong>Comprimento de onda (λ)</strong> → distância entre ciclos consecutivos</li>
+            <li><strong>Frequência (f)</strong> → número de ciclos por segundo</li>
+            <li><strong>Período (T)</strong> → tempo de duração de um ciclo completo</li>
+            <li><strong>Velocidade (v)</strong> → velocidade com que a onda se propaga</li>
+        </ul>
+    </div>
+</section>
+
+</body>
+</html> 
+</p>
         </div>
         <div class="conteudo-aula" id="aula-5">
             <h2>Aula 05</h2>
