@@ -3,31 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Física 2º EM</title>
-</head>
-<body>
-    <h1>Física 2º EM</h1>
-    <p>3º Bimestre - 2026</p>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aulas - Conteúdo</title>
     <style>
         * {
@@ -50,11 +25,10 @@
             margin-bottom: 2.5rem;
         }
 
-        .lista-aulas {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 1rem;
-            margin-bottom: 3rem;
+        .item-aula {
+            margin-bottom: 1.2rem;
+            display: flex;
+            flex-direction: column;
         }
 
         .botao-aula {
@@ -67,6 +41,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             text-align: center;
+            width: 100%;
         }
 
         .botao-aula:hover {
@@ -83,15 +58,15 @@
         .conteudo-aula {
             background-color: white;
             padding: 2rem;
-            border-radius: 12px;
+            border-radius: 0 0 12px 12px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            min-height: 200px;
+            margin-top: -4px;
             display: none;
+            animation: aparece 0.4s ease;
         }
 
         .conteudo-aula.visivel {
             display: block;
-            animation: aparece 0.4s ease;
         }
 
         .conteudo-aula h2 {
@@ -101,133 +76,75 @@
             padding-bottom: 0.5rem;
         }
 
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .botao-nav {
+            padding: 0.7rem 1.1rem;
+            background-color: #744210;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .botao-nav:hover {
+            background-color: #5a350e;
+            transform: translateY(-2px);
+        }
+
+        .botao-nav:disabled {
+            background-color: #cbd5e0;
+            cursor: not-allowed;
+            transform: none;
+            opacity: 0.7;
+        }
+
+        .atalhos {
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: #718096;
+            text-align: center;
+            width: 100%;
+        }
+
         @keyframes aparece {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        @media (max-width: 600px) {
+            .navegacao {
+                flex-direction: column;
+            }
+            .botao-nav {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <h1>📚 Lista de Aulas</h1>
+    <h1>📚 3º Bimestre - Física 2º EM</h1>
 
-    <!-- Lista dos botões das aulas -->
-    <div class="lista-aulas">
+    <!-- Aula 01 -->
+    <div class="item-aula">
         <button class="botao-aula" data-aula="1">Aula 01</button>
-        <button class="botao-aula" data-aula="2">Aula 02</button>
-        <button class="botao-aula" data-aula="3">Aula 03</button>
-        <button class="botao-aula" data-aula="4">Aula 04</button>
-        <button class="botao-aula" data-aula="5">Aula 05</button>
-        <button class="botao-aula" data-aula="6">Aula 06</button>
-        <button class="botao-aula" data-aula="7">Aula 07</button>
-        <button class="botao-aula" data-aula="8">Aula 08</button>
-        <button class="botao-aula" data-aula="9">Aula 09</button>
-        <button class="botao-aula" data-aula="10">Aula 10</button>
-        <button class="botao-aula" data-aula="11">Aula 11</button>
-        <button class="botao-aula" data-aula="12">Aula 12</button>
-        <button class="botao-aula" data-aula="13">Aula 13</button>
-        <button class="botao-aula" data-aula="14">Aula 14</button>
-    </div>
-
-    <!-- Área onde o conteúdo será exibido -->
-    <div id="conteudo-exibicao">
         <div class="conteudo-aula" id="aula-1">
-            <h2>Aula 01: Som e luz - exemplos para entender ondas</h2>
-            <p><!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 01: Som e Luz — Exemplos para Entender Ondas</title>
-    <style>
-        :root {
-            --cor-primaria: #2563eb;
-            --cor-secundaria: #1e40af;
-            --cor-destaque: #f97316;
-            --cor-fundo: #f0f7ff;
-            --cor-texto: #1f2937;
-            --cor-caixa: #ffffff;
-            --cor-borda: #bfdbfe;
-            --sombra: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
-            line-height: 1.7;
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        header {
-            background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
-            color: white;
-            padding: 32px;
-            border-radius: 16px;
-            margin-bottom: 32px;
-            box-shadow: var(--sombra);
-        }
-        h1 { font-size: 1.8rem; margin-bottom: 8px; }
-        h2 {
-            color: var(--cor-secundaria);
-            border-left: 5px solid var(--cor-destaque);
-            padding-left: 12px;
-            margin: 32px 0 16px;
-            font-size: 1.3rem;
-        }
-        h3 { color: var(--cor-primaria); margin: 20px 0 10px; font-size: 1.1rem; }
-        .caixa-conteudo {
-            background: var(--cor-caixa);
-            padding: 24px;
-            border-radius: 12px;
-            margin-bottom: 24px;
-            box-shadow: var(--sombra);
-            border: 1px solid var(--cor-borda);
-        }
-        .ilustracao {
-            display: flex;
-            justify-content: center;
-            margin: 16px 0;
-        }
-        svg { max-width: 100%; height: auto; }
-        ul { margin: 12px 0 12px 28px; }
-        li { margin-bottom: 8px; }
-        .destaque {
-            background-color: #fff7ed;
-            border-left: 4px solid var(--cor-destaque);
-            padding: 14px;
-            border-radius: 0 8px 8px 0;
-            margin: 16px 0;
-        }
-        .comparar {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin: 16px 0;
-        }
-        .coluna {
-            background: #eff6ff;
-            padding: 16px;
-            border-radius: 10px;
-            border: 1px solid #bfdbfe;
-        }
-        .espectro {
-            margin: 20px 0;
-            padding: 16px;
-            background: #f8fafc;
-            border-radius: 10px;
-        }
-        @media (max-width: 700px) {
-            .comparar { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
+            <h2>Aula 01: Som e Luz: Exemplos para entender ondas</h2>
 
-<header>
-    <h1>Aula 01: Som e Luz</h1>
-    <p>Exemplos para entender ondas — pulsos, ondas, tipos e espectro eletromagnético</p>
+     
+
+          
 </header>
 
 <section class="caixa-conteudo">
@@ -517,28 +434,36 @@
 
 </body>
 </html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="1" disabled>⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="1">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="1">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
 
 
 
 
 
-
-
-
-
-
-        
+  
+    <!-- Aula 02 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="2">Aula 02</button>
         <div class="conteudo-aula" id="aula-2">
-            <h2>Aula 02: Ondas na prática: reconhecendo tipos e características 
-</h2>
+            <h2>Aula 02: Ondas na prática: reconhecendo tipos e características</h2>
             <p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 02: Ondas na Prática — Tipos e Características</title>
-    <style>
+
+     <title>Aula 02: Ondas na Prática — Tipos e Características</title> 
+
+  
+  
+  <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -574,7 +499,6 @@
 <body>
 
 <header>
-    <h1>📚 Aula 02 — Ondas na Prática</h1>
     <p>Reconhecendo tipos e características das ondas</p>
 </header>
 
@@ -969,118 +893,34 @@
 </html>
     
 </p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="2">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="2">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="2">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
 
 
 
-     <!-- Repita o padrão para as demais aulas -->
+
+
+
+  
+    <!-- Aula 03 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="3">Aula 03</button>
         <div class="conteudo-aula" id="aula-3">
             <h2>Aula 03: A equação da onda e as relações entre suas grandezas</h2>
-            <p><!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 03: A equação da onda e as relações entre suas grandezas</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-        body {
-            background-color: #f0f4f8;
-            color: #2d3748;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        header {
-            background: linear-gradient(135deg, #2b6cb0, #2c5282);
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        h1 { font-size: 1.8rem; margin-bottom: 10px; }
-        h2 { font-size: 1.4rem; color: #2b6cb0; margin: 25px 0 15px; border-left: 4px solid #2b6cb0; padding-left: 10px; }
-        h3 { font-size: 1.1rem; color: #2d3748; margin: 15px 0 10px; }
-        .section {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        .sim-link {
-            display: inline-block;
-            background-color: #48bb78;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 12px 0;
-            transition: background 0.3s;
-        }
-        .sim-link:hover { background-color: #38a169; }
-        .instructions {
-            background-color: #ebf8ff;
-            border-left: 4px solid #3182ce;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 6px 6px 0;
-        }
-        .instructions ol, .instructions ul { margin-left: 25px; margin-top: 8px; }
-        .instructions li { margin-bottom: 6px; }
-        .concept-box {
-            background-color: #f7fafc;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 18px;
-            margin: 15px 0;
-        }
-        .formula {
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-align: center;
-            padding: 12px;
-            background-color: #fef5e7;
-            border-radius: 6px;
-            margin: 12px 0;
-            color: #b7791f;
-        }
-        .svg-container {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .wave-svg {
-            background-color: #fafafa;
-            border-radius: 8px;
-            padding: 10px;
-            border: 1px solid #e2e8f0;
-        }
-        .question {
-            background-color: #fffaf0;
-            border-left: 4px solid #ed8936;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 0 6px 6px 0;
-            font-weight: 500;
-        }
-        hr { border: none; border-top: 1px dashed #cbd5e0; margin: 25px 0; }
-    </style>
-</head>
-<body>
 
 <header>
-    <h1>Aula 03: A equação da onda e as relações entre suas grandezas</h1>
+   
     <p>Compreendendo as propriedades das ondas com simulação interativa</p>
 </header>
+
+          
+    
 
 <div class="section">
     <h2>🔬 Simulação Interativa</h2>
@@ -1265,16 +1105,24 @@
 
 </body>
 </html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="3">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="3">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="3">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    </div>
+
+
+
+
+
+
+  
+    <!-- Aula 04 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="4">Aula 04</button>
         <div class="conteudo-aula" id="aula-4">
             <h2>Aula 04: Resolvendo problemas com a equação fundamental da ondulatória</h2>
             <p><!DOCTYPE html>
@@ -1282,7 +1130,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 04 – Resolvendo problemas com a equação fundamental da ondulatória</title>
+   <title>Aula 04 – Resolvendo problemas com a equação fundamental da ondulatória</title> 
     <style>
         * {
             margin: 0;
@@ -1372,7 +1220,7 @@
 <body>
 
 <header>
-    <h1>Aula 04: Resolvendo problemas com a equação fundamental da ondulatória</h1>
+   
     <p>Compreendendo e aplicando as grandezas e fórmulas que descrevem as ondas</p>
 </header>
 
@@ -1538,9 +1386,24 @@
 </section>
 
 </body>
-</html> 
-</p>
+</html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="4">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="4">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="4">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+
+
+
+
+  
+    <!-- Aula 05 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="5">Aula 05</button>
         <div class="conteudo-aula" id="aula-5">
             <h2>Aula 05: Quando as ondas se encontram: interferência e reflexão</h2>
             <p><!DOCTYPE html>
@@ -1644,7 +1507,6 @@
 <body>
 
 <header>
-    <h1>Aula 05: Quando as ondas se encontram</h1>
     <p style="font-style: italic; opacity: 0.9;">Interferência e Reflexão</p>
 </header>
 
@@ -1875,14 +1737,24 @@
 
 </body>
 </html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="5">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="5">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="5">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
 
 
 
 
-    
+  
+    <!-- Aula 06 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="6">Aula 06</button>
         <div class="conteudo-aula" id="aula-6">
-            <h2>Aula 06: Exercícios sobre interferência e reflexão de ondas </h2>
+            <h2>Aula 06: Exercícios sobre interferência e reflexão de ondas</h2>
             <p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1970,7 +1842,7 @@
 </head>
 <body>
 
-    <h1>Aula 06: Exercícios sobre Interferência e Reflexão de Ondas</h1>
+    
 
     <div class="conteudo">
         <h2>Interferência</h2>
@@ -2119,65 +1991,222 @@
 
 </body>
 </html></p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="6">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="6">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="6">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
 
 
 
 
-    
-        <div class="conteudo-aula" id="aula-7">
+  
+    <!-- Aula 07 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="8">Aula 07</button>
+        <div class="conteudo-aula" id="aula-8">
             <h2>Aula 07</h2>
             <p>Conteúdo da Aula 07...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="8">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="8">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="8">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+
+
+
+
+  
+
+
+
+  
+    <!-- Aula 08 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="8">Aula 08</button>
         <div class="conteudo-aula" id="aula-8">
             <h2>Aula 08</h2>
             <p>Conteúdo da Aula 08...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="8">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="8">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="8">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Aula 09 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="9">Aula 09</button>
         <div class="conteudo-aula" id="aula-9">
             <h2>Aula 09</h2>
             <p>Conteúdo da Aula 09...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="9">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="9">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="9">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Aula 10 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="10">Aula 10</button>
         <div class="conteudo-aula" id="aula-10">
             <h2>Aula 10</h2>
             <p>Conteúdo da Aula 10...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="10">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="10">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="10">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Aula 11 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="11">Aula 11</button>
         <div class="conteudo-aula" id="aula-11">
             <h2>Aula 11</h2>
             <p>Conteúdo da Aula 11...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="11">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="11">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="11">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Aula 12 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="12">Aula 12</button>
         <div class="conteudo-aula" id="aula-12">
             <h2>Aula 12</h2>
             <p>Conteúdo da Aula 12...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="12">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="12">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="12">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Aula 13 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="13">Aula 13</button>
         <div class="conteudo-aula" id="aula-13">
             <h2>Aula 13</h2>
             <p>Conteúdo da Aula 13...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="13">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="13">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="13">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
+    </div>
+
+    <!-- Aula 14 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="14">Aula 14 — Conclusão</button>
         <div class="conteudo-aula" id="aula-14">
             <h2>Aula 14 — Conclusão</h2>
             <p>Conteúdo da última aula. Coloque aqui resumos, avaliações finais e materiais complementares.</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="14">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="14">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="14" disabled>Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
         </div>
     </div>
 
 <script>
-    // Seleciona todos os botões e conteúdos
     const botoes = document.querySelectorAll('.botao-aula');
     const conteudos = document.querySelectorAll('.conteudo-aula');
+    const totalAulas = botoes.length;
+    let aulaAtual = null;
 
-    // Adiciona o clique em cada botão
+    // Exibe uma aula e fecha as demais
+    function exibirAula(numero) {
+        // Fecha todas as aulas
+        botoes.forEach(btn => btn.classList.remove('ativa'));
+        conteudos.forEach(ctd => ctd.classList.remove('visivel'));
+
+        // Abre a aula selecionada
+        aulaAtual = numero;
+        document.querySelector(`.botao-aula[data-aula="${numero}"]`).classList.add('ativa');
+        const conteudo = document.getElementById(`aula-${numero}`);
+        conteudo.classList.add('visivel');
+
+        // Rola suavemente até o conteúdo
+        conteudo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        atualizarEstadoBotoes();
+    }
+
+    // Ativa/desativa botões de navegação conforme a aula atual
+    function atualizarEstadoBotoes() {
+        document.querySelectorAll('.btn-anterior').forEach(btn => btn.disabled = (aulaAtual <= 1));
+        document.querySelectorAll('.btn-proximo').forEach(btn => btn.disabled = (aulaAtual >= totalAulas));
+    }
+
+    // Volta ao início (fecha todas as aulas e sobe ao topo)
+    function voltarInicio() {
+        aulaAtual = null;
+        botoes.forEach(btn => btn.classList.remove('ativa'));
+        conteudos.forEach(ctd => ctd.classList.remove('visivel'));
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Clique nos botões das aulas
     botoes.forEach(botao => {
         botao.addEventListener('click', () => {
-            // Remove destaque de todos os botões e esconde todos os conteúdos
-            botoes.forEach(btn => btn.classList.remove('ativa'));
-            conteudos.forEach(ctd => ctd.classList.remove('visivel'));
-
-            // Pega o número da aula clicada
-            const numeroAula = botao.getAttribute('data-aula');
-            
-            // Adiciona destaque ao botão clicado e mostra o conteúdo correspondente
-            botao.classList.add('ativa');
-            document.getElementById(`aula-${numeroAula}`).classList.add('visivel');
+            exibirAula(parseInt(botao.dataset.aula));
         });
+    });
+
+    // Navegação pelos botões dentro do conteúdo
+    document.addEventListener('click', e => {
+        if (e.target.classList.contains('btn-proximo') && aulaAtual < totalAulas) {
+            exibirAula(aulaAtual + 1);
+        }
+        if (e.target.classList.contains('btn-anterior') && aulaAtual > 1) {
+            exibirAula(aulaAtual - 1);
+        }
+        if (e.target.classList.contains('btn-inicio')) {
+            voltarInicio();
+        }
+    });
+
+    // Navegação pelo TECLADO
+    document.addEventListener('keydown', e => {
+        if (!aulaAtual) return;
+
+        if (e.key === 'ArrowLeft' && aulaAtual > 1) {
+            e.preventDefault();
+            exibirAula(aulaAtual - 1);
+        }
+        else if (e.key === 'ArrowRight' && aulaAtual < totalAulas) {
+            e.preventDefault();
+            exibirAula(aulaAtual + 1);
+        }
+        else if (e.key === 'Escape') {
+            e.preventDefault();
+            voltarInicio();
+        }
     });
 </script>
 
@@ -2191,16 +2220,10 @@
 
 
 
-
-
-
-
-
-
 </main>
 
 <footer>
-    Prof.Valter@2026
+     Prof.Valter@2026
 </footer>
 
 </body>
