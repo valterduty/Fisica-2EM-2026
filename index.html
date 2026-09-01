@@ -2712,10 +2712,481 @@
   
     <!-- Aula 09 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="9">Aula 09</button>
+        <button class="botao-aula" data-aula="9">Aula 09: Altura, timbre e intensidade: a identidade das ondas sonoras</button>
         <div class="conteudo-aula" id="aula-9">
-            <h2>Aula 09</h2>
-            <p>Conteúdo da Aula 09...</p>
+            <h2>Aula 09: Altura, timbre e intensidade: a identidade das ondas sonoras</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 09: Altura, Timbre e Intensidade — As Qualidades do Som</title>
+    <style>
+        /* Estilos gerais e responsivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2b6cb0;
+            margin: 28px 0 16px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            color: #2f855a;
+            margin: 20px 0 10px;
+            font-size: 1.15rem;
+        }
+
+        .introducao {
+            background-color: #ebf8ff;
+            border-left: 5px solid #3182ce;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        /* Ilustrações SVG embutidas */
+        .ilustracao {
+            text-align: center;
+            margin: 22px 0;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            background: white;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        /* Caixas de destaque e tabelas */
+        .destaque {
+            background-color: #fef5e7;
+            border-left: 5px solid #ed8936;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #2b6cb0;
+            color: white;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #f7fafc;
+        }
+
+        /* Questões interativas */
+        .questao {
+            background-color: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: border-color 0.3s;
+        }
+
+        .questao:hover {
+            border-color: #cbd5e0;
+        }
+
+        .alternativa {
+            padding: 12px 15px;
+            margin: 8px 0;
+            background-color: #f7fafc;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .alternativa:hover {
+            background-color: #edf2f7;
+            border-left-color: #a0aec0;
+        }
+
+        .feedback {
+            margin-top: 12px;
+            padding: 14px;
+            border-radius: 6px;
+            display: none;
+            animation: aparece 0.3s ease-out;
+        }
+
+        .correto {
+            background-color: #f0fff4;
+            border-left: 5px solid #48bb78;
+            color: #22543d;
+        }
+
+        .errado {
+            background-color: #fff5f5;
+            border-left: 5px solid #fc8181;
+            color: #742a2a;
+        }
+
+        @keyframes aparece {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Resumo final */
+        .resumo {
+            background-color: #faf5ff;
+            border-left: 5px solid #9f7aea;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 15px;
+            color: #718096;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.4rem; }
+            h2 { font-size: 1.2rem; }
+            header { padding: 20px; }
+            table { font-size: 0.9rem; }
+            th, td { padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🔊 Aula 09: Altura, Timbre e Intensidade</h1>
+    <p>As qualidades fisiológicas do som — o que permite reconhecer e diferenciar os sons</p>
+</header>
+
+<section class="introducao">
+    <p><strong>Você sabia?</strong> Em uma orquestra sinfônica, é possível distinguir o som dos vários instrumentos mesmo quando eles tocam a mesma nota musical. Você saberia dizer o que permite fazer essa diferenciação?</p>
+    <p>O que permite diferenciar os instrumentos, mesmo quando tocam a mesma nota, é o <strong>timbre</strong>. Ele é a característica do som que permite distinguir, por exemplo, um violino de um piano ou de uma flauta.</p>
+</section>
+
+<!-- Ilustração 1: Comparação de ondas com mesma frequência, mas formato diferente (timbre) -->
+<div class="ilustracao">
+    <svg width="620" height="200" viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="610" height="190" fill="#f7fafc" rx="8"/>
+        <text x="310" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2d3748">Mesma frequência, timbres diferentes</text>
+        
+        <!-- Onda senoidal simples -->
+        <path d="M40,80 Q60,60 80,80 T120,80 T160,80 T200,80 T240,80 T280,80 T320,80 T360,80 T400,80 T440,80 T480,80 T520,80 T560,80" 
+              stroke="#2b6cb0" stroke-width="3" fill="none"/>
+        <text x="300" y="55" text-anchor="middle" font-size="13" fill="#2b6cb0">Onda simples (ex: diapasão)</text>
+
+        <!-- Onda com harmônicos → formato diferente = timbre diferente -->
+        <path d="M40,140 C55,110 65,160 80,140 C95,110 105,160 120,140 C135,110 145,160 160,140 C175,110 185,160 200,140 C215,110 225,160 240,140 C255,110 265,160 280,140 C295,110 305,160 320,140 C335,110 345,160 360,140 C375,110 385,160 400,140 C415,110 425,160 440,140 C455,110 465,160 480,140 C495,110 505,160 520,140 C535,110 545,160 560,140" 
+              stroke="#ed8936" stroke-width="3" fill="none"/>
+        <text x="300" y="175" text-anchor="middle" font-size="13" fill="#ed8936">Onda com harmônicos (ex: instrumento musical)</text>
+    </svg>
+</div>
+
+<section>
+    <h2>🎤 Altura das vozes</h2>
+    <p>Na apresentação de uma ópera, há vozes com características diferentes. A diferença entre tenores e sopranos está principalmente na <strong>altura (frequência)</strong> das vozes:</p>
+    <ul style="margin-left: 25px; margin-top: 10px;">
+        <li><strong>Tenores:</strong> vozes masculinas agudas.</li>
+        <li><strong>Sopranos:</strong> vozes femininas mais agudas — geralmente alcançam notas de frequência mais alta que os tenores.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>📚 Conceitos de Acústica</h2>
+    <p>A acústica é a área da Física que estuda os sons. As ondas sonoras possuem características importantes:</p>
+    <ul style="margin-left: 25px; margin-top: 10px;">
+        <li><strong>São ondas mecânicas:</strong> precisam de um meio material (ar, água, sólidos) para se propagarem. Por isso, o som <strong>não se propaga no vácuo</strong>.</li>
+        <li><strong>São ondas longitudinais:</strong> as partículas vibram na mesma direção em que a onda se propaga, formando regiões de compressão e rarefação.</li>
+    </ul>
+    <div class="destaque">
+        <strong>Resumo:</strong> Som → onda mecânica + longitudinal → precisa de meio material para se propagar.
+    </div>
+</section>
+
+<!-- Ilustração 2: Propagação da onda sonora -->
+<div class="ilustracao">
+    <svg width="620" height="190" viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="610" height="180" fill="#f7fafc" rx="8"/>
+        <text x="310" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2d3748">Onda sonora — propagação longitudinal</text>
+        
+        <!-- Fonte -->
+        <rect x="20" y="80" width="40" height="40" fill="#e53e3e" rx="4"/>
+        <text x="40" y="105" text-anchor="middle" font-size="11" fill="white" font-weight="bold">FONTE</text>
+        
+        <!-- Regiões de compressão e rarefação -->
+        <g fill="#4299e1">
+            <ellipse cx="110" cy="100" rx="28" ry="22" opacity="0.95"/>
+            <ellipse cx="170" cy="100" rx="22" ry="16" opacity="0.7"/>
+            <ellipse cx="225" cy="100" rx="28" ry="22" opacity="0.95"/>
+            <ellipse cx="285" cy="100" rx="22" ry="16" opacity="0.7"/>
+            <ellipse cx="340" cy="100" rx="28" ry="22" opacity="0.95"/>
+            <ellipse cx="400" cy="100" rx="22" ry="16" opacity="0.7"/>
+            <ellipse cx="455" cy="100" rx="28" ry="22" opacity="0.95"/>
+            <ellipse cx="515" cy="100" rx="22" ry="16" opacity="0.7"/>
+        </g>
+        
+        <!-- Setas e legendas -->
+        <path d="M80,60 L130,60" stroke="#2d3748" stroke-width="2" marker-end="url(#seta)"/>
+        <text x="105" y="52" text-anchor="middle" font-size="11" fill="#2d3748">Compressão</text>
+        <path d="M145,60 L195,60" stroke="#718096" stroke-width="2" marker-end="url(#seta)"/>
+        <text x="170" y="52" text-anchor="middle" font-size="11" fill="#718096">Rarefação</text>
+        <path d="M60,150 L570,150" stroke="#2b6cb0" stroke-width="2" marker-end="url(#seta)"/>
+        <text x="315" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b6cb0">Direção de propagação</text>
+        
+        <defs>
+            <marker id="seta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#2d3748"/>
+            </marker>
+        </defs>
+    </svg>
+</div>
+
+<section>
+    <h2>🎧 Faixas de frequência audível</h2>
+    <p>A frequência determina se o som pode ser ouvido por humanos:</p>
+    <table>
+        <tr>
+            <th>Faixa de frequência</th>
+            <th>Nome</th>
+            <th>É audível para humanos?</th>
+        </tr>
+        <tr>
+            <td>Abaixo de 20 Hz</td>
+            <td>Infrassom</td>
+            <td>❌ Não</td>
+        </tr>
+        <tr>
+            <td>de 20 Hz a 20.000 Hz</td>
+            <td>Som audível</td>
+            <td>✅ Sim</td>
+        </tr>
+        <tr>
+            <td>Acima de 20.000 Hz</td>
+            <td>Ultrassom</td>
+            <td>❌ Não</td>
+        </tr>
+    </table>
+    <div class="destaque">
+        <strong>Para memorizar:</strong> Infra = abaixo de 20 Hz — Audível = 20 a 20.000 Hz — Ultra = acima de 20.000 Hz.<br>
+        ⚠️ Esses valores são referências gerais; variam com a idade e por pessoa.
+    </div>
+
+    <h3>Comparação com outros animais</h3>
+    <ul style="margin-left: 25px;">
+        <li>Humanos: aproximadamente 20 Hz a 20.000 Hz (20 kHz).</li>
+        <li>Morcegos e golfinhos: conseguem ouvir acima de 100 kHz → ultrassom.</li>
+        <li>Algumas baleias: conseguem ouvir perto de 10 Hz → infrassom.</li>
+    </ul>
+    <p style="margin-top: 10px;"><em>O que é inaudível para nós pode ser perfeitamente perceptível para outras espécies!</em></p>
+</section>
+
+<section>
+    <h2>📌 Altura do som</h2>
+    <p>A altura é a qualidade que nos permite perceber se um som é <strong>grave</strong> ou <strong>agudo</strong>. Ela depende da <strong>frequência</strong> da onda sonora:</p>
+    <ul style="margin-left: 25px; margin-top: 10px;">
+        <li>🔊 Maior frequência → som mais agudo ("fino" ou "alto").</li>
+        <li>🔉 Menor frequência → som mais grave ("grosso" ou "baixo").</li>
+    </ul>
+    <p style="margin-top: 10px;">Exemplo: um som de 100 Hz é mais grave que um som de 1.000 Hz.</p>
+    <div class="destaque">
+        <strong>Não confunda:</strong><br>
+        <strong>Alto/baixo</strong> → refere-se à altura → depende da frequência.<br>
+        <strong>Forte/fraco</strong> → refere-se à intensidade → depende da amplitude.<br>
+        Um som pode ser agudo e fraco ao mesmo tempo! São características independentes.
+    </div>
+</section>
+
+<section>
+    <h2>📊 Intensidade sonora</h2>
+    <p>A intensidade está relacionada à <strong>amplitude</strong> da onda e à energia sonora que chega ao ouvinte:</p>
+    <ul style="margin-left: 25px; margin-top: 10px;">
+        <li>Maior amplitude → maior intensidade → som mais forte.</li>
+        <li>Menor amplitude → menor intensidade → som mais fraco.</li>
+    </ul>
+    <p style="margin-top: 10px;">No Sistema Internacional (SI), a unidade de intensidade sonora é o <strong>watt por metro quadrado (W/m²)</strong>.</p>
+</section>
+
+<section>
+    <h2>🎵 Timbre</h2>
+    <p>O timbre é a qualidade que permite <strong>identificar a fonte sonora</strong>. Mesmo que dois instrumentos produzam a <strong>mesma nota (mesma frequência)</strong> com o <strong>mesmo volume (mesma amplitude)</strong>, conseguimos distinguir quem é quem por causa do <strong>timbre</strong>.</p>
+    <p style="margin-top: 10px;">Exemplo: uma mesma nota tocada em um violão e em um saxofone terá a mesma altura, mas soará diferente. É o timbre que dá a "assinatura sonora" de cada fonte.</p>
+</section>
+
+<section class="resumo">
+    <h2>📋 Resumo das três qualidades do som</h2>
+    <table>
+        <tr>
+            <th>Qualidade</th>
+            <th>Depende principalmente de</th>
+            <th>O que percebemos</th>
+        </tr>
+        <tr>
+            <td><strong>Altura</strong></td>
+            <td>Frequência</td>
+            <td>Som grave ou agudo</td>
+        </tr>
+        <tr>
+            <td><strong>Intensidade</strong></td>
+            <td>Amplitude</td>
+            <td>Som forte ou fraco</td>
+        </tr>
+        <tr>
+            <td><strong>Timbre</strong></td>
+            <td>Forma/espectro da onda</td>
+            <td>Identifica a fonte sonora</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>✍️ Atividades</h2>
+
+    <!-- ATIVIDADE 1 — PUC-PR 2013 — CORRIGIDA CONFORME GABARITO DO DOCUMENTO -->
+    <div class="questao">
+        <p><strong>Questão 1.</strong> (PUC-PR 2013) A respeito das qualidades fisiológicas do som, são feitas algumas afirmações. Assinale a alternativa que indica as afirmações verdadeiras.</p>
+        <ol style="margin-left: 22px; margin-bottom: 12px;">
+            <li>I — A percepção de um som mais grave ou mais agudo está associada à frequência da onda sonora produzida.</li>
+            <li>II — Todos os animais têm a "faixa audível" das ondas sonoras na mesma frequência, que é entre 20 Hz e 20.000 Hz, aproximadamente.</li>
+            <li>III — Dois instrumentos diferentes podem produzir ondas sonoras com a mesma frequência, mas nunca com a mesma intensidade sonora.</li>
+            <li>IV — A qualidade fisiológica que nos possibilita diferenciar a voz de duas pessoas sem vê-las é o timbre.</li>
+            <li>V — As ondas sonoras podem ser difratadas.</li>
+        </ol>
+        
+        <div class="alternativa" onclick="mostrarResposta(this, 'errado')">A) II, III e IV.</div>
+        <div class="alternativa" onclick="mostrarResposta(this, 'correto')">B) I, IV e V.</div>
+        <div class="alternativa" onclick="mostrarResposta(this, 'errado')">C) II e III.</div>
+        <div class="alternativa" onclick="mostrarResposta(this, 'errado')">D) III, IV e V.</div>
+        <div class="alternativa" onclick="mostrarResposta(this, 'errado')">E) I, III e V.</div>
+        
+        <div class="feedback correto">
+            ✅ <strong>Resposta correta: B) I, IV e V.</strong><br>
+            ✅ <strong>I — Correta:</strong> a percepção de som grave ou agudo está associada à frequência.<br>
+            ❌ <strong>II — Incorreta:</strong> a faixa de frequências audíveis varia entre os animais.<br>
+            ❌ <strong>III — Incorreta:</strong> instrumentos diferentes podem produzir sons com a mesma frequência e também com a mesma intensidade.<br>
+            ✅ <strong>IV — Correta:</strong> o timbre funciona como uma "assinatura sonora" e permite diferenciar vozes.<br>
+            ✅ <strong>V — Correta:</strong> as ondas sonoras podem ser difratadas.
+        </div>
+        <div class="feedback errado">
+            ❌ <strong>Resposta incorreta.</strong><br>
+            Reveja: a faixa audível <strong>não é igual</strong> para todos os animais (afirmação II errada); instrumentos diferentes <strong>podem</strong> ter a mesma intensidade (afirmação III errada). As afirmações <strong>I, IV e V</strong> são corretas.
+        </div>
+    </div>
+
+    <!-- Atividade 2 — ENEM 2015 — mantida igual -->
+    <div class="questao">
+        <p><strong>Questão 2.</strong> (ENEM 2015) Ao ouvir uma flauta e um piano tocando a mesma nota musical, conseguimos diferenciar os instrumentos. Essa diferenciação se deve principalmente ao:</p>
+        
+        <div class="alternativa" onclick="mostrarResposta(this, 'errado')">A) Intensidade sonora de cada instrumento.</div>
+        <div class="alternativa" onclick="mostrarResposta(this, 'errado')">B) Potência sonora emitida.</div>
+        <div class="alternativa" onclick="mostrarResposta(this, 'errado')">C) Diferença na velocidade de propagação.</div>
+        <div class="alternativa" onclick="mostrarResposta(this, 'correto')">D) Timbre, que torna o formato da onda diferente por instrumento.</div>
+        <div class="alternativa" onclick="mostrarResposta(this, 'errado')">E) Altura do som, que tem frequência diferente por instrumento.</div>
+        
+        <div class="feedback correto">
+            ✅ <strong>Correto! Alternativa D.</strong><br>
+            Mesma nota = mesma frequência → mesma altura. Mesmo volume = mesma intensidade. Ainda assim diferem pelo <strong>timbre</strong>, que está relacionado ao formato da onda sonora. A velocidade é a mesma para ambos no mesmo meio e temperatura.
+        </div>
+        <div class="feedback errado">
+            ❌ <strong>Ops, não é essa!</strong><br>
+            A) Intensidade → volume, não identifica o instrumento.<br>
+            B) Potência → influencia a intensidade, não o timbre.<br>
+            C) Velocidade → igual para ambos no mesmo meio.<br>
+            E) Mesma nota = mesma frequência = mesma altura.<br>
+            ✅ Correta é a alternativa D: é o timbre!
+        </div>
+    </div>
+</section>
+
+<footer>
+    Aula 09 — As qualidades do som | Altura, Timbre e Intensidade — Física
+</footer>
+
+<script>
+    // Função que mostra feedback ao clicar na alternativa
+    function mostrarResposta(elemento, tipo) {
+        const questao = elemento.parentElement;
+        const feedbacks = questao.querySelectorAll('.feedback');
+        
+        // Oculta todos os feedbacks antes de mostrar o correto
+        feedbacks.forEach(fb => fb.style.display = 'none');
+        
+        // Marca visualmente a alternativa clicada
+        const alternativas = questao.querySelectorAll('.alternativa');
+        alternativas.forEach(alt => {
+            alt.style.borderLeftColor = '#a0aec0';
+            alt.style.backgroundColor = '#f7fafc';
+        });
+        elemento.style.borderLeftColor = (tipo === 'correto') ? '#48bb78' : '#fc8181';
+        elemento.style.backgroundColor = (tipo === 'correto') ? '#f0fff4' : '#fff5f5';
+        
+        // Exibe o feedback correspondente
+        const feedbackAlvo = questao.querySelector('.feedback.' + tipo);
+        if (feedbackAlvo) {
+            feedbackAlvo.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="9">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="9">🏠 Voltar ao Início</button>
@@ -2725,12 +3196,378 @@
         </div>
     </div>
 
+
+
+
+
+
+  
     <!-- Aula 10 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="10">Aula 10</button>
+        <button class="botao-aula" data-aula="10">Aula 10: Exercícios sobre altura, timbre e intensidade do som</button>
         <div class="conteudo-aula" id="aula-10">
-            <h2>Aula 10</h2>
-            <p>Conteúdo da Aula 10...</p>
+            <h2>Aula 10: Exercícios sobre altura, timbre e intensidade do som</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10: Altura, Timbre e Intensidade do Som - Física</title>
+    <style>
+        /* Estilos gerais e responsivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c7fb8, #7fcdbb);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #2c7fb8;
+            margin-bottom: 18px;
+            border-bottom: 2px solid #7fcdbb;
+            padding-bottom: 8px;
+        }
+
+        /* Estilo das ilustrações SVG */
+        .ilustracao {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            background-color: #f7fbfc;
+            padding: 10px;
+        }
+
+        /* Tabela de características */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2c7fb8;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f9f9;
+        }
+
+        /* Caixa de memorização */
+        .memorizar {
+            background-color: #fff9c4;
+            border-left: 5px solid #fbc02d;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .memorizar h3 {
+            color: #f57f17;
+            margin-bottom: 10px;
+        }
+
+        /* Área de exercícios interativos */
+        .exercicio {
+            margin: 20px 0;
+            padding: 18px;
+            background-color: #f0f4c3;
+            border-radius: 10px;
+            border-left: 5px solid #8bc34a;
+        }
+
+        .pergunta {
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        .opcao {
+            padding: 10px 14px;
+            margin: 8px 0;
+            background-color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .opcao:hover {
+            background-color: #e8f5e9;
+            border-color: #81c784;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 6px;
+            display: none;
+            font-weight: 500;
+        }
+
+        .correto {
+            background-color: #c8e6c9;
+            color: #2e7d32;
+            border: 2px solid #66bb6a;
+        }
+
+        .errado {
+            background-color: #ffcdd2;
+            color: #c62828;
+            border: 2px solid #ef5350;
+        }
+
+        .exemplo {
+            background-color: #e3f2fd;
+            border-left: 5px solid #1976d2;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            color: #555;
+            font-size: 0.95rem;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            th, td {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Aula 10: Altura, Timbre e Intensidade do Som</h1>
+        <p class="subtitulo">Física — Qualidades fisiológicas do som</p>
+    </header>
+
+    <!-- Seção de introdução -->
+    <section>
+        <h2>Introdução</h2>
+        <p>O som é uma onda mecânica que se propaga em um meio material. Nesta aula, vamos estudar as três qualidades que nos permitem distinguir os sons entre si: <strong>altura</strong>, <strong>timbre</strong> e <strong>intensidade</strong>. Cada uma está relacionada a uma característica física da onda sonora.</p>
+
+        <!-- Ilustração SVG 1: Comparação entre ondas com frequência diferente -->
+        <div class="ilustracao">
+            <h3>Ondas com frequências diferentes</h3>
+            <svg width="520" height="160" viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg">
+                <!-- Onda 1: Baixa frequência → som grave -->
+                <g stroke="#2c7fb8" stroke-width="3" fill="none">
+                    <path d="M30,40 Q60,10 90,40 T150,40 T210,40 T270,40 T330,40 T390,40 T450,40 T490,40"/>
+                    <text x="220" y="75" text-anchor="middle" fill="#2c7fb8" font-size="14" font-weight="bold">Som grave → baixa frequência</text>
+                </g>
+                <!-- Linha de referência -->
+                <line x1="30" y1="40" x2="490" y2="40" stroke="#999" stroke-width="1" stroke-dasharray="4"/>
+                <!-- Onda 2: Alta frequência → som agudo -->
+                <g stroke="#e65100" stroke-width="3" fill="none">
+                    <path d="M30,110 Q45,80 60,110 T90,110 T120,110 T150,110 T180,110 T210,110 T240,110 T270,110 T300,110 T330,110 T360,110 T390,110 T420,110 T450,110 T480,110"/>
+                    <text x="250" y="145" text-anchor="middle" fill="#e65100" font-size="14" font-weight="bold">Som agudo → alta frequência</text>
+                </g>
+                <!-- Eixos -->
+                <text x="10" y="45" fill="#555" font-size="11">Onda</text>
+                <text x="10" y="115" fill="#555" font-size="11">Onda</text>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Seção de resumo teórico -->
+    <section>
+        <h2>Resumo das qualidades do som</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Qualidade</th>
+                    <th>O que permite perceber?</th>
+                    <th>Está relacionada a...</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Altura (Tom)</strong></td>
+                    <td>Distinguir sons graves de agudos</td>
+                    <td>Frequência da onda</td>
+                </tr>
+                <tr>
+                    <td><strong>Timbre</strong></td>
+                    <td>Identificar quem ou o que produz o som</td>
+                    <td>Formato da onda</td>
+                </tr>
+                <tr>
+                    <td><strong>Intensidade (Volume)</strong></td>
+                    <td>Distinguir sons fortes de fracos</td>
+                    <td>Amplitude e energia da onda</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Caixa de resumo para memorizar -->
+        <div class="memorizar">
+            <h3>📌 Para memorizar</h3>
+            <ul>
+                <li><strong>Altura</strong> → frequência → som grave ou agudo</li>
+                <li><strong>Timbre</strong> → formato da onda → reconhecer a fonte do som</li>
+                <li><strong>Intensidade</strong> → amplitude → som forte ou fraco</li>
+            </ul>
+        </div>
+
+        <!-- Ilustração SVG 2: Comparação de amplitude -->
+        <div class="ilustracao">
+            <h3>Ondas com amplitudes diferentes</h3>
+            <svg width="520" height="170" viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg">
+                <!-- Onda com pouca amplitude → som fraco -->
+                <g stroke="#7b1fa2" stroke-width="3" fill="none">
+                    <path d="M30,50 Q60,40 90,50 T150,50 T210,50 T270,50 T330,50 T390,50 T450,50 T490,50"/>
+                    <text x="250" y="80" text-anchor="middle" fill="#7b1fa2" font-size="14" font-weight="bold">Som fraco → pequena amplitude</text>
+                </g>
+                <line x1="30" y1="50" x2="490" y2="50" stroke="#999" stroke-width="1" stroke-dasharray="4"/>
+                <!-- Onda com muita amplitude → som forte -->
+                <g stroke="#d32f2f" stroke-width="3" fill="none">
+                    <path d="M30,120 Q60,70 90,120 T150,120 T210,120 T270,120 T330,120 T390,120 T450,120 T490,120"/>
+                    <text x="250" y="155" text-anchor="middle" fill="#d32f2f" font-size="14" font-weight="bold">Som forte → grande amplitude</text>
+                </g>
+                <line x1="30" y1="120" x2="490" y2="120" stroke="#999" stroke-width="1" stroke-dasharray="4"/>
+            </svg>
+        </div>
+
+        <!-- Exemplo prático -->
+        <div class="exemplo">
+            <strong>💡 Exemplo:</strong> Uma guitarra e um piano podem tocar a mesma nota com o mesmo volume, mas conseguimos diferenciá-los por causa do <em>timbre</em>. Ou seja, mesmo com a mesma frequência e mesma amplitude, o formato da onda é diferente em cada instrumento!
+        </div>
+    </section>
+
+    <!-- Seção de exercícios interativos -->
+    <section>
+        <h2>Exercícios — Clique na resposta correta</h2>
+
+        <!-- Exercício 1 -->
+        <div class="exercicio">
+            <p class="pergunta">1. Qual qualidade do som está relacionada à frequência da onda e permite distinguir sons graves de agudos?</p>
+            <div class="opcao" onclick="verificarResposta(this, 'incorreto')">A) Timbre</div>
+            <div class="opcao" onclick="verificarResposta(this, 'correto')">B) Altura</div>
+            <div class="opcao" onclick="verificarResposta(this, 'incorreto')">C) Intensidade</div>
+            <div class="opcao" onclick="verificarResposta(this, 'incorreto')">D) Amplitude</div>
+            <div class="feedback correto">✅ Correto! A altura está relacionada à frequência da onda: quanto maior a frequência, mais agudo é o som; quanto menor, mais grave.</div>
+            <div class="feedback errado">❌ Errou! Tente novamente. Dica: lembre-se do resumo — Altura → frequência → grave/agudo.</div>
+        </div>
+
+        <!-- Exercício 2 -->
+        <div class="exercicio">
+            <p class="pergunta">2. Conseguimos reconhecer a voz de uma pessoa ou distinguir instrumentos musicais tocando a mesma nota por causa de qual qualidade?</p>
+            <div class="opcao" onclick="verificarResposta(this, 'incorreto')">A) Altura</div>
+            <div class="opcao" onclick="verificarResposta(this, 'correto')">B) Timbre</div>
+            <div class="opcao" onclick="verificarResposta(this, 'incorreto')">C) Intensidade</div>
+            <div class="opcao" onclick="verificarResposta(this, 'incorreto')">D) Volume</div>
+            <div class="feedback correto">✅ Correto! O timbre depende do formato da onda e é o que nos permite identificar quem ou o que produziu o som.</div>
+            <div class="feedback errado">❌ Errou! Pense bem: é a qualidade que revela a fonte do som. Timbre → formato da onda → reconhecimento da fonte!</div>
+        </div>
+
+        <!-- Exercício 3 -->
+        <div class="exercicio">
+            <p class="pergunta">3. A intensidade do som está relacionada à amplitude da onda. Se a amplitude de uma onda aumenta, o que acontece com o som?</p>
+            <div class="opcao" onclick="verificarResposta(this, 'correto')">A) Torna-se mais forte</div>
+            <div class="opcao" onclick="verificarResposta(this, 'incorreto')">B) Torna-se mais agudo</div>
+            <div class="opcao" onclick="verificarResposta(this, 'incorreto')">C) Torna-se mais grave</div>
+            <div class="opcao" onclick="verificarResposta(this, 'incorreto')">D) Muda de timbre</div>
+            <div class="feedback correto">✅ Correto! Quanto maior a amplitude, maior a energia transportada pela onda e mais forte é o som percebido.</div>
+            <div class="feedback errado">❌ Errou! Lembre-se: Intensidade → amplitude → forte/fraco. Maior amplitude = som mais forte!</div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Aula 10 — Física: Qualidades do som | Altura, Timbre e Intensidade</p>
+        <p>Conteúdo educacional — Uso livre e gratuito ✅</p>
+    </footer>
+
+    <!-- Script de interatividade -->
+    <script>
+        // Função que verifica a resposta clicada e exibe o feedback correspondente
+        function verificarResposta(elemento, resultadoEsperado) {
+            const exercicio = elemento.parentElement;
+            const feedbacks = exercicio.querySelectorAll('.feedback');
+
+            // Oculta todos os feedbacks antes de mostrar o novo
+            feedbacks.forEach(fb => fb.style.display = 'none');
+
+            // Exibe o feedback correspondente
+            if (resultadoEsperado === 'correto') {
+                exercicio.querySelector('.feedback.correto').style.display = 'block';
+            } else {
+                exercicio.querySelector('.feedback.errado').style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="10">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="10">🏠 Voltar ao Início</button>
@@ -2740,6 +3577,11 @@
         </div>
     </div>
 
+
+
+
+
+  
     <!-- Aula 11 -->
     <div class="item-aula">
         <button class="botao-aula" data-aula="11">Aula 11</button>
