@@ -3677,10 +3677,457 @@
   
     <!-- Aula 11 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="11">Aula 11</button>
+        <button class="botao-aula" data-aula="11">Aula 11: Quanto vale o som - Conhecendo os decibéis</button>
         <div class="conteudo-aula" id="aula-11">
-            <h2>Aula 11</h2>
-            <p>Conteúdo da Aula 11...</p>
+            <h2>Aula 11: Quanto vale o som - Conhecendo os decibéis</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física - Aula 11: Quanto vale o som? Conhecendo os decibéis</title>
+    <style>
+        /* ===== ESTILOS GERAIS E RESPONSIVOS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1565c0;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #424242;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e3f2fd;
+        }
+
+        .introducao {
+            background: #e8f5e9;
+            border-left: 5px solid #43a047;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #2e7d32;
+            font-size: 1.3rem;
+            margin: 28px 0 15px;
+        }
+
+        h3 {
+            color: #ef6c00;
+            font-size: 1.1rem;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .destaque {
+            background: #fff3e0;
+            border-left: 5px solid #fb8c00;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+
+        .formula {
+            background: #f3e5f5;
+            border: 2px solid #ce93d8;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6a1b9a;
+            margin: 15px 0;
+        }
+
+        .ilustracao {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ===== ÁREA DE PERGUNTA E RESPOSTA CLICÁVEL ===== */
+        .pergunta {
+            background: #e3f2fd;
+            border: 2px solid #1976d2;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .pergunta-titulo {
+            font-weight: bold;
+            color: #0d47a1;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        .opcao {
+            padding: 12px 15px;
+            margin: 8px 0;
+            background: #ffffff;
+            border: 2px solid #bbdefb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .opcao:hover {
+            background: #e3f2fd;
+            border-color: #1976d2;
+        }
+
+        .opcao.correta {
+            background: #c8e6c9;
+            border-color: #2e7d32;
+            color: #1b5e20;
+        }
+
+        .opcao.errada {
+            background: #ffcdd2;
+            border-color: #c62828;
+            color: #b71c1c;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .feedback-correto {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            color: #2e7d32;
+        }
+
+        .feedback-errado {
+            background: #ffebee;
+            border: 2px solid #ef5350;
+            color: #c62828;
+        }
+
+        .feedback.mostrar {
+            display: block;
+            animation: aparecer 0.4s ease;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .lembrete {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+
+        .lembrete-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .verde { background: #c8e6c9; color: #2e7d32; }
+        .vermelho { background: #ffcdd2; color: #c62828; }
+
+        .rodape {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            color: #757575;
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVIDADE PARA TELAS MENORES ===== */
+        @media (max-width: 600px) {
+            .container { padding: 18px; }
+            h1 { font-size: 1.4rem; }
+            .formula { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- TÍTULO DA AULA -->
+    <h1>🔊 Aula 11: Quanto vale o som? Conhecendo os decibéis</h1>
+    <p class="subtitulo">Física — Ondas e Fenômenos Sonoros</p>
+
+    <!-- INTRODUÇÃO E RELEMBRE -->
+    <div class="introducao">
+        <strong>📌 Relembre:</strong> O diapasão é um instrumento metálico em formato de forquilha que, ao ser percutido, vibra em uma frequência única e constante, sendo utilizado para afinar instrumentos musicais.
+    </div>
+
+    <!-- ILUSTRAÇÃO SVG: DIAPASÃO E ONDAS SONORAS -->
+    <div class="ilustracao">
+        <svg width="400" height="220" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+            <!-- Fundo -->
+            <rect x="0" y="0" width="400" height="220" rx="12" fill="#f5f5f5"/>
+            
+            <!-- Diapasão -->
+            <g transform="translate(80,40)">
+                <path d="M40,180 L40,40 
+                         C40,20 50,10 70,10 
+                         C90,10 100,20 100,40 
+                         L100,180 Z" 
+                      fill="#b0bec5" stroke="#607d8b" stroke-width="3"/>
+                <ellipse cx="70" cy="190" rx="18" ry="10" fill="#90a4ae" stroke="#546e7a" stroke-width="2"/>
+                <text x="70" y="210" text-anchor="middle" font-size="12" fill="#424242">Diapasão</text>
+            </g>
+
+            <!-- Ondas suaves -->
+            <g stroke="#1976d2" stroke-width="2" fill="none" opacity="0.7">
+                <path d="M160,70 C180,60 200,80 220,70 C240,60 260,80 280,70 C300,60 320,80 340,70"/>
+                <path d="M160,100 C185,90 205,110 230,100 C255,90 275,110 300,100 C325,90 345,110 360,100"/>
+                <text x="260" y="55" text-anchor="middle" font-size="11" fill="#1976d2">Batida suave → menor amplitude</text>
+            </g>
+  
+            <!-- Ondas fortes -->
+            <g stroke="#d32f2f" stroke-width="2.5" fill="none" opacity="0.7">
+                <path d="M160,140 C190,115 230,165 260,140 C290,115 330,165 360,140"/>
+                <path d="M160,170 C195,135 235,205 270,170 C305,135 345,205 360,170"/>
+                <text x="260" y="125" text-anchor="middle" font-size="11" fill="#d32f2f">Batida forte → maior amplitude</text>
+            </g>
+        </svg>
+    </div>
+
+    <!-- PERGUNTA CLICÁVEL -->
+    <div class="pergunta">
+        <div class="pergunta-titulo">📝 Pergunta</div>
+        <p>Um estudante bate nesse diapasão com um martelo de borracha de forma suave e, em seguida, bate com muito mais força. Considerando que a distância entre o diapasão e o ouvinte permanece constante.</p>
+        <p><strong>Qual característica da onda sonora foi alterada na segunda batida?</strong></p>
+
+        <!-- Opções clicáveis -->
+        <div class="opcao" onclick="responder(this, false)">A frequência da onda sonora foi alterada</div>
+        <div class="opcao" onclick="responder(this, true)">A amplitude da onda sonora foi alterada</div>
+        <div class="opcao" onclick="responder(this, false)">A velocidade de propagação foi alterada</div>
+        <div class="opcao" onclick="responder(this, false)">A distância entre o diapasão e o ouvinte foi alterada</div>
+
+        <!-- Área de feedback -->
+        <div id="feedback-correto" class="feedback feedback-correto">
+            ✅ <strong>Resposta correta!</strong><br>
+            Bater suavemente → o som fica mais fraco.<br>
+            Bater com muita força → o diapasão vibra com maior amplitude, produzindo um som mais intenso (mais alto).<br>
+            A frequência não muda, pois o diapasão continua vibrando na mesma frequência característica.<br>
+            <strong>Conclusão:</strong> a amplitude da onda sonora foi alterada. Isso significa que a intensidade sonora aumentou na segunda batida.
+        </div>
+        <div id="feedback-errado" class="feedback feedback-errado">
+            ❌ <strong>Ainda não acertou!</strong><br>
+            Pense: o diapasão continua o mesmo, então a frequência não muda. O que muda quando batemos com mais força? Reveja as características da onda e tente novamente!
+        </div>
+    </div>
+
+    <!-- INTENSIDADE SONORA -->
+    <h2>📐 Intensidade Sonora</h2>
+    <p>A intensidade sonora indica quanto de energia o som transporta por uma determinada área.</p>
+
+    <div class="formula">
+        I = Potência ÷ Área
+    </div>
+    <p>Onde:<br>
+    <strong>I</strong> = intensidade sonora<br>
+    <strong>Potência</strong> = quantidade de energia sonora emitida por segundo<br>
+    <strong>Área</strong> = espaço por onde essa energia se espalha</p>
+
+    <div class="destaque">
+        💡 <strong>Quanto maior a potência do som e menor a área, maior será a intensidade sonora.</strong><br><br>
+        Exemplo: Se você bate mais forte no diapasão, ele transmite mais energia para o ar → a onda sonora fica mais intensa → o som é percebido como mais forte.
+    </div>
+
+    <p><em>Para lembrar: Intensidade = quanta energia do som passa por uma determinada área.</em></p>
+
+    <!-- INTENSIDADE E DISTÂNCIA -->
+    <h2>📏 Intensidade e distância da fonte</h2>
+    <p>Imagine uma caixa de som no centro emitindo som igualmente para todos os lados. O som se espalha formando uma esfera.</p>
+
+    <div class="formula">
+        A = 4πr² &nbsp;&nbsp; → &nbsp;&nbsp; I = Potência ÷ (4πr²)
+    </div>
+
+    <p>O mais importante é entender que:</p>
+    <div class="destaque">
+        ⚠️ <strong>Quanto maior a distância da fonte, menor é a intensidade do som.</strong><br>
+        E ela diminui com o quadrado da distância: <strong>I ∝ 1/r²</strong>
+    </div>
+
+    <p><strong>Exemplo:</strong> Se o ouvinte 2 estiver 2 vezes mais distante da fonte que o ouvinte 1:</p>
+    <ul style="margin-left:25px; margin-bottom:15px;">
+        <li>distância × 2</li>
+        <li>intensidade ÷ 4</li>
+    </ul>
+    <p>Ou seja, o ouvinte mais distante recebe uma intensidade 4 vezes menor.</p>
+
+    <div class="lembrete">
+        <div class="lembrete-item verde">🟢 Perto da fonte → som mais intenso</div>
+        <div class="lembrete-item vermelho">🔴 Longe da fonte → som menos intenso</div>
+    </div>
+
+    <p>Por isso, o ouvinte 1, que está mais perto, recebe uma intensidade sonora maior que o ouvinte 2.</p>
+
+    <!-- LIMIARES DE AUDIBILIDADE -->
+    <h2>👂 Limiar de audibilidade e limiar de dor</h2>
+    <p>O ouvido humano não consegue ouvir qualquer som. Existe uma intensidade mínima necessária para conseguirmos perceber um som — é o <strong>limiar de audibilidade</strong>.</p>
+    <ul style="margin-left:25px; margin-bottom:15px;">
+        <li>Abaixo do limiar de audibilidade: não conseguimos ouvir.</li>
+        <li>Acima do limiar: conseguimos ouvir.</li>
+    </ul>
+    <p>O limiar depende da frequência. Isso significa que nosso ouvido é mais sensível a algumas frequências do que a outras.</p>
+
+    <h3>⚠️ Limiar de dor</h3>
+    <p>Se a intensidade do som continuar aumentando, chega um ponto em que o som começa a causar dor. Esse ponto é chamado de <strong>limiar de dor</strong>.</p>
+    <ul style="margin-left:25px; margin-bottom:15px;">
+        <li>Intensidade muito baixa → não ouvimos.</li>
+        <li>Intensidade adequada → ouvimos normalmente.</li>
+        <li>Intensidade muito alta → pode causar dor.</li>
+    </ul>
+
+    <div class="destaque">
+        📌 <strong>Para decorar:</strong><br>
+        • <strong>Limiar de audibilidade</strong> = menor intensidade que conseguimos ouvir.<br>
+        • <strong>Limiar de dor</strong> = intensidade muito alta que pode causar dor.
+    </div>
+
+    <!-- NÍVEL SONORO EM DECIBÉIS -->
+    <h2>📊 Nível relativo de intensidade — Decibéis (dB)</h2>
+    <p>O nível relativo de intensidade é uma forma de dizer o quão intenso é um som, usando <strong>decibéis (dB)</strong>.</p>
+
+    <div class="formula">
+        N = 10 · log(I ÷ I₀)
+    </div>
+
+    <p>Onde:<br>
+    <strong>N</strong> = nível sonoro, medido em decibéis (dB)<br>
+    <strong>I</strong> = intensidade do som que estamos analisando<br>
+    <strong>I₀</strong> = intensidade mínima que normalmente conseguimos ouvir = 10⁻¹² W/m²</p>
+
+    <h3>📈 E o que é a curva de audibilidade?</h3>
+    <p>É um gráfico que mostra quais sons conseguimos ouvir e com que intensidade, dependendo da frequência. Como cada pessoa pode ter uma sensibilidade auditiva diferente, a curva pode variar de uma pessoa para outra.</p>
+
+    <div class="destaque">
+        📌 <strong>Para decorar:</strong><br>
+        • <strong>Intensidade (I)</strong> → quantidade de energia do som por área.<br>
+        • <strong>Nível de intensidade (N)</strong> → intensidade do som expressa em decibéis (dB).<br>
+        • Quanto maior for I em relação a I₀, maior será o N (dB).
+    </div>
+
+    <!-- ILUSTRAÇÃO SVG: ESCALA DE DECIBÉIS -->
+    <div class="ilustracao">
+        <svg width="450" height="180" viewBox="0 0 450 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="gradBarra" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#4caf50"/>
+                    <stop offset="50%" stop-color="#ff9800"/>
+                    <stop offset="100%" stop-color="#f44336"/>
+                </linearGradient>
+            </defs>
+            <!-- Barra de intensidade -->
+            <rect x="30" y="60" width="390" height="35" rx="8" fill="url(#gradBarra)" stroke="#333" stroke-width="2"/>
+            
+            <!-- Marcadores -->
+            <line x1="30" y1="50" x2="30" y2="105" stroke="#333" stroke-width="2"/>
+            <text x="30" y="125" text-anchor="middle" font-size="11">0 dB</text>
+            <text x="30" y="45" text-anchor="middle" font-size="10" fill="#2e7d32">Sussurro</text>
+
+            <line x1="130" y1="50" x2="130" y2="105" stroke="#333" stroke-width="1"/>
+            <text x="130" y="125" text-anchor="middle" font-size="11">40 dB</text>
+            <text x="130" y="45" text-anchor="middle" font-size="10" fill="#2e7d32">Conversa</text>
+
+            <line x1="230" y1="50" x2="230" y2="105" stroke="#333" stroke-width="1"/>
+            <text x="230" y="125" text-anchor="middle" font-size="11">80 dB</text>
+            <text x="230" y="45" text-anchor="middle" font-size="10" fill="#e65100">Tráfego</text>
+
+            <line x1="330" y1="50" x2="330" y2="105" stroke="#333" stroke-width="1"/>
+            <text x="330" y="125" text-anchor="middle" font-size="11">120 dB</text>
+            <text x="330" y="45" text-anchor="middle" font-size="10" fill="#c62828">Limiar de dor</text>
+
+            <line x1="420" y1="50" x2="420" y2="105" stroke="#333" stroke-width="2"/>
+            <text x="420" y="125" text-anchor="middle" font-size="11">140 dB</text>
+            <text x="420" y="45" text-anchor="middle" font-size="10" fill="#b71c1c">Dano auditivo</text>
+
+            <text x="225" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#424242">Escala de intensidade sonora (decibéis)</text>
+        </svg>
+    </div>
+
+    <!-- RODAPÉ -->
+    <div class="rodape">
+        Aula 11 — Física: Ondas Sonoras e Decibéis 📚 | Material pronto para impressão e uso offline
+    </div>
+
+</div>
+
+<!-- SCRIPT PARA RESPOSTAS CLICÁVEIS -->
+<script>
+    function responder(elemento, ehCorreta) {
+        // Remove classes de todas as opções
+        const opcoes = document.querySelectorAll('.opcao');
+        opcoes.forEach(op => {
+            op.classList.remove('correta', 'errada');
+            op.style.pointerEvents = 'none'; // Bloqueia novos cliques
+        });
+
+        // Oculta ambos os feedbacks inicialmente
+        document.getElementById('feedback-correto').classList.remove('mostrar');
+        document.getElementById('feedback-errado').classList.remove('mostrar');
+
+        if (ehCorreta) {
+            // Resposta certa
+            elemento.classList.add('correta');
+            document.getElementById('feedback-correto').classList.add('mostrar');
+        } else {
+            // Resposta errada
+            elemento.classList.add('errada');
+            document.getElementById('feedback-errado').classList.add('mostrar');
+        }
+    }
+</script>
+
+</body>
+</html></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="11">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="11">🏠 Voltar ao Início</button>
@@ -3690,12 +4137,441 @@
         </div>
     </div>
 
+
+
+  
     <!-- Aula 12 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="12">Aula 12</button>
+        <button class="botao-aula" data-aula="12">Aula 12: Ondas estacionárias e harmônicos</button>
         <div class="conteudo-aula" id="aula-12">
-            <h2>Aula 12</h2>
-            <p>Conteúdo da Aula 12...</p>
+            <h2>Aula 12: Ondas estacionárias e harmônicos</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física - Aula 12: Ondas Estacionárias e Harmônicos</title>
+    <style>
+        /* Estilos gerais e responsivos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2980b9;
+            margin: 25px 0 15px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+
+        .introducao {
+            background-color: #e8f4fc;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border: 1px solid #bde0f3;
+        }
+
+        .ilustracao {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .ilustracao p {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        .caixa-conteudo {
+            background-color: white;
+            padding: 22px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .destaque {
+            background-color: #fff9c4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #f1c40f;
+            margin: 15px 0;
+        }
+
+        .formula {
+            background-color: #e8f5e9;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 12px 0;
+            border: 1px solid #a5d6a7;
+        }
+
+        /* Área de perguntas e respostas interativas */
+        .pergunta {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 18px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border: 2px solid #90caf9;
+        }
+
+        .pergunta:hover {
+            background-color: #bbdefb;
+        }
+
+        .resposta {
+            margin-top: 12px;
+            padding: 12px;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .correta {
+            display: block;
+            background-color: #c8e6c9;
+            border: 2px solid #66bb6a;
+            color: #2e7d32;
+        }
+
+        .errada {
+            display: block;
+            background-color: #ffcdd2;
+            border: 2px solid #ef5350;
+            color: #c62828;
+        }
+
+        .botoes-resposta {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .btn-certo {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .btn-certo:hover {
+            background-color: #388e3c;
+        }
+
+        .btn-errado {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .btn-errado:hover {
+            background-color: #d32f2f;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            .ilustracao svg {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📚 Física — Aula 12</h1>
+        <p>Ondas Estacionárias e Harmônicos</p>
+    </header>
+
+    <section class="introducao">
+        <h2>🎯 Introdução</h2>
+        <p>Nesta aula vamos entender o que são ondas estacionárias, como se formam e quais são as suas características. Também veremos os padrões de vibração chamados harmônicos e como calcular o comprimento de onda e a frequência em uma corda vibrante.</p>
+    </section>
+
+    <!-- Ilustração 1: Formação de onda estacionária -->
+    <div class="ilustracao">
+        <svg width="500" height="180" viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Onda 1 -->
+            <path d="M 30,60 Q 80,20 130,60 T 230,60 T 330,60 T 430,60 T 470,60" 
+                  stroke="#3498db" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <text x="250" y="35" text-anchor="middle" fill="#3498db" font-size="14px">Onda 1 →</text>
+            
+            <!-- Onda 2 -->
+            <path d="M 30,100 Q 130,140 230,100 T 430,100 T 470,100" 
+                  stroke="#e74c3c" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <text x="250" y="120" text-anchor="middle" fill="#e74c3c" font-size="14px">← Onda 2</text>
+            
+            <!-- Eixo -->
+            <line x1="30" y1="80" x2="470" y2="80" stroke="#333" stroke-width="2"/>
+            <text x="250" y="15" text-anchor="middle" fill="#2c3e50" font-size="13px">Superposição → Onda Estacionária</text>
+        </svg>
+        <p>Ilustração: Duas ondas iguais, em sentidos opostos, se interferem e formam uma onda estacionária.</p>
+    </div>
+
+    <section class="caixa-conteudo">
+        <h2>🌊 Ondas Estacionárias</h2>
+        <p>Ondas estacionárias são ondas que <strong>parecem ficar paradas</strong>, formando regiões que não se movimentam e regiões que vibram bastante.</p>
+        
+        <p><strong>Isso acontece quando:</strong></p>
+        <ul style="margin:12px 0 20px 25px;">
+            <li>Duas ondas têm a mesma frequência e a mesma amplitude;</li>
+            <li>Elas se propagam em sentidos opostos;</li>
+            <li>Ao se encontrarem, elas se superpõem (interferem uma na outra).</li>
+        </ul>
+
+        <p><strong>Exemplo:</strong> imagine uma corda presa nas duas pontas. Se você fizer uma onda em uma ponta, ela vai até a outra, volta e se encontra com novas ondas. A combinação pode formar um padrão que parece parado.</p>
+
+        <!-- Ilustração 2: Nós e Ventres -->
+        <div class="ilustracao">
+            <svg width="500" height="200" viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Corda vibrando -->
+                <path d="M 50,100 Q 110,40 170,100 T 290,100 T 410,100 T 470,100" 
+                      stroke="#27ae60" stroke-width="4" fill="none"/>
+                <!-- Eixo central -->
+                <line x1="50" y1="100" x2="470" y2="100" stroke="#777" stroke-width="2" stroke-dasharray="5,5"/>
+                
+                <!-- Nós -->
+                <circle cx="50" cy="100" r="8" fill="#2c3e50"/>
+                <text x="50" y="125" text-anchor="middle" font-weight="bold" font-size="14px">Nó</text>
+                <circle cx="170" cy="100" r="8" fill="#2c3e50"/>
+                <text x="170" y="125" text-anchor="middle" font-weight="bold" font-size="14px">Nó</text>
+                <circle cx="290" cy="100" r="8" fill="#2c3e50"/>
+                <text x="290" y="125" text-anchor="middle" font-weight="bold" font-size="14px">Nó</text>
+                <circle cx="470" cy="100" r="8" fill="#2c3e50"/>
+                <text x="470" y="125" text-anchor="middle" font-weight="bold" font-size="14px">Nó</text>
+                
+                <!-- Ventres -->
+                <circle cx="110" cy="40" r="8" fill="#e67e22"/>
+                <text x="110" y="25" text-anchor="middle" font-weight="bold" font-size="14px">Ventre</text>
+                <circle cx="230" cy="160" r="8" fill="#e67e22"/>
+                <text x="230" y="180" text-anchor="middle" font-weight="bold" font-size="14px">Ventre</text>
+                <circle cx="350" cy="40" r="8" fill="#e67e22"/>
+                <text x="350" y="25" text-anchor="middle" font-weight="bold" font-size="14px">Ventre</text>
+                <circle cx="430" cy="160" r="8" fill="#e67e22"/>
+                <text x="430" y="180" text-anchor="middle" font-weight="bold" font-size="14px">Ventre</text>
+            </svg>
+            <p>Ilustração: Pontos parados = Nós; Pontos que vibram = Ventres.</p>
+        </div>
+
+        <div class="destaque">
+            <p><strong>Nós (N):</strong> são os pontos que ficam parados, sem vibrar. → <em>Interferência destrutiva total</em> (uma onda anula a outra).</p>
+            <p><strong>Ventres (V):</strong> são os pontos que vibram com maior amplitude. → <em>Interferência construtiva</em> (as ondas se somam).</p>
+            <p style="margin-top:10px;"><strong>💡 Para decorar:</strong> Nó = Nada se move; Ventre = Vibra bastante!</p>
+        </div>
+    </section>
+
+    <section class="caixa-conteudo">
+        <h2>🎵 Harmônicos</h2>
+        <p>Uma corda presa nas duas pontas só pode vibrar em padrões específicos. Esses padrões são chamados de <strong>harmônicos</strong> ou modos normais de vibração.</p>
+
+        <!-- Ilustração 3: Harmônicos -->
+        <div class="ilustracao">
+            <svg width="500" height="220" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+                <!-- 1º Harmônico -->
+                <line x1="50" y1="50" x2="450" y2="50" stroke="#aaa" stroke-width="2"/>
+                <circle cx="50" cy="50" r="6" fill="#333"/>
+                <circle cx="450" cy="50" r="6" fill="#333"/>
+                <path d="M50,50 Q250,10 450,50" stroke="#3498db" stroke-width="4" fill="none"/>
+                <text x="250" y="75" text-anchor="middle" font-size="14px">1º Harmônico (n=1)</text>
+
+                <!-- 2º Harmônico -->
+                <line x1="50" y1="110" x2="450" y2="110" stroke="#aaa" stroke-width="2"/>
+                <circle cx="50" cy="110" r="6" fill="#333"/>
+                <circle cx="250" cy="110" r="6" fill="#333"/>
+                <circle cx="450" cy="110" r="6" fill="#333"/>
+                <path d="M50,110 Q150,70 250,110 Q350,150 450,110" stroke="#e74c3c" stroke-width="4" fill="none"/>
+                <text x="250" y="140" text-anchor="middle" font-size="14px">2º Harmônico (n=2)</text>
+
+                <!-- 3º Harmônico -->
+                <line x1="50" y1="170" x2="450" y2="170" stroke="#aaa" stroke-width="2"/>
+                <circle cx="50" cy="170" r="6" fill="#333"/>
+                <circle cx="183" cy="170" r="6" fill="#333"/>
+                <circle cx="316" cy="170" r="6" fill="#333"/>
+                <circle cx="450" cy="170" r="6" fill="#333"/>
+                <path d="M50,170 Q116,130 183,170 Q250,210 316,170 Q383,130 450,170" stroke="#27ae60" stroke-width="4" fill="none"/>
+                <text x="250" y="205" text-anchor="middle" font-size="14px">3º Harmônico (n=3)</text>
+            </svg>
+            <p>Ilustração: Padrões de vibração para o 1º, 2º e 3º harmônicos em uma corda.</p>
+        </div>
+
+        <p>A ideia principal é: o comprimento da corda (<strong>L</strong>) determina quais ondas conseguem "caber" nela.</p>
+
+        <h3>📐 Relações</h3>
+        <p><strong>1º harmônico (n = 1):</strong> cabe meia onda → L = λ₁/2 → <strong>λ₁ = 2L</strong></p>
+        <p><strong>2º harmônico (n = 2):</strong> cabe uma onda inteira → L = λ₂ → <strong>λ₂ = L</strong></p>
+
+        <div class="formula">
+            Fórmula geral: λₙ = 2 · L / n
+        </div>
+
+        <p>Onde:</p>
+        <ul style="margin:10px 0 10px 25px;">
+            <li>λₙ = comprimento de onda do harmônico de ordem n</li>
+            <li>L = comprimento da corda</li>
+            <li>n = número do harmônico (1, 2, 3...)</li>
+        </ul>
+
+        <div class="destaque">
+            <p>💡 <strong>Para decorar:</strong> quanto maior o número do harmônico, <strong>menor</strong> é o comprimento de onda.</p>
+            <p>Exemplo prático: se L = 1 m → 1º harmônico: λ = 2 m | 2º harmônico: λ = 1 m | 3º harmônico: λ ≈ 0,67 m</p>
+        </div>
+    </section>
+
+    <section class="caixa-conteudo">
+        <h2>🎻 Aplicação: Corda de Violão</h2>
+        <p>Um músico toca a nota Lá central (<strong>440 Hz</strong>) em um violão. Ao encostar o dedo levemente no ponto médio da corda, cria-se um <strong>nó</strong> ali.</p>
+        
+        <!-- Ilustração 4: Nó no meio da corda -->
+        <div class="ilustracao">
+            <svg width="500" height="150" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+                <!-- Corda completa -->
+                <line x1="50" y1="75" x2="450" y2="75" stroke="#aaa" stroke-width="2"/>
+                <circle cx="50" cy="75" r="7" fill="#333"/>
+                <circle cx="450" cy="75" r="7" fill="#333"/>
+                <path d="M50,75 Q250,30 450,75" stroke="#3498db" stroke-width="4" fill="none"/>
+                <text x="150" y="30" fill="#3498db" font-size="13px">440 Hz (1º harmônico)</text>
+
+                <!-- Linha divisória -->
+                <line x1="250" y1="10" x2="250" y2="140" stroke="#e74c3c" stroke-width="2" stroke-dasharray="8,4"/>
+                <text x="250" y="135" text-anchor="middle" fill="#e74c3c" font-size="12px">dedo → nó</text>
+
+                <!-- Com nó no meio -->
+                <path d="M50,75 Q150,110 250,75 Q350,40 450,75" stroke="#e74c3c" stroke-width="4" fill="none"/>
+                <circle cx="250" cy="75" r="7" fill="#e74c3c"/>
+                <text x="350" y="115" fill="#e74c3c" font-size="13px">880 Hz (2º harmônico)</text>
+            </svg>
+            <p>Ilustração: Ao criar um nó no meio, a corda passa a vibrar no 2º harmônico — frequência dobra!</p>
+        </div>
+
+        <p>Ao criar um nó no ponto médio, a corda passa a vibrar em <strong>duas partes iguais</strong> — ou seja, no <strong>2º harmônico</strong>.</p>
+
+        <table>
+            <tr>
+                <th>Situação</th>
+                <th>Frequência</th>
+                <th>Comprimento de onda</th>
+            </tr>
+            <tr>
+                <td>1º harmônico (fundamental)</td>
+                <td>440 Hz</td>
+                <td>2L</td>
+            </tr>
+            <tr>
+                <td>Com nó no meio (2º harmônico)</td>
+                <td>880 Hz</td>
+                <td>L</td>
+            </tr>
+        </table>
+
+        <div class="destaque">
+            <p>✅ <strong>Conclusão:</strong> ao passar do 1º para o 2º harmônico, a frequência <strong>dobra</strong> e o comprimento de onda fica igual ao comprimento total da corda.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Aula 12 — Física: Ondas Estacionárias e Harmônicos</p>
+        <p>Ilustrações criadas com SVG inline — arquivo funciona 100% offline</p>
+    </footer>
+
+    <script>
+        // Funções para exibir respostas
+        function respostaCorreta(botao, num) {
+            // Fecha todas as respostas
+            document.querySelectorAll('.resposta').forEach(r => r.style.display = 'none');
+            // Mostra apenas a correta
+            document.getElementById(`resp${num}-correta`).style.display = 'block';
+            // Impede propagação do clique para o card
+            botao.closest('.pergunta').onclick = null;
+            event.stopPropagation();
+        }
+
+        function respostaErrada(botao, num) {
+            // Fecha todas as respostas
+            document.querySelectorAll('.resposta').forEach(r => r.style.display = 'none');
+            // Mostra apenas a errada
+            document.getElementById(`resp${num}-errada`).style.display = 'block';
+            botao.closest('.pergunta').onclick = null;
+            event.stopPropagation();
+        }
+    </script>
+
+</body>
+</html></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="12">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="12">🏠 Voltar ao Início</button>
@@ -3705,6 +4581,10 @@
         </div>
     </div>
 
+
+
+
+  
     <!-- Aula 13 -->
     <div class="item-aula">
         <button class="botao-aula" data-aula="13">Aula 13</button>
