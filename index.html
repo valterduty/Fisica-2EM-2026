@@ -4587,10 +4587,832 @@
   
     <!-- Aula 13 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="13">Aula 13</button>
+        <button class="botao-aula" data-aula="13">Resumo 3º Bimestre</button>
         <div class="conteudo-aula" id="aula-13">
-            <h2>Aula 13</h2>
-            <p>Conteúdo da Aula 13...</p>
+            <h2>Resumo 3º Bimestre</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física: Ondas e Som</title>
+    <style>
+        /* ===== ESTILOS GERAIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #2980b9, #6ab0de);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2980b9;
+            margin: 25px 0 15px;
+            border-bottom: 2px solid #6ab0de;
+            padding-bottom: 8px;
+            font-size: 1.3rem;
+        }
+
+        h3 {
+            color: #16a085;
+            margin: 18px 0 10px;
+            font-size: 1.1rem;
+        }
+
+        .introducao {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* ===== ILUSTRAÇÕES SVG ===== */
+        .ilustracao {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            background: #f8fbfe;
+            padding: 10px;
+        }
+
+        .legenda {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ===== CAIXAS DE CONTEÚDO ===== */
+        .caixa {
+            background: white;
+            padding: 22px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .destaque {
+            background: #e8f4fc;
+            border-left: 4px solid #2980b9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .formula {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px;
+            background: #fef9e7;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* ===== ÁREA DE PERGUNTAS E RESPOSTAS INTERATIVAS ===== */
+        .pergunta {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .botao-pergunta {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            text-align: left;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .botao-pergunta:hover {
+            background: linear-gradient(135deg, #2980b9, #1f618d);
+        }
+
+        .resposta {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        .resposta.aberta {
+            max-height: 2000px;
+        }
+
+        .conteudo-resposta {
+            padding: 18px;
+            border-top: 1px solid #ddd;
+        }
+
+        .opcao {
+            padding: 12px 15px;
+            margin: 8px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .opcao:hover:not(.respondida) {
+            border-color: #3498db;
+            background: #f0f8ff;
+        }
+
+        /* Estado após responder */
+        .respondida {
+            cursor: default;
+        }
+
+        .opcao.correta {
+            border-color: #27ae60;
+            background: #eafaf1;
+            font-weight: 600;
+        }
+
+        .opcao.errada {
+            border-color: #e74c3c;
+            background: #fdedeb;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 14px 18px;
+            border-radius: 8px;
+            display: none;
+            line-height: 1.7;
+        }
+
+        .feedback.correto {
+            background: #eafaf1;
+            color: #219653;
+            border-left: 4px solid #27ae60;
+        }
+
+        .feedback.errado {
+            background: #fdedeb;
+            color: #c0392b;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .resposta-correta-completa {
+            margin-top: 12px;
+            padding: 15px;
+            background: #f0fff4;
+            border: 2px solid #27ae60;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .resposta-correta-completa.exibir {
+            display: block;
+        }
+
+        /* ===== TABELA DE RESUMO ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #2980b9;
+            color: white;
+        }
+
+        tr:hover {
+            background: #f4f8fb;
+        }
+
+        /* ===== RODAPÉ ===== */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            border-top: 1px solid #ddd;
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            table, th, td {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- CABEÇALHO -->
+<header>
+    <h1>🌊 Física: Ondas e Som</h1>
+    <p>Estudo completo sobre propriedades, tipos e fenômenos ondulatórios</p>
+</header>
+
+<!-- INTRODUÇÃO -->
+<section class="introducao">
+    <h2>📚 Apresentação</h2>
+    <p>Bem-vindo ao material de estudo sobre <strong>ondas e som</strong>! Aqui você vai entender o que são ondas, como se classificam, suas principais características e fenômenos, além de propriedades específicas do som. Explore o conteúdo e teste seus conhecimentos com as perguntas interativas ao final.</p>
+</section>
+
+<!-- ILUSTRAÇÃO 1: O QUE É ONDA -->
+<div class="ilustracao">
+    <svg width="500" height="150" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+        <rect width="500" height="150" fill="#f0f8ff" rx="8"/>
+        <line x1="30" y1="75" x2="470" y2="75" stroke="#333" stroke-width="2"/>
+        <line x1="30" y1="20" x2="30" y2="130" stroke="#333" stroke-width="2"/>
+        <path d="M30,75 Q60,30 90,75 T150,75 T210,75 T270,75 T330,75 T390,75 T450,75" 
+              stroke="#2980b9" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <polygon points="460,75 445,65 445,85" fill="#e74c3c"/>
+        <text x="420" y="60" fill="#e74c3c" font-size="14">Propagação →</text>
+        <text x="10" y="25" fill="#2c3e50" font-weight="bold">Energia</text>
+        <text x="230" y="145" fill="#2c3e50" font-weight="bold">Direção de propagação</text>
+        <circle cx="30" cy="75" r="6" fill="#27ae60"/>
+        <text x="5" y="55" fill="#27ae60" font-size="12">Fonte</text>
+    </svg>
+    <p class="legenda">Figura 1 — Uma onda transporta energia sem transportar matéria.</p>
+</div>
+
+<!-- SEÇÃO 1: O QUE É UMA ONDA -->
+<section class="caixa">
+    <h2>1. O que é uma onda?</h2>
+    <p>Uma <strong>onda</strong> é uma perturbação que se propaga, transportando energia, mas <em>não transportando matéria</em> de forma permanente.</p>
+    
+    <div class="destaque">
+        <p>💡 <strong>Exemplo prático:</strong> Imagine uma corda: se você mexer uma das pontas para cima e para baixo, uma perturbação vai se deslocar pela corda. A corda não vai inteira para o outro lado; o que se propaga é a energia da perturbação.</p>
+    </div>
+
+    <ul>
+        <li><strong>Pulso:</strong> uma única perturbação.</li>
+        <li><strong>Onda:</strong> uma sucessão de perturbações que se propagam.</li>
+    </ul>
+</section>
+
+<!-- ILUSTRAÇÃO 2: TIPOS DE ONDAS -->
+<div class="ilustracao">
+    <svg width="500" height="200" viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="500" height="200" fill="#f0f8ff" rx="8"/>
+        <text x="60" y="25" fill="#2980b9" font-weight="bold">Onda Mecânica</text>
+        <rect x="30" y="40" width="180" height="140" fill="#e8f4fc" rx="6"/>
+        <circle cx="60" cy="100" r="5" fill="#3498db"/>
+        <circle cx="90" cy="90" r="5" fill="#3498db"/>
+        <circle cx="120" cy="105" r="5" fill="#3498db"/>
+        <circle cx="150" cy="88" r="5" fill="#3498db"/>
+        <circle cx="180" cy="102" r="5" fill="#3498db"/>
+        <path d="M50,100 Q75,70 100,100 T150,100 T190,100" stroke="#e74c3c" stroke-width="3" fill="none"/>
+        <text x="55" y="165" font-size="11" fill="#555">Precisa de meio material</text>
+
+        <text x="310" y="25" fill="#8e44ad" font-weight="bold">Onda Eletromagnética</text>
+        <rect x="290" y="40" width="180" height="140" fill="#f4f0fb" rx="6"/>
+        <path d="M310,100 Q335,60 360,100 T410,100 T460,100" stroke="#9b59b6" stroke-width="3" fill="none"/>
+        <path d="M310,100 Q335,140 360,100 T410,100 T460,100" stroke="#f39c12" stroke-width="3" fill="none"/>
+        <text x="300" y="165" font-size="11" fill="#555">Propaga no vácuo</text>
+        <circle cx="390" cy="70" r="3" fill="#9b59b6"/><text x="400" y="73" font-size="9">E</text>
+        <circle cx="390" cy="130" r="3" fill="#f39c12"/><text x="400" y="133" font-size="9">B</text>
+    </svg>
+    <p class="legenda">Figura 2 — Ondas mecânicas dependem de meio material; ondas eletromagnéticas não.</p>
+</div>
+
+<!-- SEÇÃO 2: TIPOS DE ONDAS -->
+<section class="caixa">
+    <h2>2. Tipos de ondas</h2>
+    
+    <h3>Ondas mecânicas</h3>
+    <p>Precisam de um meio material para se propagarem. Sem matéria para transmitir a perturbação, esse tipo de onda não consegue se propagar.</p>
+    <p><strong>Exemplos:</strong></p>
+    <ul>
+        <li>som;</li>
+        <li>ondas em uma corda;</li>
+        <li>ondas na água.</li>
+    </ul>
+
+    <h3>Ondas eletromagnéticas</h3>
+    <p>Não precisam de um meio material e podem se propagar no vácuo.</p>
+    <p><strong>Exemplos:</strong></p>
+    <ul>
+        <li>luz;</li>
+        <li>ondas de rádio;</li>
+        <li>micro-ondas;</li>
+        <li>raios X.</li>
+    </ul>
+</section>
+
+<!-- ILUSTRAÇÃO 3: TRANSVERSAIS E LONGITUDINAIS -->
+<div class="ilustracao">
+    <svg width="500" height="220" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+        <rect width="500" height="220" fill="#f0f8ff" rx="8"/>
+        <text x="150" y="25" fill="#2980b9" font-weight="bold">Onda Transversal</text>
+        <line x1="30" y1="70" x2="470" y2="70" stroke="#ccc" stroke-width="1"/>
+        <path d="M30,70 Q60,30 90,70 T150,75 T210,70 T270,65 T330,70 T390,75 T450,70" 
+              stroke="#2980b9" stroke-width="4" fill="none"/>
+        <text x="420" y="55" font-size="12" fill="#e74c3c">→ Propagação</text>
+        <text x="20" y="45" font-size="12" fill="#27ae60">↑↓ Vibração</text>
+
+        <text x="140" y="130" fill="#d35400" font-weight="bold">Onda Longitudinal</text>
+        <g stroke="#d35400" stroke-width="5">
+            <line x1="40" y1="160" x2="55" y2="160"/>
+            <line x1="60" y1="160" x2="78" y2="160"/>
+            <line x1="85" y1="160" x2="110" y2="160"/>
+            <line x1="115" y1="160" x2="128" y2="160"/>
+            <line x1="132" y1="160" x2="145" y2="160"/>
+            <line x1="150" y1="160" x2="180" y2="160"/>
+            <line x1="185" y1="160" x2="215" y2="160"/>
+            <line x1="220" y1="160" x2="245" y2="160"/>
+            <line x1="250" y1="160" x2="263" y2="160"/>
+            <line x1="268" y1="160" x2="281" y2="160"/>
+            <line x1="286" y1="160" x2="316" y2="160"/>
+            <line x1="321" y1="160" x2="351" y2="160"/>
+            <line x1="356" y1="160" x2="370" y2="160"/>
+            <line x1="375" y1="160" x2="388" y2="160"/>
+            <line x1="393" y1="160" x2="423" y2="160"/>
+            <line x1="428" y1="160" x2="458" y2="160"/>
+        </g>
+        <text x="420" y="145" font-size="12" fill="#e74c3c">→ Propagação</text>
+        <text x="20" y="185" font-size="12" fill="#27ae60">↔ Vibração</text>
+        <text x="100" y="205" font-size="10" fill="#777">Compressão = linhas juntas · Rarefação = linhas afastadas</text>
+    </svg>
+    <p class="legenda">Figura 3 — Comparação entre ondas transversais e longitudinais.</p>
+</div>
+
+<!-- SEÇÃO 3: TRANSVERSAIS E LONGITUDINAIS -->
+<section class="caixa">
+    <h2>3. Ondas transversais e longitudinais</h2>
+    <p>Outra forma de classificar uma onda é observar como as partículas vibram em relação à direção em que a onda se propaga.</p>
+
+    <h3>Transversal</h3>
+    <p>A vibração acontece <strong>perpendicularmente</strong> à direção de propagação.</p>
+    <p>Por exemplo, imagine uma corda sendo movimentada para cima e para baixo enquanto a onda se desloca para frente.</p>
+    <div class="formula">Vibração: ↑↓ &nbsp;&nbsp; Propagação: →</div>
+
+    <h3>Longitudinal</h3>
+    <p>A vibração acontece na <strong>mesma direção</strong> da propagação.</p>
+    <p>O exemplo clássico é o som: as partículas do meio vibram para frente e para trás enquanto a onda sonora se propaga.</p>
+    <div class="formula">Vibração: ↔ &nbsp;&nbsp; Propagação: →</div>
+</section>
+
+<!-- ILUSTRAÇÃO 4: CARACTERÍSTICAS -->
+<div class="ilustracao">
+    <svg width="500" height="250" viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+        <rect width="500" height="250" fill="#f0f8ff" rx="8"/>
+        <line x1="40" y1="125" x2="460" y2="125" stroke="#333" stroke-width="2"/>
+        <path d="M40,125 Q75,60 110,125 T180,125 T250,125 T320,125 T390,125 T460,125" 
+              stroke="#2980b9" stroke-width="4" fill="none"/>
+        <line x1="110" y1="125" x2="110" y2="60" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,5"/>
+        <text x="120" y="95" fill="#e74c3c" font-weight="bold">Amplitude (A)</text>
+        <line x1="110" y1="145" x2="250" y2="145" stroke="#27ae60" stroke-width="2"/>
+        <polygon points="110,145 118,140 118,150" fill="#27ae60"/>
+        <polygon points="250,145 242,140 242,150" fill="#27ae60"/>
+        <text x="155" y="165" fill="#27ae60" font-weight="bold">λ — Comprimento de onda</text>
+        <circle cx="110" cy="60" r="5" fill="#f39c12"/>
+        <text x="100" y="45" font-size="11">Crista</text>
+        <circle cx="180" cy="190" r="5" fill="#f39c12"/>
+        <text x="170" y="210" font-size="11">Vale</text>
+        <circle cx="40" cy="125" r="4" fill="#9b59b6"/>
+        <text x="15" y="130" font-size="11">Equilíbrio</text>
+    </svg>
+    <p class="legenda">Figura 4 — Principais características de uma onda.</p>
+</div>
+
+<!-- SEÇÃO 4: CARACTERÍSTICAS -->
+<section class="caixa">
+    <h2>4. Principais características de uma onda</h2>
+    
+    <h3>Amplitude (A)</h3>
+    <p>É o quanto o meio se desloca em relação à posição de equilíbrio. Quanto maior a amplitude, maior é a intensidade da oscilação.</p>
+
+    <h3>Frequência (f)</h3>
+    <p>É a quantidade de oscilações realizadas em determinado tempo. Sua unidade é o <strong>hertz (Hz)</strong>.</p>
+    <p>Exemplo: 10 Hz = 10 oscilações por segundo.</p>
+
+    <h3>Período (T)</h3>
+    <p>É o tempo necessário para realizar uma oscilação completa.</p>
+    <p>A frequência e o período estão relacionados por:</p>
+    <div class="formula">f = 1 / T &nbsp;&nbsp; e &nbsp;&nbsp; T = 1 / f</div>
+    <ul>
+        <li>frequência alta → período pequeno;</li>
+        <li>frequência baixa → período grande.</li>
+    </ul>
+
+    <h3>Comprimento de onda (λ)</h3>
+    <p>É a distância correspondente a um ciclo completo da onda. Pode ser medido, por exemplo, de uma crista até a próxima crista.</p>
+
+    <h3>Velocidade (v)</h3>
+    <p>É a velocidade com que a onda se propaga.</p>
+    <p>A relação entre velocidade, frequência e comprimento de onda é:</p>
+    <div class="formula">v = f × λ</div>
+</section>
+
+<!-- SEÇÃO 5 A 11: FENÔMENOS E SOM -->
+<section class="caixa">
+    <h2>5. Interferência</h2>
+    <p>Quando duas ou mais ondas se encontram, elas podem se superpor. Esse fenômeno é chamado de <strong>interferência</strong>.</p>
+    
+    <h3>Interferência construtiva</h3>
+    <p>Acontece quando as ondas se reforçam. As amplitudes se somam, produzindo uma perturbação maior.</p>
+    <div class="destaque">Onda + onda → resultado maior</div>
+
+    <h3>Interferência destrutiva</h3>
+    <p>Acontece quando uma onda tende a diminuir ou cancelar a outra.</p>
+    <div class="destaque">Onda + onda → resultado menor</div>
+    <p>Se tiverem amplitudes iguais e estiverem em oposição adequada, podem até se cancelar naquele ponto.</p>
+
+    <h2>6. Ondas estacionárias</h2>
+    <p>As ondas estacionárias aparecem quando ondas se combinam de determinada maneira, formando regiões que parecem ficar paradas.</p>
+    <ul>
+        <li><strong>Nó:</strong> região que praticamente não vibra. Amplitude ≈ 0.</li>
+        <li><strong>Ventre:</strong> região em que a vibração possui amplitude máxima.</li>
+    </ul>
+    <p><em>Memorize:</em> Nó = não se mexe. Ventre = vibra bastante.</p>
+
+    <h2>7. Reflexão</h2>
+    <p>A reflexão acontece quando uma onda encontra uma barreira ou uma mudança de meio e retorna.</p>
+    <p>Exemplo: o eco — o som se propaga, encontra uma superfície e retorna.</p>
+    <ul>
+        <li>Extremidade fixa: ocorre inversão da onda.</li>
+        <li>Extremidade livre: não ocorre inversão.</li>
+    </ul>
+
+    <h2>8. Difração</h2>
+    <p>A difração ocorre quando uma onda consegue se espalhar ou contornar obstáculos e passar por aberturas.</p>
+    <p>Quanto mais a abertura ou obstáculo tiver dimensões comparáveis ao comprimento de onda, mais perceptível tende a ser o efeito da difração.</p>
+
+    <h2>9. Características do som</h2>
+    <p>O som é uma <strong>onda mecânica</strong> e possui características específicas:</p>
+    <ul>
+        <li><strong>Altura:</strong> relacionada à frequência → menor = som grave; maior = som agudo.</li>
+        <li><strong>Intensidade:</strong> relacionada à amplitude → maior = som mais forte; menor = som mais fraco.</li>
+        <li><strong>Timbre:</strong> permite diferenciar sons de mesma frequência produzidos por fontes diferentes (ex: instrumentos musicais).</li>
+    </ul>
+
+    <h2>10. Frequência e audição humana</h2>
+    <ul>
+        <li>Abaixo de 20 Hz: <strong>infrassom</strong></li>
+        <li>De 20 Hz a 20.000 Hz: <strong>faixa audível humana</strong></li>
+        <li>Acima de 20.000 Hz: <strong>ultrassom</strong></li>
+    </ul>
+
+    <h2>11. Harmônicos</h2>
+    <p>Quando uma corda vibra, forma diferentes padrões de ondas estacionárias. O primeiro padrão é a <strong>frequência fundamental</strong>; os demais são os <strong>harmônicos</strong>.</p>
+    <p>Conforme o número do harmônico aumenta, o comprimento de onda diminui. Exemplo: se a fundamental for 440 Hz, o segundo harmônico será 880 Hz.</p>
+</section>
+
+<!-- RESUMO -->
+<section class="caixa">
+    <h2>📋 Resumo</h2>
+    <table>
+        <tr>
+            <th>Conceito</th>
+            <th>O que significa</th>
+        </tr>
+        <tr><td>Onda</td><td>Transporta energia (não matéria)</td></tr>
+        <tr><td>Onda mecânica</td><td>Precisa de meio material</td></tr>
+        <tr><td>Onda eletromagnética</td><td>Pode se propagar no vácuo</td></tr>
+        <tr><td>Transversal</td><td>Vibração perpendicular à propagação</td></tr>
+        <tr><td>Longitudinal</td><td>Vibração paralela à propagação</td></tr>
+        <tr><td>Amplitude</td><td>Tamanho da oscilação</td></tr>
+        <tr><td>Frequência</td><td>Oscilações por segundo</td></tr>
+        <tr><td>Período</td><td>Tempo de uma oscilação completa</td></tr>
+        <tr><td>Comprimento de onda</td><td>Distância de um ciclo completo</td></tr>
+        <tr><td>Interferência construtiva</td><td>Ondas se reforçam</td></tr>
+        <tr><td>Interferência destrutiva</td><td>Ondas se diminuem ou cancelam</td></tr>
+        <tr><td>Nó</td><td>Região sem vibração</td></tr>
+        <tr><td>Ventre</td><td>Região de máxima vibração</td></tr>
+        <tr><td>Reflexão</td><td>Onda retorna ao encontrar barreira</td></tr>
+        <tr><td>Difração</td><td>Onda se espalha/contorna obstáculos</td></tr>
+        <tr><td>Altura do som</td><td>Relacionada à frequência</td></tr>
+        <tr><td>Intensidade do som</td><td>Relacionada à amplitude</td></tr>
+        <tr><td>Timbre</td><td>Identifica a fonte do som</td></tr>
+    </table>
+
+    <h3>As fórmulas principais para decorar:</h3>
+    <div class="formula">f = 1 / T &nbsp;&nbsp; e &nbsp;&nbsp; v = f × λ</div>
+</section>
+
+<!-- ÁREA DE PERGUNTAS INTERATIVAS -->
+<section class="caixa">
+    <h2>✍️ Teste seus conhecimentos</h2>
+    <p style="margin-bottom: 20px;">Clique na pergunta para expandir e escolha a resposta correta.</p>
+
+    <!-- PERGUNTA 1 -->
+    <div class="pergunta">
+        <button class="botao-pergunta" onclick="alternarResposta(this)">
+            <span>1. O que uma onda transporta de um ponto a outro?</span>
+            <span>▼</span>
+        </button>
+        <div class="resposta">
+            <div class="conteudo-resposta">
+                <p>Escolha a alternativa correta:</p>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    a) Matéria e energia juntas
+                </div>
+                <div class="opcao" data-correta="true" onclick="verificarResposta(this)">
+                    b) Apenas energia, sem transporte permanente de matéria
+                </div>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    c) Matéria, mas não energia
+                </div>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    d) Nada é transportado, apenas a aparência muda
+                </div>
+                <div class="feedback correto">
+                    ✅ <strong>Resposta correta!</strong><br>
+                    Uma onda transporta energia sem deslocar matéria de forma permanente. As partículas do meio apenas oscilam em torno de suas posições de equilíbrio.
+                </div>
+                <div class="feedback errado">
+                    ❌ <strong>Resposta incorreta.</strong><br>
+                    Revise a seção "O que é uma onda?". Lembre-se: a corda não se desloca toda; o que viaja é a energia da perturbação.
+                </div>
+                <div class="resposta-correta-completa">
+                    <strong>📖 Resposta completa:</strong> Uma onda é uma perturbação que se propaga transportando energia, mas sem transportar matéria de forma permanente. As partículas do meio vibram em torno de suas posições de equilíbrio e retornam ao ponto de partida. O que se propaga é a energia da perturbação.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PERGUNTA 2 -->
+    <div class="pergunta">
+        <button class="botao-pergunta" onclick="alternarResposta(this)">
+            <span>2. Qual alternativa aponta corretamente apenas ondas que podem se propagar no vácuo?</span>
+            <span>▼</span>
+        </button>
+        <div class="resposta">
+            <div class="conteudo-resposta">
+                <p>Escolha a alternativa correta:</p>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    a) Som, luz e ondas de rádio
+                </div>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    b) Ondas em corda, luz e ultrassom
+                </div>
+                <div class="opcao" data-correta="true" onclick="verificarResposta(this)">
+                    c) Luz, ondas de rádio e raios X
+                </div>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    d) Som na água, micro-ondas e vibrações de um violão
+                </div>
+                <div class="feedback correto">
+                    ✅ <strong>Resposta correta!</strong><br>
+                    Luz, ondas de rádio e raios X são ondas eletromagnéticas e se propagam no vácuo. O som e ondas em corda são mecânicas e dependem de meio material.
+                </div>
+                <div class="feedback errado">
+                    ❌ <strong>Resposta incorreta.</strong><br>
+                    O som e ondas em corda são mecânicas — precisam de meio material e NÃO se propagam no vácuo. Ondas eletromagnéticas (luz, rádio, raios X) não precisam de meio.
+                </div>
+                <div class="resposta-correta-completa">
+                    <strong>📖 Resposta completa:</strong> Ondas eletromagnéticas (luz, ondas de rádio, micro-ondas, raios X) podem se propagar no vácuo, pois não dependem de meio material. Ondas mecânicas (som, ondas em corda, ondas na água) precisam de matéria para transmitir a perturbação e não existem no vácuo.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PERGUNTA 3 -->
+    <div class="pergunta">
+        <button class="botao-pergunta" onclick="alternarResposta(this)">
+            <span>3. Sobre frequência (f) e período (T), qual relação está correta?</span>
+            <span>▼</span>
+        </button>
+        <div class="resposta">
+            <div class="conteudo-resposta">
+                <p>Escolha a alternativa correta:</p>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    a) Quanto maior a frequência, maior o período
+                </div>
+                <div class="opcao" data-correta="true" onclick="verificarResposta(this)">
+                    b) f = 1 / T — quanto maior a frequência, menor o período
+                </div>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    c) T = f — são iguais numericamente sempre
+                </div>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    d) A frequência é o tempo de uma oscilação completa
+                </div>
+                <div class="feedback correto">
+                    ✅ <strong>Resposta correta!</strong><br>
+                    Frequência e período são inversamente proporcionais: f = 1/T. Mais oscilações por segundo (f alta) significa menos tempo para cada oscilação (T pequeno).
+                </div>
+                <div class="feedback errado">
+                    ❌ <strong>Resposta incorreta.</strong><br>
+                    Frequência é o número de oscilações por segundo; período é o tempo de uma oscilação. Como f = 1/T, quando um aumenta, o outro diminui.
+                </div>
+                <div class="resposta-correta-completa">
+                    <strong>📖 Resposta completa:</strong> Frequência (f) é o número de oscilações por segundo. Período (T) é o tempo de uma oscilação completa. A relação é f = 1/T. Por isso, quanto maior a frequência, menor o período — são grandezas inversamente proporcionais.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PERGUNTA 4 -->
+    <div class="pergunta">
+        <button class="botao-pergunta" onclick="alternarResposta(this)">
+            <span>4. Em ondas estacionárias, os pontos de máxima vibração são chamados de:</span>
+            <span>▼</span>
+        </button>
+        <div class="resposta">
+            <div class="conteudo-resposta">
+                <p>Escolha a alternativa correta:</p>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    a) Nós
+                </div>
+                <div class="opcao" data-correta="true" onclick="verificarResposta(this)">
+                    b) Ventres
+                </div>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    c) Cristas
+                </div>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    d) Vales
+                </div>
+                <div class="feedback correto">
+                    ✅ <strong>Resposta correta!</strong><br>
+                    Ventres são os pontos de máxima amplitude em ondas estacionárias. Nós são pontos de amplitude quase nula — "não se mexem".
+                </div>
+                <div class="feedback errado">
+                    ❌ <strong>Resposta incorreta.</strong><br>
+                    Lembre-se: <em>Nó = não se mexe</em> (amplitude zero); <em>Ventre = vibra bastante</em> (amplitude máxima). Cristas e vales aparecem em ondas comuns, não em estacionárias.
+                </div>
+                <div class="resposta-correta-completa">
+                    <strong>📖 Resposta completa:</strong> Em ondas estacionárias formam-se pontos fixos de vibração. Os <strong>ventres</strong> são as regiões de máxima amplitude, onde a vibração é mais intensa. Os <strong>nós</strong> são pontos de amplitude aproximadamente zero, que praticamente não se movem.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PERGUNTA 5 -->
+    <div class="pergunta">
+        <button class="botao-pergunta" onclick="alternarResposta(this)">
+            <span>5. O que permite distinguir sons de mesma frequência produzidos por instrumentos diferentes?</span>
+            <span>▼</span>
+        </button>
+        <div class="resposta">
+            <div class="conteudo-resposta">
+                <p>Escolha a alternativa correta:</p>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    a) Altura
+                </div>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    b) Intensidade
+                </div>
+                <div class="opcao" data-correta="true" onclick="verificarResposta(this)">
+                    c) Timbre
+                </div>
+                <div class="opcao" data-correta="false" onclick="verificarResposta(this)">
+                    d) Amplitude
+                </div>
+                <div class="feedback correto">
+                    ✅ <strong>Resposta correta!</strong><br>
+                    O timbre é a característica que permite identificar a fonte do som. É por ele que diferenciamos um violino de um piano tocando a mesma nota.
+                </div>
+                <div class="feedback errado">
+                    ❌ <strong>Resposta incorreta.</strong><br>
+                    Altura → frequência; Intensidade → amplitude; Timbre → identifica a fonte. É o timbre que distingue os instrumentos!
+                </div>
+                <div class="resposta-correta-completa">
+                    <strong>📖 Resposta completa:</strong> O <strong>timbre</strong> é a qualidade que permite reconhecer e diferenciar a fonte de um som. Mesmo com mesma frequência (mesma altura) e mesma intensidade, instrumentos diferentes produzem combinações de frequências harmônicas distintas, e isso define o timbre.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+    <p>📘 Material de estudo — Física: Ondas e Som</p>
+    <p>Conteúdo alinhado ao currículo de física · Página interativa e responsiva</p>
+</footer>
+
+<!-- SCRIPT CORRIGIDO E TESTADO -->
+<script>
+    // Alterna a exibição da resposta ao clicar na pergunta
+    function alternarResposta(botao) {
+        const pergunta = botao.parentElement;
+        const resposta = pergunta.querySelector('.resposta');
+        
+        // Fecha outras respostas abertas
+        document.querySelectorAll('.resposta.aberta').forEach(r => {
+            if (r !== resposta) {
+                r.classList.remove('aberta');
+                r.querySelector('.botao-pergunta').querySelector('span:last-child').textContent = '▼';
+            }
+        });
+        
+        // Abre/fecha a resposta atual
+        resposta.classList.toggle('aberta');
+        
+        // Altera o ícone
+        const icone = botao.querySelector('span:last-child');
+        icone.textContent = resposta.classList.contains('aberta') ? '▲' : '▼';
+    }
+
+    // Verifica se a resposta escolhida está correta
+    function verificarResposta(opcaoEscolhida) {
+        const conteudo = opcaoEscolhida.closest('.conteudo-resposta');
+        
+        // Impede nova escolha após responder
+        if (conteudo.classList.contains('respondida')) return;
+        conteudo.classList.add('respondida');
+        
+        const ehCorreta = opcaoEscolhida.getAttribute('data-correta') === 'true';
+        
+        // Desativa todas as opções
+        conteudo.querySelectorAll('.opcao').forEach(op => {
+            op.classList.add('respondida');
+        });
+        
+        // ESCONDE os dois feedbacks primeiro
+        const feedbackCorreto = conteudo.querySelector('.feedback.correto');
+        const feedbackErrado = conteudo.querySelector('.feedback.errado');
+        const respostaCompleta = conteudo.querySelector('.resposta-correta-completa');
+        
+        feedbackCorreto.style.display = 'none';
+        feedbackErrado.style.display = 'none';
+        respostaCompleta.classList.remove('exibir');
+        
+        if (ehCorreta) {
+            // ACERTOU: marca só a escolhida como correta, mostra só feedback correto
+            opcaoEscolhida.classList.add('correta');
+            feedbackCorreto.style.display = 'block';
+            respostaCompleta.classList.add('exibir');
+        } else {
+            // ERROU: marca escolhida como errada, destaca a certa, mostra só feedback errado
+            opcaoEscolhida.classList.add('errada');
+            conteudo.querySelector('.opcao[data-correta="true"]').classList.add('correta');
+            feedbackErrado.style.display = 'block';
+            respostaCompleta.classList.add('exibir');
+        }
+    }
+</script>
+
+</body>
+</html></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="13">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="13">🏠 Voltar ao Início</button>
@@ -4600,11 +5422,14 @@
         </div>
     </div>
 
+
+
+  
     <!-- Aula 14 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="14">Aula 14 — Conclusão</button>
+        <button class="botao-aula" data-aula="14">Aula 14</button>
         <div class="conteudo-aula" id="aula-14">
-            <h2>Aula 14 — Conclusão</h2>
+            <h2>Aula 14</h2>
             <p>Conteúdo da Aula 14...</p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="14">⬅ Aula Anterior</button>
